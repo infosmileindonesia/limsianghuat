@@ -178,11 +178,11 @@
 }
 
 .distribution-card .left-arrow-swiper{
-    @apply absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer;
+    @apply absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer hidden;
 }
 
 .distribution-card .right-arrow-swiper{
-    @apply absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 z-20 cursor-pointer;
+    @apply absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 z-20 cursor-pointer hidden;
 }
 
 @layer utilities{
