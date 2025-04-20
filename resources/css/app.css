@@ -6,6 +6,207 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@utility container {
+    max-width: 1112px;
+}
+
+@layer components {
+
+    .banner-title{
+        @apply absolute inset-0 flex flex-col justify-center items-center space-y-3 font-bold text-white text-2xl lg:text-8xl text-center italic;
+    }
+
+    .banner-title-secondary{
+        @apply absolute inset-0 flex flex-col justify-center items-center font-bold text-white text-4xl md:text-8xl;
+    }
+
+    .section-title{
+        @apply font-bold text-2xl sm:text-4xl md:text-6xl leading-normal md:leading-16;
+    }
+
+    .section-title-secondary{
+        @apply font-semibold text-2xl sm:text-4xl md:text-6xl leading-normal md:leading-16;
+    }
+
+    .section-title-secondary-2{
+        @apply font-medium text-xl sm:text-3xl md:text-5xl leading-normal md:leading-16;
+    }
+
+    .section-title-secondary-3{
+        @apply font-medium text-xl sm:text-3xl md:text-4xl leading-normal md:leading-16;
+    }
+
+    .btn-learn-more-banner {
+        @apply bg-linear-120 from-white via-slate-300 hover:via-white to-white hover:to-70% hover:to-slate-300 px-4 py-3 rounded-full font-normal text-black text-lg not-italic hover:scale-110 hover:scale-3d transition-all hover:-translate-1 ease-in-out transform;
+    }
+
+    .distribution-card{
+        @apply relative flex flex-row bg-white w-full overflow-hidden;
+    }
+
+    .distribution-card .distribution-body{
+        @apply w-1/2 px-14 py-10 border border-slate-400 flex flex-col justify-around;
+    }
+
+    .card-why{
+        @apply flex flex-col items-center space-y-4 bg-white py-10 rounded-3xl w-full h-full;
+    }
+
+    header nav ul.menu-list{
+        @apply flex md:flex-row flex-col justify-center items-center space-x-0 md:space-x-6 text-lg;
+    }
+
+    header nav ul.menu-list li{
+        @apply text-black hover:text-red-600 transition-all duration-300 ease-in-out;
+    }
+
+    header nav ul.menu-list li.active a{
+        @apply font-semibold text-red-600;
+    }
+
+    [data-counter]::after {
+        content: "+";
+        position: absolute;
+        right: -30px;
+
+        @apply inset-y-0 flex items-center my-auto font-bold text-3xl;
+    }
+
+    .accordions{
+        @apply flex flex-col w-full;
+    }
+
+
+    .accordion-item{
+        @apply flex flex-col rounded-lg transition-all duration-300 ease-in-out select-none;
+    }
+
+    .accordion-item .accordion-header{
+        @apply flex flex-row justify-between items-center px-14 pt-11 pb-8 rounded-lg cursor-pointer;
+    }
+
+    .accordion-item .accordion-header .accordion-title{
+        @apply max-w-[324px] font-semibold text-gray-800 md:text-5xl leading-14;
+    }
+
+    .accordion-item .accordion-header .accordion-subtitle{
+        @apply max-w-[376px] text-gray-500 text-sm md:text-xl text-right leading-7;
+    }
+
+    .accordion-item .accordion-content{
+        @apply flex flex-col px-14 pb-14;
+    }
+
+    .accordion-item .accordion-content .accordion-content-outter{
+        @apply  relative px-4 w-full h-[620px] overflow-hidden;
+    }
+
+    .accordion-item .accordion-content .accordion-content-inner{
+        @apply px-4 h-full;
+    }
+
+    .swiper-maps-controls{
+        @apply flex justify-center items-center px-4 py-2;
+    }
+}
+
+.accordion-item .accordion-content .ps__thumb-y{
+    @apply bg-red-500/30 rounded-full;
+}
+
+.accordion-item .accordion-content .ps__rail-y:hover > .accordion-item .accordion-content .ps__thumb-y, .accordion-item .accordion-content .ps__rail-y:focus > .ps__thumb-y, .accordion-item .accordion-content .ps__rail-y.ps--clicking .ps__thumb-y{
+    @apply bg-red-600 rounded-full;
+}
+
+.accordion-item .accordion-content .ps .ps__thumb-x:hover, .accordion-item .accordion-content .ps .ps__thumb-y:hover, .accordion-item .accordion-content .ps .ps__thumb-x:focus, .accordion-item .accordion-content .ps .ps__thumb-y:focus, .accordion-item .accordion-content .ps .ps__thumb-x.ps--clicking, .accordion-item .accordion-content .ps .ps__thumb-y.ps--clicking{
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.accordion-item .accordion-content .ps__rail-y:hover > .ps__thumb-y, .accordion-item .accordion-content .ps__rail-y:focus > .ps__thumb-y, .accordion-item .accordion-content .ps__rail-y.ps--clicking .ps__thumb-y{
+    @apply bg-red-600 rounded-full transition-colors duration-300 ease-in-out;
+}
+
+.testimonial-swiper-pagination .swiper-pagination-bullet{
+    @apply bg-gray-400 opacity-50 rounded-none w-9 h-1 transition-all duration-300 ease-in-out;
+}
+
+.testimonial-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    @apply bg-gray-800;
+}
+
+.brand-tab-link{
+    @apply pb-2 border-transparent hover:border-red-400 border-b-2 hover:border-b-2 text-center transition-all duration-300 ease-in-out;
+}
+
+.brand-tab-link.active{
+    @apply pb-2 border-red-400 border-b-2;
+}
+
+.alcohol-brands-swiper .swiper-slide{
+    @apply flex justify-center items-center;
+}
+
+.alcohol-swiper-button-next{
+    @apply select-none;
+}
+
+.alcohol-swiper-button-prev{
+    @apply select-none;
+}
+
+.alcohol-swiper-button-prev.swiper-button-disabled svg path{
+    @apply stroke-gray-400;
+}
+.alcohol-swiper-button-next.swiper-button-disabled svg path{
+    @apply stroke-gray-400;
+}
+
+.swiper-maps-controls .swiper-maps-pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+    @apply static flex flex-1 justify-center items-center w-auto shrink grow-0;
+}
+
+.swiper-maps-controls .swiper-pagination-bullet{
+    @apply bg-gray-400 opacity-50 rounded-full w-3 h-3 transition-all duration-300 ease-in-out;
+}
+
+.swiper-maps-controls .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    @apply bg-gray-800 opacity-100 w-3.5 h-3.5;
+}
+
+.distribution-card .left-arrow-swiper{
+    @apply absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer;
+}
+
+.distribution-card .right-arrow-swiper{
+    @apply absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 z-20 cursor-pointer;
+}
+
+@layer utilities{
+
+
+
+    /* Radar spreading effect */
+    .animate-radar {
+        animation: radar-spread 2s infinite;
+    }
+
+    @keyframes radar-spread {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(4); /* Adjust scale for the spread size */
+            opacity: 0;
+        }
+    }
+
+    .text-outline {
+        -webkit-text-stroke: 1px black;
+        color: transparent;
+    }
 }

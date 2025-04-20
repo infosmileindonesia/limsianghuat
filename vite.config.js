@@ -5,7 +5,13 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/swiper-plugins.js'],
+            input: [
+                'resources/css/app.css',
+                'resources/css/perfect-scrollbar.css',
+                'resources/js/app.js',
+                'resources/js/swiper-plugins.js',
+                'resources/js/motion-plugin.js'
+            ],
             refresh: true,
         }),
         tailwindcss(),
