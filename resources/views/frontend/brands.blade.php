@@ -21,7 +21,7 @@
             :title="'Brands'"
         />
 
-        <div class="container mx-auto py-10">
+        <div class="container mx-auto py-10" id="brand-alcohol">
             <p class="text-center mt-4">Every brand possesses it’s own unique qualities and value propositions. Our team
                 travels extensively to identify the highest quality products that we can introduce to
                 the Indonesian market, ensuring they align with consumer patterns.</p>
@@ -53,7 +53,7 @@
                             <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.41781 26.5018C4.41781 38.6981 14.3048 48.5851 26.5011 48.5851C38.6974 48.5851 48.5845 38.6981 48.5845 26.5018C48.5845 14.3055 38.6974 4.41846 26.5011 4.41846C14.3049 4.41846 4.41781 14.3055 4.41781 26.5018Z" stroke="black" stroke-width="2"/>
                                 <path d="M23.1886 20.981C22.0719 22.0664 17.6678 24.9555 17.6678 26.5018M17.6678 26.5018C17.6678 28.0481 22.0719 30.9372 23.1886 32.0226M17.6678 26.5018L35.3345 26.5018" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                        
+                            </svg>
                         </div>
                         <div x-ref="navNext" class="alcohol-swiper-button-next cursor-pointer">
                             <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        <div class="container mx-auto py-10">
+        <div class="container mx-auto py-10" id="brand-non-alcohol">
             <h2 class="section-title-secondary text-center mt-10">Non - Alcoholic Beverages</h2>
             <div x-data="nonAlcoholSection">
                 <div class="swiper-arrow flex items-center justify-end space-x-2 mt-5">
@@ -92,7 +92,7 @@
                         <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.41781 26.5018C4.41781 38.6981 14.3048 48.5851 26.5011 48.5851C38.6974 48.5851 48.5845 38.6981 48.5845 26.5018C48.5845 14.3055 38.6974 4.41846 26.5011 4.41846C14.3049 4.41846 4.41781 14.3055 4.41781 26.5018Z" stroke="black" stroke-width="2"/>
                             <path d="M23.1886 20.981C22.0719 22.0664 17.6678 24.9555 17.6678 26.5018M17.6678 26.5018C17.6678 28.0481 22.0719 30.9372 23.1886 32.0226M17.6678 26.5018L35.3345 26.5018" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                                        
+                        </svg>
                     </div>
                     <div x-ref="navNext" class="alcohol-swiper-button-next cursor-pointer">
                         <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@
             </div>
         </div>
 
-        <div class="container mx-auto py-10">
+        <div class="container mx-auto py-10" id="brand-food">
             <h2 class="section-title-secondary text-center mt-10">Foods & Beverages</h2>
             <div x-data="foodBrandsSection">
                 <div class="swiper-arrow flex items-center justify-end space-x-2 mt-5">
@@ -124,7 +124,7 @@
                         <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.41781 26.5018C4.41781 38.6981 14.3048 48.5851 26.5011 48.5851C38.6974 48.5851 48.5845 38.6981 48.5845 26.5018C48.5845 14.3055 38.6974 4.41846 26.5011 4.41846C14.3049 4.41846 4.41781 14.3055 4.41781 26.5018Z" stroke="black" stroke-width="2"/>
                             <path d="M23.1886 20.981C22.0719 22.0664 17.6678 24.9555 17.6678 26.5018M17.6678 26.5018C17.6678 28.0481 22.0719 30.9372 23.1886 32.0226M17.6678 26.5018L35.3345 26.5018" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                                        
+                        </svg>
                     </div>
                     <div x-ref="navNext" class="alcohol-swiper-button-next cursor-pointer">
                         <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,4 +1,4 @@
-<div class="bg-black rounded-2xl p-14 shadow-lg">
+<div class="bg-black rounded-2xl px-3 py-10 lg:py-14 lg:px-14 shadow-lg">
     <form class="space-y-6" wire:submit='submit'>
 
         @if (session('contact_success'))

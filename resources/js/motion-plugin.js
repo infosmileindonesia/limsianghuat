@@ -1,4 +1,28 @@
-import { animate, inView, stagger } from "motion";
+import { animate, inView, stagger, scroll } from "motion";
+
+const cardStackWrapper = document.querySelector('.card_distribution__wrapper');
+
+if (cardStackWrapper) {
+    const theCardElements = cardStackWrapper.querySelectorAll('.the_card');
+
+    theCardElements.forEach((card, index) => {
+        let cardContent = card.querySelector('.the_card_content');
+
+        // each card must have offset top & incremented by 10px
+        const cardOffsetTop = card.offsetTop + (index * 10);
+
+        scroll(animate(cardContent, {
+            scale: [0.5, 1],
+            position: [0, cardOffsetTop],
+        }, {
+            target: cardContent,
+            duration: 0.5,
+            easing: 'ease-in-out',
+        }));
+    })
+
+}
+
 
 const counterTarget = document.querySelectorAll("[data-counter]");
 const animateView = document.querySelectorAll("[data-animate-view]");

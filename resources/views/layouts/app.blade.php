@@ -4,6 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="icon" type="image/png" href="{{ asset('favicon-96x96.png') }}" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}" />
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset('apple-touch-icon.png')}}" />
+        <link rel="manifest" href="{{ asset('site.webmanifest')}}" />
+
         <title>{{ config('app.name', 'Lim Siang Huat') }} | @yield('title')</title>
 
         @yield('meta')
@@ -36,29 +42,61 @@
                 @yield('content')
             </main>
 
-            <footer class="bg-gray-100 pt-40">
+            @if (!isContactUsRoute())
+                <div class="py-[280px] lg:py-[150px]"></div>
+            @endif
 
-                <div class="container mx-auto border-b border-slate-900">
-                    <div class="mb-5">
-                        <img src="{{ asset('img/lsh-logo-text.png') }}" alt="" width="384" height="116" class="mx-auto">
+
+            <footer class="bg-gray-100 pt-20 lg:pt-40">
+
+                <div class="container mx-auto border-b border-slate-900 relative">
+
+                    @if (!isContactUsRoute())
+                    <div class="absolute inset-x-0 bottom-full xl:min-h-[402px]">
+
+                        <div class="w-full flex flex-col space-y-4 lg:space-y-0 lg:flex-row rounded-none lg:rounded-3xl bg-black xl:pl-24 pl-12 xl:pr-8 pr-16 xl:py-7 py-3.5 h-full justify-between items-center">
+                            <div class="flex flex-col xl:max-w-[400px] ">
+                                <div class="text-xl lg:text-4xl font-normal -tracking-[3%] text-white">Your brand’s next
+                                    big move starts here.</div>
+                                    {{-- red button --}}
+                                <a href="{{ route('contact') }}" class="bg-red-600 text-white inline-flex max-w-fit text-lg lg:text-2xl font-semibold py-4 px-8 rounded-full mt-5 hover:bg-red-700 transition duration-300 ease-in-out">
+                                    Let’s Make It Happen !
+                                </a>
+
+                            </div>
+
+                            <div>
+                                <img src="{{ asset('img/placeholder/Truck.png') }}" alt="" class="max-w-[300px] mx-auto">
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="grid grid-cols-5 mb-8">
+                    <div class="py-5 xl:py-2.5"></div>
+
+                    @endif
+
+
+                    <div class="mb-5">
+                        <img src="{{ asset('img/lsh-logo-text.png') }}" alt="" width="384" height="116" class="mx-auto lg:max-w-[384px]  max-w-[200px]">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 lg:gap-0 justify-center xl:grid-cols-5 mb-8">
 
                         <div class="flex flex-col items-center">
                             <h4 class="text-center font-semibold text-xl mb-2">Company</h4>
                             <ul class="text-center space-y-2">
-                                <li>About LSH</li>
-                                <li>Why Us</li>
-                                <li>Career</li>
+                                <li><a href="{{ route('about') }}">About LSH</a></li>
+                                <li><a href="{{ route('about') }}#about-why">Why Us</a></li>
+                                <li><a href="{{ route('careers') }}">Career</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
                             <h4 class="text-center font-semibold text-xl mb-2">Brands</h4>
                             <ul class="text-center space-y-2">
-                                <li>Alcohol</li>
-                                <li>Non - Alcohol</li>
-                                <li>Foods</li>
+                                <li><a href="{{ route('brands') }}#brand-alcohol">Alcohol</a></li>
+                                <li><a href="{{ route('brands') }}#brand-non-alcohol">Non - Alcohol</a></li>
+                                <li><a href="{{ route('brands') }}#brand-food">Foods</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">

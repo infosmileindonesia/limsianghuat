@@ -33,39 +33,39 @@
                 <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
                 </div>
-                <p class="text-center">Lorem. <br> Lorem, ipsum.</p>
+                <p class="text-center"><strong>Years</strong><br> <small>of experience</small></p>
             </div>
             <div class="flex flex-col items-center min-w-2xs">
                 <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
                     <span class="relative" data-counter data-counter-end="15" data-counter-start="0" data-counter-duration="500">15</span>
                 </div>
-                <p class="text-center">Lorem. <br> Lorem, ipsum.</p>
+                <p class="text-center"><strong>Company</strong><br> <small>as our principal</small></p>
             </div>
             <div class="flex flex-col items-center min-w-2xs">
                 <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
                     <span class="relative" data-counter data-counter-end="100" data-counter-start="0" data-counter-duration="500">100</span>
                 </div>
-                <p class="text-center">Lorem. <br> Lorem, ipsum.</p>
+                <p class="text-center"><strong>SKUs</strong> <br> <small>that we distribute</small></p>
             </div>
             <div class="flex flex-col items-center min-w-2xs">
                 <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
                     <span class="relative" data-counter data-counter-end="200" data-counter-start="0" data-counter-duration="500">200</span>
                 </div>
-                <p class="text-center">Lorem. <br> Lorem, ipsum.</p>
+                <p class="text-center"><strong>Outlets</strong><br> <small>that we connect with</small></p>
             </div>
             <div class="flex flex-col items-center min-w-2xs">
                 <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
                 </div>
-                <p class="text-center">Lorem. <br> Lorem, ipsum.</p>
+                <p class="text-center"><strong>Provinces</strong> <br> <small>of active market</small></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="bg-black py-10 lg:py-14">
+<section class="bg-black py-10 lg:py-14" id="about-why">
 
-    <div class="container mx-auto">
+    <div class="container mx-auto px-2 lg:px-0">
         <h2 class="text-center text-6xl text-white font-semibold">Why <span class="font-bold">Lim Siang Huat ?</span></h2>
         <p class="text-white text-center mt-4 text-2xl">Several key factors distinguish us as the <span class="font-semibold italic">preferred choice</span> to fulfill your requirements.</p>
 
@@ -126,11 +126,11 @@
 
 <section>
 
-    <div class="container mx-auto my-24 space-y-5">
+    <div class="container mx-auto my-10 lg:my-24 space-y-5 px-2 lg:px-0">
         <p class="text-2xl text-center">TESTIMONIALS</p>
         <h2 class="section-title text-center">Words From Principals</h2>
 
-        <div class="p-12">
+        <div class="p-0 lg:p-12">
 
             <div class="swiper testimonial-swiper">
                 <div class="swiper-wrapper">
@@ -142,14 +142,14 @@
 
                     @for ($i = 1; $i <= $testiCount; $i++)
 
-                    <div class="swiper-slide px-2 py-10">
-                        <div class="bg-neutral-100 rounded-4xl shadow-xl pt-14 pl-16 pr-9 pb-16">
-                            <div class="grid grid-cols-2 gap-x-24">
+                    <div class="swiper-slide px-2 py-5 lg:py-10">
+                        <div class="bg-neutral-100 rounded lg:rounded-4xl shadow lg:shadow-2xl pt-7 lg:pt-14 pl-4 lg:pl-16 pr-4 lg:pr-9 pb-8 lg:pb-16">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 overflow-hidden">
                                 <div>
-                                    <img src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full h-auto max-w-11/12" alt="">
+                                    <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full h-auto max-w-11/12" alt="">
                                 </div>
 
-                                <div class="flex-col flex space-y-36 justify-between">
+                                <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex-col flex space-y-36 justify-between">
                                     <p class="text-2xl">“We are grateful for choosing LSH as our
                                         product distributor, as they have
                                         consistently demonstrated outstanding
@@ -157,20 +157,23 @@
 
                                 </div>
                             </div>
-                            <div class="grid grid-cols-2 gap-x-24 mt-36">
-                                <div class="flex items-center gap-x-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-y-0 gap-y-4 lg:gap-x-24 mt-12 lg:mt-36 overflow-hidden">
+                                <div class="flex items-center gap-x-8 overflow-hidden">
                                     <div class="relative flex-1">
                                         <span class="w-full h-px bg-black absolute inset-0 -translate-y-1/2"></span>
                                     </div>
                                     <div class="text-gray-400">
-                                        <span class="text-black">{{ $i }}</span> / {{ $testiCount }}
+                                        <span class="text-black" data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%">{{ $i }}</span> / {{ $testiCount }}
                                     </div>
                                 </div>
 
-                                <p>
-                                    <span class="font-bold text-2xl">Nixon</span> <br>
-                                    <span class="text-xl">Branch Manager of A</span>
-                                </p>
+                                <div class="overflow-hidden">
+                                    <p data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%">
+                                        <span class="font-bold text-2xl">Nixon</span> <br>
+                                        <span class="text-xl">Branch Manager of A</span>
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -187,11 +190,11 @@
 
     </div>
 
-    <div class="container mx-auto mt-24">
+    <div class="container mx-auto mt-10 lg:mt-24 px-2 lg:px-0">
         <h2 class="section-title">Achievement</h2>
     </div>
 
-    <div class="w-1/2 mb-24 ml-auto">
+    <div class="w-full lg:w-1/2 mb-24 ml-0 lg:ml-auto px-2 lg:px-0">
 
         <div class="swiper half-wrapper-swiper">
             <div class="swiper-wrapper">

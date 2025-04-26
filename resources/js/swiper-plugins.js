@@ -1,18 +1,22 @@
 // import Swiper JS
 import Swiper from 'swiper';
-import { Mousewheel, Autoplay, EffectCards, Parallax, Pagination, Grid, Navigation } from 'swiper/modules';
+import { Mousewheel, Autoplay, EffectCards, Parallax, Pagination, Navigation, EffectFade } from 'swiper/modules';
 
 // import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+import 'swiper/css/parallax';
 
 const swiper = new Swiper('.mySwiper', {
-    modules: [Mousewheel, Autoplay],
+    modules: [Mousewheel, Autoplay, Parallax],
     loop: true,
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
     },
+    parallax: true,
 });
 
 const mapSwiper = new Swiper('.maps-swiper', {
@@ -76,19 +80,24 @@ const bulkSwiperContainer = document.querySelectorAll('[data-swiper="bulkswiper"
 if (bulkSwiperContainer.length > 0) {
     bulkSwiperContainer.forEach((container, index) => {
         let className = container.getAttribute('data-class-name');
+
         bulkSwiper[index] = new Swiper(container, {
-            modules: [Navigation],
+            modules: [Navigation, EffectFade, Pagination],
             slidesPerView: 1,
+            effect: 'fade',
             navigation: {
                 nextEl: `.right-arrow-${className}`,
                 prevEl: `.left-arrow-${className}`,
-            }
+            },
+            pagination: {
+                el: `.pagination-${className}`
+            },
         });
     });
 }
 
 const testimonialSwiper = new Swiper('.testimonial-swiper', {
-    modules: [Pagination],
+    modules: [Pagination, Parallax, EffectFade],
     pagination: {
         el: '.testimonial-swiper-pagination',
         clickable: true,
@@ -96,6 +105,11 @@ const testimonialSwiper = new Swiper('.testimonial-swiper', {
     navigation: {
         enabled: false,
     },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    parallax: true,
     spaceBetween: 50,
 });
 

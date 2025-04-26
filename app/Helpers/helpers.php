@@ -20,6 +20,18 @@ if (!function_exists('isActiveRoute')) {
     }
 }
 
+if (!function_exists('isContactUsRoute')) {
+    /**
+     * Check if the current route is the contact us route.
+     *
+     * @return bool
+     */
+    function isContactUsRoute(): bool
+    {
+        return isActiveRoute('contact');
+    }
+}
+
 if (!function_exists('dummyAlcoholBrand')) {
     /**
      * Generate a dummy alcohol brand name.

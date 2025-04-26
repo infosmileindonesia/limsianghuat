@@ -15,6 +15,12 @@
     <div class="container mx-auto py-10">
         <h1 class="text-4xl font-bold text-center">Careers</h1>
         <p class="text-center mt-4">Join our team and grow your career with us.</p>
+
+        <div class="container mx-auto">
+
+            <livewire:frontend.careers.listing />
+
+        </div>
     </div>
 </section>
 

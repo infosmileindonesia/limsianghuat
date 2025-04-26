@@ -3,7 +3,7 @@
 
     <div class="container relative items-center min-h-[100px] mx-auto py-4 flex flex-col md:flex-row justify-center">
         <!-- Logo Section -->
-        <div class="flex justify-center items-center h-full mb-4 md:absolute md:top-0 md:left-0 md:bottom-0 md:self-center md:grid md:place-items-center">
+        <div class="flex justify-center items-center h-full mb-0 lg:mb-4 md:absolute md:top-0 md:left-0 md:bottom-0 md:self-center md:grid md:place-items-center">
             <a href="#">
                 <span><img src="{{ asset('img/logo.png') }}" alt="Logo" width="93" height="86"></span>
             </a>
@@ -12,7 +12,7 @@
         <!-- Mobile Menu Button -->
         <button
             @click="open = !open"
-            class="absolute top-4 right-4 my-auto md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            class="absolute top-[38px] right-4 my-auto md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             aria-label="Toggle navigation"
         >
             <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,7 +24,7 @@
         </button>
 
         <!-- Navigation Menu -->
-        <nav :class="{ 'block': open, 'hidden': !open }" class="hidden md:block">
+        <nav :class="{ 'block': open, 'hidden': !open }" class="hidden md:block mt-4 lg:mt-0">
             <ul class="menu-list">
                 <li class="{{ isActiveRoute('home') ? 'active' : '' }}"><a href="{{ route('home') }}">HOME</a></li>
                 <li class="{{ isActiveRoute('about') ? 'active' : '' }}"><a href="{{ route('about') }}">ABOUT US</a></li>
