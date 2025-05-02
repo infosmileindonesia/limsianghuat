@@ -32,7 +32,7 @@
                             <div class="checkbox-list-item">
                                 @foreach ($departments as $department)
                                 <div class="checkbox-item">
-                                    <label for="department-{{ $department }}" class="text-lg">{{ $department }}</label>
+                                    <label for="department-{{ $department }}" class="text-lg">{{ $department }} (<span class="w-2">{{ $availableDepartments[$department] }}</span>)</label>
                                     <input type="checkbox" id="department-{{ $department }}"
                                         wire:model.live="selectedDepartment" value="{{ $department }}" class="block w-4 h-4">
                                 </div>
@@ -149,15 +149,16 @@
     <div class="overflow-auto w-full px-4 lg:px-0 border-b">
         <ul class="flex gap-4 justify-around pb-8" x-data="{ department: @entangle('selectedDepartmentLabel') }">
             <li class="text-base whitespace-nowrap lg:text-2xl text-center rounded-3xl border px-4 lg:py-4 lg:px-10 py-2 transition-all duration-300 ease-in-out"
-                x-on:click="department = null"
+                wire:click="setDepartment('all')"
                 x-bind:class="{ 'bg-black text-white': department === null }"
             ><span class="cursor-pointer">View All</span></li>
             @foreach ($departments as $department)
                 <li class="text-base whitespace-nowrap lg:text-2xl text-center rounded-3xl border px-4 lg:py-4 lg:px-10 py-2 transition-all duration-300 ease-in-out"
-                    x-on:click.prevent="department = '{{ $department }}'"
+                    {{-- x-on:click.prevent="department = '{{ $department }}'" --}}
                     x-bind:class="{ 'bg-black text-white': department === '{{ $department }}' }"
+                    wire:click="setDepartment('{{ $department }}')"
                 >
-                    <a href="#">{{ $department }}</a>
+                    <span href="#">{{ $department }}</span>
                 </li>
             @endforeach
         </ul>

@@ -20,12 +20,26 @@ export default () => ({
 
         this.foodBrandsSwiper = new Swiper(swiperContainerClass, {
             modules: [Navigation],
-            slidesPerView: 3,
+            slidesPerView: 2,
             navigation: {
                 nextEl: this.$refs.navNext,
                 prevEl: this.$refs.navPrev,
             },
-            spaceBetween: 30
+            spaceBetween: 30,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+            },
         });
     }
 });

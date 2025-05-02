@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Frontend\Careers;
 
+use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 class Listing extends Component
@@ -22,6 +23,13 @@ class Listing extends Component
         'Marketing',
         'Finance',
         'Accounting',
+    ];
+
+    public $availableDepartments = [
+        'Sales' => 0,
+        'Marketing' => 0,
+        'Finance' => 0,
+        'Accounting' => 0
     ];
 
     public $states = [
@@ -48,27 +56,62 @@ class Listing extends Component
         }
     }
 
+    public function setDepartment($department)
+    {
+        if ($department === 'all') {
+            $this->selectedDepartment = [];
+            $this->selectedDepartmentLabel = null;
+
+            $this->filteredListings = $this->listings;
+
+            return;
+        }
+
+        $this->selectedDepartment = [$department];
+        $this->selectedDepartmentLabel = $department;
+
+        // filter listings by department
+        $this->filteredListings = $this->listings->filter(function ($listing) use ($department) {
+            return $listing->department === $department;
+        });
+    }
+
     public function updatedSelectedDepartment($value)
     {
         // only allow one department to be selected
         $this->selectedDepartment = [$value];
         $this->selectedDepartmentLabel = $this->selectedDepartment[0];
 
-        // filter listings by department
-        $this->filteredListings = $this->listings->filter(function ($listing) use ($value) {
-            return $listing->department === $value;
-        });
+
+        $this->getFilteredListings();
+    }
+
+    public function getFilteredListings()
+    {
+        $this->filteredListings = $this->listings;
+
+        if (!empty($this->selectedDepartment)) {
+            $this->filteredListings = $this->filteredListings->filter(function ($listing) {
+                return in_array($listing->department, $this->selectedDepartment);
+            });
+        }
+
+        if (!empty($this->stateSelected)) {
+            $this->filteredListings = $this->filteredListings->filter(function ($listing) {
+                return in_array($listing->location, $this->stateSelected);
+            });
+        }
+
+        if (!empty($this->levelSelected)) {
+            $this->filteredListings = $this->filteredListings->filter(function ($listing) {
+                return in_array($listing->level, $this->levelSelected);
+            });
+        }
     }
 
     public function updatedLevelSelected($value)
     {
-        // only allow one level to be selected
-        $this->levelSelected = [$value];
-
-        // filter listings by level
-        $this->filteredListings = $this->listings->filter(function ($listing) use ($value) {
-            return $listing->level === $value;
-        });
+        $this->getFilteredListings();
     }
 
 
@@ -78,6 +121,10 @@ class Listing extends Component
         $this->stateSelected = [];
         $this->levelSelected = [];
         $this->allStateSelected = false;
+
+        $this->selectedDepartmentLabel = null;
+
+        $this->getFilteredListings();
     }
 
 
@@ -121,13 +168,19 @@ class Listing extends Component
             ],
         ];
 
+        // Count the number of listings in each department
+        foreach ($listings as $listing) {
+            if (isset($this->availableDepartments[$listing['department']])) {
+                $this->availableDepartments[$listing['department']]++;
+            }
+        }
+
         $this->listings = collect($listings)->map(function ($listing) {
             return (object) $listing;
         });
 
         $this->filteredListings = $this->listings;
     }
-
 
     public function render()
     {

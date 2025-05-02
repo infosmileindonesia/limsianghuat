@@ -14,7 +14,7 @@ export default (activeTab) => ({
             console.log('activeTab changed to: ' + value);
             this.reloadSwiper(value);
         });
-        
+
     },
     setActiveTab(tab) {
         this.activeTab = tab;
@@ -29,7 +29,6 @@ export default (activeTab) => ({
 
         this.alcoholBrandsSwiper = new Swiper(swiperContainerClass, {
             modules: [Grid, Navigation],
-            slidesPerView: 3,
             navigation: {
                 nextEl: this.$refs.navNext,
                 prevEl: this.$refs.navPrev,
@@ -37,9 +36,36 @@ export default (activeTab) => ({
             grid: {
                 rows: 2,
                 fill: 'row',
-    
             },
-            spaceBetween: 30
+            slidesPerView: 2,
+            spaceBetween: 30,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    grid: {
+                        rows: 1,
+                        fill: 'row',
+                    }
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    grid: {
+                        rows: 1,
+                        fill: 'row',
+                    }
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    grid: {
+                        rows: 2,
+                        fill: 'row',
+                    }
+                },
+            },
+
         });
     }
 });

@@ -21,7 +21,7 @@
             :title="'Brands'"
         />
 
-        <div class="container mx-auto py-10" id="brand-alcohol">
+        <div class="container mx-auto py-10 px-2 lg:px-0" id="brand-alcohol">
             <p class="text-center mt-4">Every brand possesses it’s own unique qualities and value propositions. Our team
                 travels extensively to identify the highest quality products that we can introduce to
                 the Indonesian market, ensuring they align with consumer patterns.</p>
@@ -30,22 +30,24 @@
 
 
             {{-- Tab Navigation --}}
-            <div class="mt-10 overflow-auto w-full" x-data="alcoholSection('beer')">
-                <ul class="flex flex-row flex-nowrap list-none text-3xl font-semibold border-b pl-0 mb-4 w-full"
-                    role="tablist">
-                    @foreach ($alcoholBrands as $brand)
-                        <li
-                            class="text-center h-max-16 flex items-center justify-center grow-0 shrink-0 basis-[220px]"
-                            role="presentation">
-                            <a href="#alcohol-{{ $brand['slug'] }}"
-                                class="brand-tab-link"
-                                :class="activeTab === '{{ $brand['slug'] }}' ? 'active' : ''"
-                                @click.prevent="setActiveTab('{{ $brand['slug'] }}')">
-                                {{ $brand['name'] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+            <div class="mt-10 w-full" x-data="alcoholSection('beer')">
+                <div class="w-full overflow-x-auto">
+                    <ul class="flex flex-row flex-nowrap list-none text-3xl font-semibold border-b pl-0 mb-4 w-full"
+                        role="tablist">
+                        @foreach ($alcoholBrands as $brand)
+                            <li
+                                class="text-center h-max-16 flex items-center justify-center grow-0 shrink-0 basis-[220px]"
+                                role="presentation">
+                                <a href="#alcohol-{{ $brand['slug'] }}"
+                                    class="brand-tab-link"
+                                    :class="activeTab === '{{ $brand['slug'] }}' ? 'active' : ''"
+                                    @click.prevent="setActiveTab('{{ $brand['slug'] }}')">
+                                    {{ $brand['name'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
                 {{-- Tab Content --}}
                 {{-- Loop each element into a swiper wrapper --}}
                     <div class="swiper-arrow flex items-center justify-end space-x-2 mt-5">
@@ -84,7 +86,7 @@
             </div>
         </div>
 
-        <div class="container mx-auto py-10" id="brand-non-alcohol">
+        <div class="container mx-auto py-10 px-2 lg:px-0" id="brand-non-alcohol">
             <h2 class="section-title-secondary text-center mt-10">Non - Alcoholic Beverages</h2>
             <div x-data="nonAlcoholSection">
                 <div class="swiper-arrow flex items-center justify-end space-x-2 mt-5">
@@ -116,7 +118,7 @@
             </div>
         </div>
 
-        <div class="container mx-auto py-10" id="brand-food">
+        <div class="container mx-auto py-10 px-2 lg:px-0" id="brand-food">
             <h2 class="section-title-secondary text-center mt-10">Foods & Beverages</h2>
             <div x-data="foodBrandsSection">
                 <div class="swiper-arrow flex items-center justify-end space-x-2 mt-5">
