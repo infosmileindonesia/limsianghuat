@@ -133,6 +133,32 @@
     .swiper-maps-controls{
         @apply flex justify-center items-center px-4 py-2;
     }
+
+    .career-filter-card{
+        @apply bg-white px-4 lg:px-20 py-8 lg:py-12 border border-black rounded-3xl min-h-[200px];
+    }
+
+    .career-filter-card .filter-wrapper{
+        @apply flex justify-between items-center space-x-1 min-w-[150px] cursor-pointer select-none;
+    }
+
+    .career-filter-card .filter-wrapper > p,
+    .career-filter-card .filter-wrapper > span{
+        @apply block;
+    }
+
+    .career-filter-card .checkbox-area{
+        @apply top-[120%] z-10 absolute bg-white shadow-lg border border-black w-max;
+    }
+
+    .career-filter-card .checkbox-area .checkbox-list-item{
+        @apply flex flex-col gap-4 p-4;
+    }
+
+    .career-filter-card .checkbox-area .checkbox-list-item .checkbox-item{
+        @apply flex justify-between items-center gap-2;
+    }
+
 }
 
 .accordion-item .accordion-content .ps__thumb-y{
