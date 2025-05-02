@@ -4,7 +4,7 @@
     <div class="mt-12 mb-20">
 
         <div class="career-filter-card">
-            <div class="flex justify-between items-center">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-y-4 lg:gap-y-0">
 
                 <div>
                     <div class="relative" x-on:click="openDept = !openDept" x-on:click.away="openDept = false"
@@ -45,7 +45,7 @@
 
                 <div>
 
-                    <div class="flex items-center gap-x-6 cursor-pointer">
+                    <div class="flex flex-col lg:flex-row items-center gap-x-0 gap-y-4 lg:gap-y-0 lg:gap-x-6 cursor-pointer">
                         <div class="relative" x-on:click="openState = !openState" x-on:click.away="openState = false"
                             x-on:keydown.escape.window="openState = false" x-data="{ openState: false }">
                             <div class="filter-wrapper" x-bind:class="{ 'text-red-500': openState }">
@@ -133,7 +133,7 @@
 
             </div>
 
-            <div class="flex justify-center items-center mt-20">
+            <div class="flex justify-center items-center mt-10 lg:mt-20">
                 <a href="#" class="text-center underline hover:no-underline"
                     x-on:click.prevent="confirm('Are you sure you want to remove all filters?') ? @this.removeFilters() : null"
                 >
