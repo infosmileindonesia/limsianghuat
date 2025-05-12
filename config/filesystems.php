@@ -60,6 +60,11 @@ return [
             'report' => false,
         ],
 
+        'tmp-for-tests' => [
+            'driver' => 'local',
+            'root' => storage_path('app/livewire-tmp'),
+        ],
+
     ],
 
     /*
@@ -75,11 +80,6 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-    ],
-
-    'tmp-for-tests' => [
-        'driver' => 'local',
-        'root' => storage_path('app/livewire-tmp'),
     ],
 
 ];
