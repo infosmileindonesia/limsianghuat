@@ -76,8 +76,20 @@ class Listing extends Component
         });
     }
 
-    public function updatedSelectedDepartment($value)
+    public function updatedSelectedDepartment($value, $key)
     {
+        if ($value === '__rm__') {
+            // remove the department from the selected department
+            unset($this->selectedDepartment[$key]);
+            $this->selectedDepartment = array_values($this->selectedDepartment);
+            $this->selectedDepartmentLabel = null;
+
+            if (empty($this->selectedDepartment)) {
+                $this->filteredListings = $this->listings;
+                return;
+            }
+        }
+
         // only allow one department to be selected
         $this->selectedDepartment = [$value];
         $this->selectedDepartmentLabel = $this->selectedDepartment[0];

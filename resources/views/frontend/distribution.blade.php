@@ -13,11 +13,11 @@
     />
 
     <div class="container mx-auto py-10">
-        <p class="text-center mt-4">Our company have been continuosly develop and expand into different cities in
-            Indonesia to create wider connection with restaurants, hotels, supermarkets, bars,
+        <p class="text-center mt-4 text-2xl">Our company have been continuosly develop and expand into different cities in <br>
+            Indonesia to create wider connection with restaurants, hotels, supermarkets, bars, <br>
             night clubs and individual consumers. </p>
 
-            <div class="relative" id="map-parent">
+            <div class="relative lg:mt-9 mt-4" id="map-parent">
                 <img src="{{ asset('img/placeholder/maps.png') }}" class="w-full h-auto" alt="">
 
                 <div class="absolute inset-0">
@@ -64,12 +64,11 @@
     </div>
 
     <div class="container mx-auto py-10">
-        <h2 class="section-title-secondary-2 text-center mt-10">Unlocking Opportunities,
+        <h2 class="section-title-lg text-center mt-10 mb-10">Unlocking Opportunities, <br>
             Expanding Your Reach.</h2>
 
         <div class="accordions"
-            x-data="{accordionActive: 0}"
-            @click.away="accordionActive = 0"
+            x-data="{accordionActive: 1}"
             >
 
             <div class="accordion-item bg-zinc-100"

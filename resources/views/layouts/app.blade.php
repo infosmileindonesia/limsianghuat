@@ -47,7 +47,14 @@
             @endif
 
 
-            <footer class="bg-gray-100 pt-20 lg:pt-40">
+            <footer class="bg-gray-100">
+
+                @if (!isContactUsRoute())
+                    <div class="pt-20 lg:pt-40"></div>
+                @else
+                    <div class="pt-6 lg:pt-12"></div>
+
+                @endif
 
                 <div class="container mx-auto border-b border-slate-900 relative">
 

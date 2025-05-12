@@ -12,7 +12,7 @@ if (cardStackWrapper) {
         const cardOffsetTop = card.offsetTop + (index * 10);
 
         scroll(animate(cardContent, {
-            scale: [0.5, 1],
+            scale: [0.9, 1],
             position: [0, cardOffsetTop],
         }, {
             target: cardContent,
@@ -57,7 +57,10 @@ if (animateView.length > 0) {
         inView(target, () => {
             animate(
                 animateTargetClass,
-                { opacity: [0, 1], scale: [0.8, 1] },
+                {
+                    opacity: [0, 1],
+                    scale: [0.8, 1]
+                },
                 { delay: stagger(0.1)}
             );
         }, {

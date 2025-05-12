@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -19,8 +19,12 @@ export default () => ({
         let swiperContainerClass = `.food-brands-swiper`;
 
         this.foodBrandsSwiper = new Swiper(swiperContainerClass, {
-            modules: [Navigation],
+            modules: [Navigation, Autoplay],
             slidesPerView: 2,
+            autoplay: {
+                delay: 1200,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: this.$refs.navNext,
                 prevEl: this.$refs.navPrev,

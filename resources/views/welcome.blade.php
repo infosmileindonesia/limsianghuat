@@ -18,30 +18,37 @@
         <!-- Swiper Carousel -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide relative">
-                    <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 1" class="w-full aspect-square xl:aspect-[4/2] object-cover">
-                    <div class="banner-title">
-                        <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
-                        <a href="#" class="btn-learn-more-banner">EXPLORE MORE</a>
+
+                @if ($banners)
+
+                    @foreach ($banners as $banner)
+                        <div class="swiper-slide relative">
+                            <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                            <div class="banner-title">
+                                <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! nl2br($banner->title) !!}</span>
+                                <a href="{{ $banner->url }}" class="btn-learn-more-banner">LEARN MORE</a>
+                            </div>
+                        </div>
+                    @endforeach
+
+                @else
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide relative">
+                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 1" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                        <div class="banner-title">
+                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
+                            <a href="#" class="btn-learn-more-banner">EXPLORE MORE</a>
+                        </div>
                     </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide relative">
-                    <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 2" class="w-full aspect-square xl:aspect-[4/2] object-cover">
-                    <div class="banner-title">
-                        <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
-                        <a href="#" class="btn-learn-more-banner">LEARN MORE</a>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide relative">
+                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 2" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                        <div class="banner-title">
+                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
+                            <a href="#" class="btn-learn-more-banner">LEARN MORE</a>
+                        </div>
                     </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide relative">
-                    <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 3" class="w-full aspect-square xl:aspect-[4/2] object-cover">
-                    <div class="banner-title">
-                        <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
-                        <a href="#" class="btn-learn-more-banner">LEARN MORE</a>
-                    </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>
@@ -63,7 +70,7 @@
                 <div class="relative h-full col-span-3">
 
                     <div class="relative lg:absolute lg:pl-14 py-10 bg-gray-200 lg:inset-0 lg:w-[108%] lg:rounded-2xl h-min ">
-                        <div class="max-w-none xl:max-w-4/5 space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0">
+                        <div class="max-w-none xl:max-w-[74%] space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0">
                             <p class="text-2xl">WHO WE ARE</p>
                             <h1 class="text-5xl font-semibold leading-16">F&B Distributor Since <span class="italic text-red-500 text-5xl font-bold">2002</span></h1>
                             <p>We are passionate about connecting high-quality food and beverage products with businesses that share our commitment to excellence.</p>
@@ -89,7 +96,7 @@
 
                 </div>
                 <div class="relative h-full col-span-2">
-                    <div class="lg:inset-0 lg:top-auto lg:bottom-0 relative lg:absolute lg:ml-[-4%]">
+                    <div class="relative lg:absolute lg:bottom-[-30px] pt-10 lg:ml-[-19%]">
                         <div class="lg:w-max lg:h-max relative group overflow-hidden rounded-none lg:rounded-4xl cursor-pointer">
                             <img src="{{ asset('img/placeholder/Industrial.png') }}" alt="" class="w-auto mr-auto group-hover:scale-110 group-hover:-translate-x-1 group-hover:translate-y-1 transition-all duration-500 ease-in-out">
 
@@ -107,14 +114,14 @@
             </div>
         </div>
 
-        <div class="container mx-auto mt-24 space-y-5 px-2 lg:px-0">
+        <div class="container mx-auto mt-16 lg:mt-36 space-y-5 px-2 lg:px-0">
             <p class="text-2xl text-center">DISTRIBUTION</p>
             <h2 class="section-title text-center">Present in Key Provinces, <br>
-                Dedicated to <span class="italic text-red-500">Serving You</span>.</h2>
+                Dedicated to <span class="italic text-red-500 font-bold">Serving You</span>.</h2>
                 <p class="text-center text-xl">Over the past 20 years, LSH Indonesia has expanded into five different cities <br>
                     and continues to grow, establishing a strong presence throughout the country.</p>
 
-                <div class="relative">
+                <div class="relative mt-9">
                     <img src="{{ asset('img/placeholder/maps.png') }}" class="w-full h-auto" alt="">
 
                     <div class="absolute inset-0">
@@ -154,7 +161,7 @@
                 </div>
 
                 {{-- Learn More Button --}}
-                <a href="#" class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max mx-auto">
+                <a href="#" class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max mx-auto mt-9">
                     <span class="font-medium">
                         Learn More
                     </span>
@@ -168,8 +175,8 @@
                 </a>
         </div>
 
-        <div class="container mx-auto mt-10 lg:mt-24 space-y-5">
-            <h2 class="text-center section-title">We <span class="italic text-red-500">Know the Route</span>, <br>
+        <div class="container mx-auto mt-10 lg:mt-36 space-y-5">
+            <h2 class="text-center section-title">We <span class="italic text-red-500 font-bold">Know the Route</span>, <br>
                 We Understand the Channels.</h2>
             <p class="text-center text-xl">
                 With strong access to General Trade, Modern Trade, and HoReCa, <br> we ensure your products reach key markets efficiently and effectively.

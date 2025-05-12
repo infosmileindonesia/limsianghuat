@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Grid, Navigation } from "swiper/modules";
+import { Autoplay, Grid, Navigation } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -28,10 +28,14 @@ export default (activeTab) => ({
         let swiperContainerClass = `.alcohol-brands-swiper-${activeTab}`;
 
         this.alcoholBrandsSwiper = new Swiper(swiperContainerClass, {
-            modules: [Grid, Navigation],
+            modules: [Grid, Navigation, Autoplay],
             navigation: {
                 nextEl: this.$refs.navNext,
                 prevEl: this.$refs.navPrev,
+            },
+            autoplay: {
+                delay: 1200,
+                disableOnInteraction: false,
             },
             grid: {
                 rows: 2,

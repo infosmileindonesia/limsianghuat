@@ -63,12 +63,25 @@ distributionSwiper.on('activeIndexChange', function (swiper) {
 
 document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.half-wrapper-swiper', {
-        slidesPerView: 2.5,
+        modules: [Autoplay, Navigation],
+        autoplay: {
+            delay: 1700,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            },
+        },
+        spaceBetween: 20,
+        slidesPerView: 1,
         centeredSlides: false,
         loop: true,
-        pagination: {
-            el: '.half-wrapper-swiper-pagination',
-            clickable: true,
+        navigation: {
+            enabled: true,
+            nextEl: '.swiper-button-next-half-wrapper-swiper',
+            prevEl: '.swiper-button-prev-half-wrapper-swiper',
         },
     });
 });
@@ -82,7 +95,7 @@ if (bulkSwiperContainer.length > 0) {
         let className = container.getAttribute('data-class-name');
 
         bulkSwiper[index] = new Swiper(container, {
-            modules: [Navigation, EffectFade, Pagination],
+            modules: [Navigation, EffectFade, Pagination, Autoplay],
             slidesPerView: 1,
             effect: 'fade',
             navigation: {
@@ -92,19 +105,26 @@ if (bulkSwiperContainer.length > 0) {
             pagination: {
                 el: `.pagination-${className}`
             },
+            autoplay: {
+                delay: 800,
+                disableOnInteraction: false,
+            },
+            loop: true,
         });
     });
 }
 
 const testimonialSwiper = new Swiper('.testimonial-swiper', {
-    modules: [Pagination, Parallax, EffectFade],
+    modules: [Pagination, Parallax, EffectFade, Autoplay, Navigation],
     pagination: {
         el: '.testimonial-swiper-pagination',
         clickable: true,
     },
-    navigation: {
-        enabled: false,
+    autoplay: {
+        delay: 1700,
+        disableOnInteraction: false,
     },
+    loop: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true,

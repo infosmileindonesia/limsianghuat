@@ -3,9 +3,7 @@
 use App\Http\Controllers\FrontendPageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [FrontendPageController::class, 'index'])->name('home');
 
 Route::get('about',[FrontendPageController::class, 'about'])->name('about');
 Route::get('brands',[FrontendPageController::class, 'brands'])->name('brands');
