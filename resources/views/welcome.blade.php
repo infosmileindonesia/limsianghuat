@@ -69,7 +69,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-5 min-h-[572px]">
                 <div class="relative h-full col-span-3">
 
-                    <div class="relative lg:absolute lg:pl-14 py-10 bg-gray-200 lg:inset-0 lg:w-[108%] lg:rounded-2xl h-min ">
+                    <div class="relative lg:absolute lg:pl-10 py-10 bg-[#F2F2F2] lg:inset-0 lg:w-[108%] lg:rounded-2xl h-min ">
                         <div class="max-w-none xl:max-w-[74%] space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0">
                             <p class="text-2xl">WHO WE ARE</p>
                             <h1 class="text-5xl font-semibold leading-16">F&B Distributor Since <span class="italic text-red-500 text-5xl font-bold">2002</span></h1>
@@ -77,17 +77,17 @@
                             <p class="font-bold underline text-lg mb-5">We Commit to These Values</p>
 
                             <div class="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-2.5 max-w-3/5 lg:max-w-none mx-auto">
-                                <div class="flex flex-col gap-2 items-center p-4 bg-white rounded-4xl shadow-2xl">
+                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
                                     <img src="{{ asset('img/icons/Arhive_fill.png') }}" alt="">
-                                    <p class="text-xl text-center">work with <br> <span class="text-2xl font-bold text-red-500 uppercase italic">passion</span></p>
+                                    <p class="text-lg text-center leading-[22px]">work with <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">passion</span></p>
                                 </div>
-                                <div class="flex flex-col gap-2 items-center p-4 bg-white rounded-4xl shadow-2xl">
+                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
                                     <img src="{{ asset('img/icons/Check_round_fill.png') }}" alt="">
-                                    <p class="text-xl text-center"><span class="text-2xl font-bold text-red-500 uppercase italic">value & respect</span> <br> our relations </p>
+                                    <p class="text-lg text-center leading-[22px]"><span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">value & respect</span> <br> our relations </p>
                                 </div>
-                                <div class="flex flex-col gap-2 items-center p-4 bg-white rounded-4xl shadow-2xl">
+                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
                                     <img src="{{ asset('img/icons/Group_fill.png') }}" alt="">
-                                    <p class="text-xl text-center">strength of <br> <span class="text-2xl font-bold text-red-500 uppercase italic">Teamwork</span></p>
+                                    <p class="text-lg text-center leading-[22px]">strength of <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">Teamwork</span></p>
                                 </div>
                             </div>
 
@@ -96,14 +96,14 @@
 
                 </div>
                 <div class="relative h-full col-span-2">
-                    <div class="relative lg:absolute lg:bottom-[-30px] pt-10 lg:ml-[-19%]">
+                    <div class="relative lg:absolute lg:bottom-[-2px] pt-10 lg:ml-[-19%]">
                         <div class="lg:w-max lg:h-max relative group overflow-hidden rounded-none lg:rounded-4xl cursor-pointer">
                             <img src="{{ asset('img/placeholder/Industrial.png') }}" alt="" class="w-auto mr-auto group-hover:scale-110 group-hover:-translate-x-1 group-hover:translate-y-1 transition-all duration-500 ease-in-out">
 
                             <div class="absolute lg:top-0 lg:right-0">
                                 <div class="w-max-h-max">
                                     <span>
-                                        <img  src="{{ asset('img/icons/play-youtube.png') }}" alt="" class="shadow-2xl group-hover:scale-125 group-hover:-translate-x-1.5 group-hover:translate-y-1.5 delay-300 transition-all duration-500 ease-in-out">
+                                        <img src="{{ asset('img/icons/play-youtube.png') }}" alt="" class="shadow-2xl group-hover:scale-125 group-hover:-translate-x-1.5 group-hover:translate-y-1.5 delay-300 transition-all duration-500 ease-in-out">
                                     </span>
                                 </div>
 
@@ -154,6 +154,20 @@
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
+
+                                <!-- Sulawesi 1 -->
+                                <circle cx="645" cy="185" r="7" fill="#E31D1C" />
+                                <circle cx="645" cy="185" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                    <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
+                                </circle>
+
+                                <!-- Sulawesi 2 -->
+                                <circle cx="665" cy="240" r="7" fill="#E31D1C" />
+                                <circle cx="665" cy="240" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                    <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
+                                </circle>
                             </g>
                         </svg>
                     </div>
@@ -161,7 +175,7 @@
                 </div>
 
                 {{-- Learn More Button --}}
-                <a href="#" class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max mx-auto mt-9">
+                <a href="{{ route('distribution') }}#channel" class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max mx-auto mt-9">
                     <span class="font-medium">
                         Learn More
                     </span>
@@ -195,10 +209,10 @@
                                     class="text-6xl font-semibold leading-16">Hotel <br>
                                     Restaurant <br>
                                     Cafe </h5>
-                                <a href="#" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
+                                <a href="{{ route('distribution') }}#hotel-restaurant-cafe" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
-                                    <span class="font-medium">
+                                    <span class="font-normal text-2xl">
                                         Discover More
                                     </span>
 
@@ -254,10 +268,10 @@
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="text-6xl font-semibold leading-16">General <br>
                                     Trade</h5>
-                                <a href="#" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
+                                <a href="{{ route('distribution') }}#general-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
-                                    <span class="font-medium">
+                                    <span class="font-normal text-2xl">
                                         Discover More
                                     </span>
 
@@ -311,10 +325,10 @@
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="text-6xl font-semibold leading-16">Modern <br>
                                     Trade</h5>
-                                <a href="#" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
+                                <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
-                                    <span class="font-medium">
+                                    <span class="font-normal text-2xl">
                                         Discover More
                                     </span>
 

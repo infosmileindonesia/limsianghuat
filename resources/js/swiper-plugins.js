@@ -20,7 +20,12 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 const mapSwiper = new Swiper('.maps-swiper', {
-    modules: [Pagination, Navigation],
+    modules: [Pagination, Navigation, Autoplay],
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
@@ -33,33 +38,6 @@ const mapSwiper = new Swiper('.maps-swiper', {
     },
 })
 
-var distributionSwiper = new Swiper(".distributionSwiper", {
-    modules: [Mousewheel, EffectCards, Parallax],
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 20,
-    parallax: true,
-    mousewheel: {
-        enabled: true,
-        sensitivity: 1,
-        thresholdDelta: 0,
-        thresholdTime: 100,
-    },
-    effect: "cards",
-    cardsEffect: {
-        slideShadows: true,
-        perSlideOffset: 7,
-        perSlideRotate: 0
-    },
-});
-
-distributionSwiper.on('activeIndexChange', function (swiper) {
-
-    console.log(swiper.activeIndex);
-
-
-    // Add your custom logic here
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.half-wrapper-swiper', {

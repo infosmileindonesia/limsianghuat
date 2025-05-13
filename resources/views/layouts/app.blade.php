@@ -66,7 +66,7 @@
                                 <div class="text-xl lg:text-4xl font-normal -tracking-[3%] text-white">Your brand’s next
                                     big move starts here.</div>
                                     {{-- red button --}}
-                                <a href="{{ route('contact') }}" class="bg-red-600 text-white inline-flex max-w-fit text-lg lg:text-2xl font-semibold py-4 px-8 rounded-full mt-5 hover:bg-red-700 transition duration-300 ease-in-out">
+                                <a href="{{ route('contact') }}" class="bg-red-600 text-white inline-flex max-w-fit text-lg lg:text-2xl font-medium py-4 px-8 rounded-full mt-5 hover:bg-red-700 transition duration-300 ease-in-out">
                                     Let’s Make It Happen !
                                 </a>
 
@@ -109,13 +109,14 @@
                         <div class="flex flex-col items-center">
                             <h4 class="text-center font-semibold text-xl mb-2">Distribution</h4>
                             <ul class="text-center space-y-2">
-                                <li>Channel</li>
-                                <li>Branches</li>
+                                <li><a href="{{ route('distribution') }}#channel">Channel</a></li>
+                                <li><a href="{{ route('distribution') }}#distribution">Branches</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
                             <h4 class="text-center font-semibold text-xl mb-2">Contact</h4>
                             <ul class="text-center space-y-2">
+                                <li>LSH Jakarta</li>
                                 <li>LSH Batam</li>
                                 <li>LSH Bali</li>
                                 <li>LSH Surabaya</li>
@@ -124,9 +125,9 @@
                         <div class="flex flex-col items-center">
                             <h4 class="text-center font-semibold text-xl mb-2">Updates</h4>
                             <ul class="flex items-center space-x-4">
-                                <li><a href=""><span><img width="36" height="36" src="{{ asset('img/icons/facebook.png') }}" alt=""></span></a></li>
-                                <li><a href=""><span><img width="36" height="36" src="{{ asset('img/icons/instagram.png') }}" alt=""></span></a></li>
-                                <li><a href=""><span><img width="36" height="36" src="{{ asset('img/icons/new-twitter.png') }}" alt=""></span></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/p/Lim-Siang-Huat-Group-100063795910946/?locale=id_ID"><span><img width="36" height="36" src="{{ asset('img/icons/facebook.png') }}" alt=""></span></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/limsianghuat.official/?hl=en"><span><img width="36" height="36" src="{{ asset('img/icons/instagram.png') }}" alt=""></span></a></li>
+                                <li><a target="_blank" href="https://www.tiktok.com/@lim.siang.huat"><span><img width="36" height="36" src="{{ asset('img/icons/new-twitter-rectangle.png') }}" alt=""></span></a></li>
                             </ul>
                         </div>
 
