@@ -56,7 +56,7 @@
 
                 @endif
 
-                <div class="container mx-auto border-b border-slate-900 relative">
+                <div class="container mx-auto border-b border-[#868686] relative">
 
                     @if (!isContactUsRoute())
                     <div class="absolute inset-x-0 bottom-full xl:min-h-[402px]">
@@ -139,11 +139,11 @@
 
                 <div class="flex justify-between items-center container mx-auto py-5">
                     <div>
-                        <p>Copyright © Lim Siang Huat 2016</p>
+                        <p class="text-[#868686] ">Copyright © Lim Siang Huat 2016</p>
                     </div>
 
                     <div>
-                        <p>LSH Global Website</p>
+                        <p class="text-[#868686] ">LSH Global Website</p>
                     </div>
                 </div>
 
