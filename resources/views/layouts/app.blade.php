@@ -139,7 +139,7 @@
 
                 <div class="flex justify-between items-center container mx-auto py-5">
                     <div>
-                        <p class="text-[#868686] ">Copyright © Lim Siang Huat 2016</p>
+                        <p class="text-[#868686] ">Copyright © Lim Siang Huat {{ date('Y') }}.</p>
                     </div>
 
                     <div>
