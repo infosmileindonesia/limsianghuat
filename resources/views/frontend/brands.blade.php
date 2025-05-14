@@ -21,7 +21,7 @@
             :title="'Brands'"
         />
 
-        <div class="container mx-auto py-10 px-2 lg:px-0" id="brand-alcohol">
+        <div class="container mx-auto pb-10 pt-20 px-2 lg:px-0" id="brand-alcohol">
             <p class="text-center mt-4 text-2xl">Every brand possesses it’s own unique qualities and value propositions. Our team <br>
                 travels extensively to identify the highest quality products that we can introduce to <br>
                 the Indonesian market, ensuring they align with consumer patterns.</p>
