@@ -55,7 +55,7 @@
 
     <section class="pt-12 pb-10">
         <div class="container mx-auto px-2 lg:px-0">
-            <div class="font-bold text-2xl text-left pb-5 relative">
+            <div class="font-semibold text-2xl text-left pb-5 relative">
                 <p>
                     <span>At Lim Siang Huat</span> <br>
                     <span>We're a partner in your success.</span>
