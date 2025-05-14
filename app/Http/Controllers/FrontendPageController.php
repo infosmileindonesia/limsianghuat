@@ -30,6 +30,10 @@ class FrontendPageController extends Controller
     {
 
         $brandBeers = BrandAlcohol::where('type', BrandAlcohol::TYPE_BEER)->get();
+        $brandSprits = BrandAlcohol::where('type', BrandAlcohol::TYPE_SPIRIT)->get();
+        $brandSoju = BrandAlcohol::where('type', BrandAlcohol::TYPE_SOJU)->get();
+        $brandWines = BrandAlcohol::where('type', BrandAlcohol::TYPE_WINE)->get();
+        $brandCider = BrandAlcohol::where('type', BrandAlcohol::TYPE_CIDER)->get();
 
         $alcoholBrands = dummyAlcoholBrand();
 
@@ -45,6 +49,63 @@ class FrontendPageController extends Controller
             }
             return $brand;
         });
+
+        if ($brandSprits->count() > 0) {
+            $alcoholBrands = $alcoholBrands->map(function ($brand) use ($brandSprits) {
+                if ($brand['slug'] == 'spirit') {
+                    $brand['products'] = $brandSprits->map(function ($brandSpirit) {
+                        return [
+                            'name' => $brandSpirit->name,
+                            'image' => asset('storage/' . $brandSpirit->image),
+                        ];
+                    });
+                }
+                return $brand;
+            });
+        }
+
+        if ($brandSoju->count() > 0) {
+            $alcoholBrands = $alcoholBrands->map(function ($brand) use ($brandSoju) {
+                if ($brand['slug'] == 'soju') {
+                    $brand['products'] = $brandSoju->map(function ($brandSoju) {
+                        return [
+                            'name' => $brandSoju->name,
+                            'image' => asset('storage/' . $brandSoju->image),
+                        ];
+                    });
+                }
+                return $brand;
+            });
+        }
+
+        if ($brandWines->count() > 0) {
+            $alcoholBrands = $alcoholBrands->map(function ($brand) use ($brandWines) {
+                if ($brand['slug'] == 'wine') {
+                    $brand['products'] = $brandWines->map(function ($brandWine) {
+                        return [
+                            'name' => $brandWine->name,
+                            'image' => asset('storage/' . $brandWine->image),
+                        ];
+                    });
+                }
+                return $brand;
+            });
+        }
+
+        if ($brandCider->count() > 0) {
+            $alcoholBrands = $alcoholBrands->map(function ($brand) use ($brandCider) {
+                if ($brand['slug'] == 'cider') {
+                    $brand['products'] = $brandCider->map(function ($brandCider) {
+                        return [
+                            'name' => $brandCider->name,
+                            'image' => asset('storage/' . $brandCider->image),
+                        ];
+                    });
+                }
+                return $brand;
+            });
+        }
+
 
         $nonAlcoholBrands = BrandNonAlcohol::all()->map(function ($brand) {
             return [

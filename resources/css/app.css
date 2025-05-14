@@ -135,7 +135,7 @@
     }
 
     .swiper-maps-controls{
-        @apply flex justify-center items-center px-4 py-2;
+        @apply relative flex justify-center items-center px-4 py-2;
     }
 
     .career-filter-card{
@@ -226,6 +226,18 @@
 
 .swiper-maps-controls .swiper-pagination-bullet.swiper-pagination-bullet-active{
     @apply bg-gray-800 opacity-100 w-3.5 h-3.5;
+}
+
+.swiper-maps-controls .swiper-button-next{
+    @apply relative inset-auto object-center translate-y-2.5 cursor-pointer select-none transform;
+}
+.swiper-maps-controls .swiper-button-prev{
+    @apply relative inset-auto object-center translate-y-2.5 cursor-pointer select-none transform;
+}
+
+.swiper-maps-controls .swiper-button-next::after,
+.swiper-maps-controls .swiper-button-prev::after{
+    @apply hidden;
 }
 
 

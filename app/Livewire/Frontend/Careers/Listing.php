@@ -139,6 +139,12 @@ class Listing extends Component
         $this->getFilteredListings();
     }
 
+    #[Computed()]
+    public function hasFilters()
+    {
+        return !empty($this->selectedDepartment) || !empty($this->stateSelected) || !empty($this->levelSelected);
+    }
+
 
     public function mount()
     {

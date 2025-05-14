@@ -150,14 +150,15 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="flex justify-center items-center mt-10 lg:mt-20">
+
+        <div class="flex justify-center items-center mt-10 lg:mt-20">
             <a href="#" class="text-center underline hover:no-underline"
                 x-on:click.prevent="confirm('Are you sure you want to remove all filters?') ? @this.removeFilters() : null"
+                x-show="$wire.selectedDepartment.length > 0 || $wire.stateSelected.length > 0 || $wire.levelSelected.length > 0"
             >
                 Remove Filters
             </a>
-        </div> --}}
-
+        </div>
     </div>
 
     <div class="overflow-auto w-full px-4 lg:px-0 border-b">

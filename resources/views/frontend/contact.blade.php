@@ -86,17 +86,17 @@
             </div>
         </div>
         <div class="swiper-maps-controls">
-            {{-- <div class="swiper-button-prev swiper-maps-button-prev cursor-pointer">
+            <div class="swiper-button-prev swiper-maps-button-prev cursor-pointer">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1215 18.5001H29.0002V21.5001H16.1215L21.0609 26.4395L18.9396 28.5608L10.3789 20.0001L18.9396 11.4395L21.0609 13.5608L16.1215 18.5001Z" fill="#999999"/>
                 </svg>
-            </div> --}}
+            </div>
             <div class="swiper-pagination swiper-maps-pagination"></div>
-            {{-- <div class="swiper-button-next swiper-maps-button-next cursor-pointer">
+            <div class="swiper-button-next swiper-maps-button-next cursor-pointer">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M23.478 21.5568H10.9243V18.4428H23.478L18.6633 13.3157L20.7311 11.1138L29.0757 19.9998L20.7311 28.8858L18.6633 26.6838L23.478 21.5568V21.5568Z" fill="#999999"/>
                 </svg>
-            </div> --}}
+            </div>
         </div>
 
     </div>
