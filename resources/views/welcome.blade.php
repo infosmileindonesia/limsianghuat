@@ -78,15 +78,15 @@
 
                             <div class="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-2.5 max-w-3/5 lg:max-w-none mx-auto">
                                 <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
-                                    <img src="{{ asset('img/icons/Arhive_fill.png') }}" alt="">
+                                    <img class="w-16 h-16" src="{{ asset('img/icons/Icon-Archive.png') }}" alt="">
                                     <p class="text-lg text-center leading-[22px]">work with <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">passion</span></p>
                                 </div>
                                 <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
-                                    <img src="{{ asset('img/icons/Check_round_fill.png') }}" alt="">
+                                    <img class="w-16 h-16" src="{{ asset('img/icons/Icon-Check-Round.png') }}" alt="">
                                     <p class="text-lg text-center leading-[22px]"><span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">value & respect</span> <br> our relations </p>
                                 </div>
                                 <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
-                                    <img src="{{ asset('img/icons/Group_fill.png') }}" alt="">
+                                    <img class="w-16 h-16" src="{{ asset('img/icons/Icon-Group.png') }}" alt="">
                                     <p class="text-lg text-center leading-[22px]">strength of <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">Teamwork</span></p>
                                 </div>
                             </div>
