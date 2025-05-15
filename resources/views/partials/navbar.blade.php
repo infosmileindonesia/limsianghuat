@@ -1,7 +1,7 @@
 {{-- filepath: d:\PersonalFolder\Freel\LIMSIANGHUAT\web_folder\resources\views\partials\navbar.blade.php --}}
 <header x-data="{ open: false }">
 
-    <div class="container relative items-center min-h-[100px] mx-auto py-4 flex flex-col md:flex-row justify-center">
+    <div class="container relative items-center min-h-[121px] mx-auto lg:py-4 flex flex-col md:flex-row justify-center">
         <!-- Logo Section -->
         <div class="flex justify-center items-center h-full mb-0 lg:mb-4 md:absolute md:top-0 md:left-0 md:bottom-0 md:self-center md:grid md:place-items-center">
             <a href="#">

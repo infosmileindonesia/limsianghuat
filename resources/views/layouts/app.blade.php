@@ -139,11 +139,11 @@
 
                 <div class="flex justify-between items-center container mx-auto py-5">
                     <div>
-                        <p class="text-[#868686] ">Copyright © Lim Siang Huat {{ date('Y') }}.</p>
+                        <p class="text-[#868686]">Copyright © Lim Siang Huat {{ date('Y') }}.</p>
                     </div>
 
                     <div>
-                        <p class="text-[#868686] ">LSH Global Website</p>
+                        <p class="text-[#868686]"><a href="https://lshworld.com">LSH Global Website</a></p>
                     </div>
                 </div>
 
