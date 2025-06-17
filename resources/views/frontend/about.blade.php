@@ -24,40 +24,40 @@
         />
 
 
-    <div class="container mx-auto pt-10 pb-14 lg:pb-28">
-        <h1 class="section-title text-center mb-8">Connecting Brands to Consumer.</h1>
-        <p class="text-center text-2xl mb-10">Our mission are to do every work with <span class="font-bold italic">passion</span>, <span class="font-bold italic">value</span> and <span class="font-bold italic">respect</span> the relationship <br> with brand owners and customers, <span class="font-bold italic">believe</span> in the strength of teamwork.</p>
+    <div class="mx-auto pt-10 pb-14 lg:pb-28 container">
+        <h1 class="mb-8 text-center section-title">Connecting Brands to Consumer.</h1>
+        <p class="mb-10 text-2xl text-center">Our mission are to do every work with <span class="font-bold italic">passion</span>, <span class="font-bold italic">value</span> and <span class="font-bold italic">respect</span> the relationship <br> with brand owners and customers, <span class="font-bold italic">believe</span> in the strength of teamwork.</p>
 
-        <div class="lg:grid md:items-center md:flex flex-wrap justify-center lg:grid-cols-5 md:gap-3 lg:gap-0 mt-4 lg:mt-8">
+        <div class="md:flex flex-wrap justify-center md:items-center md:gap-3 lg:gap-0 lg:grid lg:grid-cols-5 mt-4 lg:mt-8">
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
-                <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
+                <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
                 </div>
                 <p class="text-center"><strong>Years</strong><br> <small>of experience</small></p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
-                <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
-                    <span class="relative" data-counter data-counter-end="15" data-counter-start="0" data-counter-duration="500">15</span>
-                </div>
-                <p class="text-center"><strong>Company</strong><br> <small>as our principal</small></p>
-            </div>
-            <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
-                <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
-                    <span class="relative" data-counter data-counter-end="100" data-counter-start="0" data-counter-duration="500">100</span>
+                <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
+                    <span class="relative" data-counter data-counter-end="100" data-counter-start="0" data-counter-duration="500">200</span>
                 </div>
                 <p class="text-center"><strong>SKUs</strong> <br> <small>that we distribute</small></p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
-                <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
-                    <span class="relative" data-counter data-counter-end="200" data-counter-start="0" data-counter-duration="500">200</span>
+                <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
+                    <span class="relative" data-counter data-counter-end="10000" data-counter-start="0" data-counter-duration="500">10000</span>
                 </div>
-                <p class="text-center"><strong>Outlets</strong><br> <small>that we connect with</small></p>
+                <p class="text-center"><strong>Outlets</strong><br> <small>that we serve directly</small></p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
-                <div class="text-6xl font-bold text-red-500 flex items-center space-x-2">
-                    <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
+                <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
+                    <span class="relative" data-counter data-counter-end="15" data-counter-start="0" data-counter-duration="500">15</span>
                 </div>
-                <p class="text-center"><strong>Provinces</strong> <br> <small>of active market</small></p>
+                <p class="text-center"><strong>Company</strong><br> <small class="text-red-500">as our principal</small></p>
+            </div>
+            <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
+                <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
+                    <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">11</span>
+                </div>
+                <p class="text-center"><strong>Cities</strong> <br> <small>of active distribution</small></p>
             </div>
         </div>
     </div>
@@ -65,47 +65,47 @@
 
 <section class="bg-black py-10 lg:py-14" id="about-why">
 
-    <div class="container mx-auto px-2 lg:px-0">
-        <h2 class="text-center text-6xl text-white font-semibold">Why <span class="font-bold">Lim Siang Huat ?</span></h2>
-        <p class="text-white text-center mt-4 text-2xl">Several key factors distinguish us as the <span class="font-semibold italic">preferred choice</span> to fulfill your requirements.</p>
+    <div class="mx-auto px-2 lg:px-0 container">
+        <h2 class="font-semibold text-white text-6xl text-center">Why <span class="font-bold">Lim Siang Huat ?</span></h2>
+        <p class="mt-4 text-white text-2xl text-center">Several key factors distinguish us as the <span class="font-semibold italic">preferred choice</span> to fulfill your requirements.</p>
 
-        <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 mt-12" data-animate-view data-animate-target=".card-why">
+        <div class="gap-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12" data-animate-view data-animate-target=".card-why">
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">01</h3>
-                    <p class="text-4xl font-bold text-red-500">LSH's DNA</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">01</h3>
+                    <p class="font-bold text-red-500 text-4xl">LSH's DNA</p>
                     <p class="text-center">Distribution is in <br>
                         LSH’s DNA.</p>
                 </div>
             </div>
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">02</h3>
-                    <p class="text-4xl font-bold text-red-500">Network</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">02</h3>
+                    <p class="font-bold text-red-500 text-4xl">Network</p>
                     <p class="text-center">Ready in micro <br>
                         distribution network.</p>
                 </div>
             </div>
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">03</h3>
-                    <p class="text-4xl font-bold text-red-500">Working System</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">03</h3>
+                    <p class="font-bold text-red-500 text-4xl">Working System</p>
                     <p class="text-center">Work with system, neat,<br>
                         and documented.</p>
                 </div>
             </div>
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">04</h3>
-                    <p class="text-4xl font-bold text-red-500">Infrastructure</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">04</h3>
+                    <p class="font-bold text-red-500 text-4xl">Infrastructure</p>
                     <p class="text-center">Ready infrastructure to reach <br>
                         local and national market.</p>
                 </div>
             </div>
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">05</h3>
-                    <p class="text-4xl font-bold text-red-500">Channel</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">05</h3>
+                    <p class="font-bold text-red-500 text-4xl">Channel</p>
                     <p class="text-center">We know the strategy to <br>
                         introduce the products <br>
                         to the market.</p>
@@ -113,8 +113,8 @@
             </div>
             <div>
                 <div class="card-why">
-                    <h3 class="text-white text-5xl text-center font-black text-outline">06</h3>
-                    <p class="text-4xl font-bold text-red-500">Experienced</p>
+                    <h3 class="text-outline font-black text-white text-5xl text-center">06</h3>
+                    <p class="font-bold text-red-500 text-4xl">Experienced</p>
                     <p class="text-center">Dedicated field force for <br>
                         different types of market <br>
                         channels.</p>
@@ -126,13 +126,13 @@
 
 <section class="relative">
 
-    <div class="container mx-auto my-10 lg:my-24 space-y-5 px-2 lg:px-0 relative">
+    <div class="relative space-y-5 mx-auto my-10 lg:my-24 px-2 lg:px-0 container">
         <p class="text-2xl text-center">TESTIMONIALS</p>
-        <h2 class="section-title text-center">Words From Principals</h2>
+        <h2 class="text-center section-title">Words From Principals</h2>
 
         <div class="p-0 lg:p-12">
 
-            <div class="swiper testimonial-swiper bg-neutral-100 rounded lg:rounded-4xl shadow lg:shadow-2xl">
+            <div class="bg-neutral-100 shadow lg:shadow-2xl rounded lg:rounded-4xl swiper testimonial-swiper">
                 <div class="swiper-wrapper">
                     @php
 
@@ -142,23 +142,23 @@
 
                     @if ($testiCount > 0)
                         @foreach ($testimonials as $testimonial)
-                            <div class="swiper-slide px-2 py-5 lg:py-10">
-                                <div class=" pt-7 lg:pt-14 pl-4 lg:pl-16 pr-4 lg:pr-9 pb-8 lg:pb-16">
-                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 overflow-hidden">
+                            <div class="px-2 py-5 lg:py-10 swiper-slide">
+                                <div class="pt-7 lg:pt-14 pr-4 lg:pr-9 pb-8 lg:pb-16 pl-4 lg:pl-16">
+                                    <div class="gap-x-24 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
                                         <div>
-                                            <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full h-auto max-w-11/12" alt="">
+                                            <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full max-w-11/12 h-auto" alt="">
                                         </div>
 
-                                        <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex-col flex space-y-36 justify-between">
+                                        <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex flex-col justify-between space-y-36">
                                             <p class="text-2xl">
                                                 “{{ $testimonial->content }}”
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-y-0 gap-y-4 lg:gap-x-24 mt-12 lg:mt-36 overflow-hidden">
+                                    <div class="gap-x-0 gap-y-4 lg:gap-x-24 lg:gap-y-0 grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-36 overflow-hidden">
                                         <div class="flex items-center gap-x-8 overflow-hidden">
                                             <div class="relative flex-1">
-                                                <span class="w-full h-px bg-black absolute inset-0 -translate-y-1/2"></span>
+                                                <span class="absolute inset-0 bg-black w-full h-px -translate-y-1/2"></span>
                                             </div>
                                             <div class="text-gray-400">
                                                 <span class="text-black" data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%">{{ $loop->iteration }}</span> / {{ $testiCount }}
@@ -183,14 +183,14 @@
 
                         @for ($i = 1; $i <= $testiCount; $i++)
 
-                        <div class="swiper-slide px-2 py-5 lg:py-10">
-                            <div class=" pt-7 lg:pt-14 pl-4 lg:pl-16 pr-4 lg:pr-9 pb-8 lg:pb-16">
-                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 overflow-hidden">
+                        <div class="px-2 py-5 lg:py-10 swiper-slide">
+                            <div class="pt-7 lg:pt-14 pr-4 lg:pr-9 pb-8 lg:pb-16 pl-4 lg:pl-16">
+                                <div class="gap-x-24 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
                                     <div>
-                                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full h-auto max-w-11/12" alt="">
+                                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full max-w-11/12 h-auto" alt="">
                                     </div>
 
-                                    <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex-col flex space-y-36 justify-between">
+                                    <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex flex-col justify-between space-y-36">
                                         <p class="text-2xl">“We are grateful for choosing LSH as our
                                             product distributor, as they have
                                             consistently demonstrated outstanding
@@ -198,10 +198,10 @@
 
                                     </div>
                                 </div>
-                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-y-0 gap-y-4 lg:gap-x-24 mt-12 lg:mt-36 overflow-hidden">
+                                <div class="gap-x-0 gap-y-4 lg:gap-x-24 lg:gap-y-0 grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-36 overflow-hidden">
                                     <div class="flex items-center gap-x-8 overflow-hidden">
                                         <div class="relative flex-1">
-                                            <span class="w-full h-px bg-black absolute inset-0 -translate-y-1/2"></span>
+                                            <span class="absolute inset-0 bg-black w-full h-px -translate-y-1/2"></span>
                                         </div>
                                         <div class="text-gray-400">
                                             <span class="text-black" data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%">{{ $i }}</span> / {{ $testiCount }}
@@ -233,18 +233,18 @@
 
     </div>
 
-    <div class="container mx-auto mt-10 lg:mt-24 px-2 lg:px-0">
+    <div class="mx-auto mt-10 lg:mt-24 px-2 lg:px-0 container">
         <h2 class="section-title">Achievement</h2>
     </div>
 
-    <div class="w-full lg:w-1/2 mb-24 ml-0 lg:ml-auto px-2 lg:px-0">
+    <div class="mb-24 ml-0 lg:ml-auto px-2 lg:px-0 w-full lg:w-1/2">
 
         <div class="swiper half-wrapper-swiper">
             <div class="swiper-wrapper">
                 @for ($i = 1; $i <= 5; $i++)
-                <div class="swiper-slide px-2 py-10">
-                    <div class="bg-neutral-100 rounded-4xl shadow-xl p-8 aspect-[3/4] max-w-none w-full lg:max-w-[341px]">
-                        <h3 class="text-2xl font-bold">Slide {{ $i }}</h3>
+                <div class="px-2 py-10 swiper-slide">
+                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
+                        <h3 class="font-bold text-2xl">Slide {{ $i }}</h3>
                         <p class="mt-4">This is the content of slide {{ $i }}.</p>
                     </div>
                 </div>
@@ -255,8 +255,8 @@
 
     </div>
 
-    <div class="container mx-auto absolute -bottom-4 lg:bottom-0  inset-x-0">
-        <div class="flex space-x-10 max-w-none justify-center lg:justify-start lg:max-w-md swiper-half-button-navigation-wrapper">
+    <div class="-bottom-4 lg:bottom-0 absolute inset-x-0 mx-auto container">
+        <div class="flex justify-center lg:justify-start space-x-10 max-w-none lg:max-w-md swiper-half-button-navigation-wrapper">
 
             {{-- arrow button for achievement slider --}}
             <div class="swiper-button-prev swiper-button-prev-half-wrapper-swiper">

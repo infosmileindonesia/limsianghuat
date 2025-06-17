@@ -7,6 +7,8 @@ use App\Models\BrandAlcohol;
 use App\Models\BrandNonAlcohol;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 class FrontendPageController extends Controller
 {
@@ -151,6 +153,22 @@ class FrontendPageController extends Controller
     public function careers()
     {
         return view('frontend.careers');
+    }
+
+    public function setLocale($locale)
+    {
+
+        if (in_array($locale, ['en', 'zh_TW'])) {
+
+            App::setLocale($locale);
+            session(['locale' => $locale]);
+        } else {
+            return redirect()->back()->with('error', 'Invalid locale selected.');
+        }
+
+        ResponseCache::clear();
+
+        return redirect()->back();
     }
 
 }

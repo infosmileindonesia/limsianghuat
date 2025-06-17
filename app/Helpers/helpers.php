@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 if (!function_exists('isActiveRoute')) {
     /**
@@ -131,5 +133,18 @@ if (!function_exists('dummyAlcoholBrand')) {
         });
 
         return $categories;
+    }
+}
+
+if (!function_exists('isLocaleCurrent')) {
+    /**
+     * Check if the given locale is the current application locale.
+     *
+     * @param string $locale
+     * @return bool
+     */
+    function isLocaleCurrent(string $locale): bool
+    {
+        return app()->isLocale($locale);
     }
 }

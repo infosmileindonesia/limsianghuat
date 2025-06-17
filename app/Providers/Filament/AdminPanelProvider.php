@@ -9,6 +9,7 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\SpatieLaravelTranslatablePlugin;
 use Filament\Support\Colors\Color;
 use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -24,6 +25,9 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->plugin(SpatieLaravelTranslatablePlugin::make()
+                ->defaultLocales(['en', 'zh_TW'])
+            )
             ->id('admin')
             ->path('admin')
             ->login()

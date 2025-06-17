@@ -22,29 +22,29 @@
                 @if ($banners)
 
                     @foreach ($banners as $banner)
-                        <div class="swiper-slide relative">
-                            <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                        <div class="relative swiper-slide">
+                            <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}" class="w-full object-cover aspect-square xl:aspect-[4/2]">
                             <div class="banner-title">
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! nl2br($banner->title) !!}</span>
-                                <a href="{{ $banner->url }}" class="btn-learn-more-banner">LEARN MORE</a>
+                                <a href="{{ $banner->url }}" class="btn-learn-more-banner">{{ $banner->button_text }}</a>
                             </div>
                         </div>
                     @endforeach
 
                 @else
                     <!-- Slide 1 -->
-                    <div class="swiper-slide relative">
-                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 1" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                    <div class="relative swiper-slide">
+                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 1" class="w-full object-cover aspect-square xl:aspect-[4/2]">
                         <div class="banner-title">
-                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
-                            <a href="#" class="btn-learn-more-banner">EXPLORE MORE</a>
+                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! __('contents.banners.banner_1') !!} </span>
+                            <a href="#" class="btn-learn-more-banner">LEARN MORE</a>
                         </div>
                     </div>
                     <!-- Slide 2 -->
-                    <div class="swiper-slide relative">
-                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 2" class="w-full aspect-square xl:aspect-[4/2] object-cover">
+                    <div class="relative swiper-slide">
+                        <img src="{{ asset('img/placeholder/hero.jpg') }}" alt="Hero Image 2" class="w-full object-cover aspect-square xl:aspect-[4/2]">
                         <div class="banner-title">
-                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">GLOBALLY ALIGNED, <br>INDONESIAN ROOTED </span>
+                            <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! __('contents.banners.banner_1') !!} </span>
                             <a href="#" class="btn-learn-more-banner">LEARN MORE</a>
                         </div>
                     </div>
@@ -54,40 +54,41 @@
     </section>
 
     <section class="pt-12 pb-10">
-        <div class="container mx-auto px-2 lg:px-0">
-            <div class="font-semibold text-2xl text-left pb-5 relative">
+        <div class="mx-auto px-2 lg:px-0 container">
+            <div class="relative pb-5 font-semibold text-2xl text-left">
                 <p>
-                    <span>At Lim Siang Huat</span> <br>
-                    <span>We're a partner in your success.</span>
+                    @lang('contents.home.whoarewe_header')
                 </p>
 
-                <div class="absolute inset-0 bg-red-500 h-1 w-48 mt-auto"></div>
+                <div class="absolute inset-0 bg-red-500 mt-auto w-48 h-1"></div>
             </div>
         </div>
 
-        <div class="container mx-auto mt-10">
+        <div class="mx-auto mt-10 container">
             <div class="grid grid-cols-1 lg:grid-cols-5 min-h-[572px]">
-                <div class="relative h-full col-span-3">
+                <div class="relative col-span-3 h-full">
 
-                    <div class="relative lg:absolute lg:pl-10 py-10 bg-[#F2F2F2] lg:inset-0 lg:w-[108%] lg:rounded-2xl h-min ">
-                        <div class="max-w-none xl:max-w-[74%] space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0">
-                            <p class="text-2xl">WHO WE ARE</p>
-                            <h1 class="text-5xl font-semibold leading-16">F&B Distributor Since <span class="italic text-red-500 text-5xl font-bold">2002</span></h1>
-                            <p>We are passionate about connecting high-quality food and beverage products with businesses that share our commitment to excellence.</p>
-                            <p class="font-bold underline text-lg mb-5">We Commit to These Values</p>
+                    <div class="lg:absolute relative lg:inset-0 bg-[#F2F2F2] py-10 lg:pl-10 lg:rounded-2xl lg:w-[108%] h-min">
+                        <div class="space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0 max-w-none xl:max-w-[74%]">
+                            <p class="text-2xl">@lang('contents.home.whoarewe_title')</p>
+                            <h1 class="home--whoarewe-subtitle">@lang('contents.home.whoarewe_subtitle')</h1>
+                            {{-- <p>We are passionate about connecting high-quality food and beverage products with businesses that share our commitment to excellence.</p> --}}
+                            <p class="mb-5 font-bold text-lg underline">
+                                @lang('contents.home.whoarewe_description_2')
+                            </p>
 
-                            <div class="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-2.5 max-w-3/5 lg:max-w-none mx-auto">
-                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
+                            <div class="gap-2.5 grid lg:grid-cols-2 xl:grid-cols-3 mx-auto w-full max-w-3/5 lg:max-w-none">
+                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Archive.png') }}" alt="">
-                                    <p class="text-lg text-center leading-[22px]">work with <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">passion</span></p>
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.integration') !!}</p>
                                 </div>
-                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
+                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Check-Round.png') }}" alt="">
-                                    <p class="text-lg text-center leading-[22px]"><span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">value & respect</span> <br> our relations </p>
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.respect') !!}</p>
                                 </div>
-                                <div class="flex flex-col gap-2 items-center px-4 pb-4 pt-4 bg-white rounded-4xl shadow-2xl">
+                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Group.png') }}" alt="">
-                                    <p class="text-lg text-center leading-[22px]">strength of <br> <span class="leading-5 text-2xl font-bold text-red-500 uppercase italic">Teamwork</span></p>
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.teamwork') !!}</p>
                                 </div>
                             </div>
 
@@ -95,15 +96,15 @@
                     </div>
 
                 </div>
-                <div class="relative h-full col-span-2">
-                    <div class="relative lg:absolute lg:bottom-[-2px] pt-10 lg:ml-[-19%]">
-                        <div class="lg:w-max lg:h-max relative group overflow-hidden rounded-none lg:rounded-4xl cursor-pointer">
-                            <img src="{{ asset('img/placeholder/Industrial.png') }}" alt="" class="w-auto mr-auto group-hover:scale-110 group-hover:-translate-x-1 group-hover:translate-y-1 transition-all duration-500 ease-in-out">
+                <div class="relative col-span-2 h-full">
+                    <div class="lg:bottom-[-2px] lg:absolute relative lg:ml-[-19%] pt-10">
+                        <div class="group relative rounded-none lg:rounded-4xl lg:w-max lg:h-max overflow-hidden cursor-pointer">
+                            <img src="{{ asset('img/placeholder/Industrial.png') }}" alt="" class="mr-auto w-auto group-hover:scale-110 transition-all group-hover:-translate-x-1 group-hover:translate-y-1 duration-500 ease-in-out">
 
-                            <div class="absolute lg:top-0 lg:right-0">
+                            <div class="lg:top-0 lg:right-0 absolute">
                                 <div class="w-max-h-max">
                                     <span>
-                                        <img src="{{ asset('img/icons/play-youtube.png') }}" alt="" class="shadow-2xl group-hover:scale-125 group-hover:-translate-x-1.5 group-hover:translate-y-1.5 delay-300 transition-all duration-500 ease-in-out">
+                                        <img src="{{ asset('img/icons/play-youtube.png') }}" alt="" class="shadow-2xl group-hover:scale-125 transition-all group-hover:-translate-x-1.5 group-hover:translate-y-1.5 duration-500 ease-in-out delay-300">
                                     </span>
                                 </div>
 
@@ -114,12 +115,11 @@
             </div>
         </div>
 
-        <div class="container mx-auto mt-16 lg:mt-36 space-y-5 px-2 lg:px-0">
-            <p class="text-2xl text-center">DISTRIBUTION</p>
-            <h2 class="section-title text-center">Present in Key Provinces, <br>
-                Dedicated to <span class="italic text-red-500 font-bold">Serving You</span>.</h2>
-                <p class="text-center text-xl">Over the past 20 years, LSH Indonesia has expanded into five different cities <br>
-                    and continues to grow, establishing a strong presence throughout the country.</p>
+        <div class="space-y-5 mx-auto mt-16 lg:mt-36 px-2 lg:px-0 container">
+            {{-- <p class="text-2xl text-center">DISTRIBUTION</p> --}}
+            <p class="text-2xl text-center">@lang('contents.home.route_header')</p>
+            <h2 class="text-center section-title home--route_title">{!! __('contents.home.route_title') !!}</h2>
+                <p class="text-xl text-center">{{ __('contents.home.route_subtitle') }}</p>
 
                 <div class="relative mt-9">
                     <img src="{{ asset('img/placeholder/maps.png') }}" class="w-full h-auto" alt="">
@@ -156,15 +156,15 @@
                                 </circle>
 
                                 <!-- Sulawesi 1 -->
-                                <circle cx="645" cy="185" r="7" fill="#E31D1C" />
+                                {{-- <circle cx="645" cy="185" r="7" fill="#E31D1C" />
                                 <circle cx="645" cy="185" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
-                                </circle>
+                                </circle> --}}
 
                                 <!-- Sulawesi 2 -->
-                                <circle cx="665" cy="240" r="7" fill="#E31D1C" />
-                                <circle cx="665" cy="240" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                <circle cx="665" cy="240" r="9" fill="#E31D1C" />
+                                <circle cx="665" cy="240" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
@@ -175,9 +175,9 @@
                 </div>
 
                 {{-- Learn More Button --}}
-                <a href="{{ route('distribution') }}#channel" class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max mx-auto mt-9">
+                <a href="{{ route('distribution') }}#channel" class="flex items-center mx-auto mt-9 py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
                     <span class="font-medium">
-                        Learn More
+                        @lang('contents.generals.learn_more')
                     </span>
 
                     <span class="inline-block ml-2">
@@ -189,11 +189,12 @@
                 </a>
         </div>
 
-        <div class="container mx-auto mt-10 lg:mt-36 space-y-5">
-            <h2 class="text-center section-title">We <span class="italic text-red-500 font-bold">Know the Route</span>, <br>
-                We Understand the Channels.</h2>
-            <p class="text-center text-xl">
-                With strong access to General Trade, Modern Trade, and HoReCa, <br> we ensure your products reach key markets efficiently and effectively.
+        <div class="space-y-5 mx-auto mt-10 lg:mt-36 container">
+            <h2 class="text-center section-title home--distribution_title">
+                {!! __('contents.home.distribution_title') !!}
+            </h2>
+            <p class="text-xl text-center">
+                @lang('contents.home.distribution_subtitle')
             </p>
 
 
@@ -204,16 +205,16 @@
                         <div class="distribution-card">
                             <div class="distribution-body">
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
-                                    class="text-red-500 italic text-xl">01</span>
+                                    class="text-red-500 text-xl italic">01</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="text-6xl font-semibold leading-16">Hotel <br>
-                                    Restaurant <br>
-                                    Cafe </h5>
+                                    class="font-semibold text-6xl leading-16">
+                                    {!! __('contents.home.distribution_items.horeca') !!}
+                                </h5>
                                 <a href="{{ route('distribution') }}#hotel-restaurant-cafe" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
+                                    class="flex items-center py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
                                     <span class="font-normal text-2xl">
-                                        Discover More
+                                        @lang('contents.generals.discover_button')
                                     </span>
 
                                     <span class="inline-block ml-2">
@@ -231,7 +232,7 @@
                             <div class="distribution-body-carousel">
                                 <div class="w-full h-full">
                                     {{-- add more swiper --}}
-                                    <div data-swiper="bulkswiper" class="swiper swiper-dis-content-0"
+                                    <div data-swiper="bulkswiper" class="swiper-dis-content-0 swiper"
                                         data-class-name="swiper-dis-content-0">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -254,7 +255,7 @@
                                 <!-- Add Pagination -->
                                 <x-frontend.utils.arrow-prev className="left-arrow-swiper left-arrow-swiper-dis-content-0" />
                                 <x-frontend.utils.arrow-next className="right-arrow-swiper right-arrow-swiper-dis-content-0" />
-                                <div class="swiper-pagination pagination-swiper-dis-content-0"></div>
+                                <div class="pagination-swiper-dis-content-0 swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
@@ -264,15 +265,16 @@
                         <div class="distribution-card">
                             <div class="distribution-body">
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
-                                    class="text-red-500 italic text-xl">02</span>
+                                    class="text-red-500 text-xl italic">02</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="text-6xl font-semibold leading-16">General <br>
-                                    Trade</h5>
+                                    class="font-semibold text-6xl leading-16">
+                                    {!! __('contents.home.distribution_items.modern_trade') !!}
+                                </h5>
                                 <a href="{{ route('distribution') }}#general-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
+                                    class="flex items-center py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
                                     <span class="font-normal text-2xl">
-                                        Discover More
+                                        @lang('contents.generals.discover_button')
                                     </span>
 
                                     <span class="inline-block ml-2">
@@ -288,9 +290,9 @@
                                 </a>
                             </div>
                             <div class="distribution-body-carousel">
-                                <div class="w-full h-full relative">
+                                <div class="relative w-full h-full">
                                     {{-- add more swiper --}}
-                                    <div data-swiper="bulkswiper" class="swiper swiper-dis-content-1"
+                                    <div data-swiper="bulkswiper" class="swiper-dis-content-1 swiper"
                                         data-class-name="swiper-dis-content-1">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -309,7 +311,7 @@
                                     </div>
 
                                 </div>
-                                <div class="swiper-pagination pagination-swiper-dis-content-1"></div>
+                                <div class="pagination-swiper-dis-content-1 swiper-pagination"></div>
                                 <x-frontend.utils.arrow-prev className="left-arrow-swiper left-arrow-swiper-dis-content-1" />
                                 <x-frontend.utils.arrow-next className="right-arrow-swiper right-arrow-swiper-dis-content-1" />
                             </div>
@@ -321,15 +323,16 @@
                         <div class="distribution-card">
                             <div class="distribution-body">
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
-                                    class="text-red-500 italic text-xl">03</span>
+                                    class="text-red-500 text-xl italic">03</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="text-6xl font-semibold leading-16">Modern <br>
-                                    Trade</h5>
+                                    class="font-semibold text-6xl leading-16">
+                                    {!! __('contents.home.distribution_items.general_trade') !!}
+                                </h5>
                                 <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="rounded-full pl-5 pr-2 py-1 border border-slate-600 flex items-center w-max">
+                                    class="flex items-center py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
                                     <span class="font-normal text-2xl">
-                                        Discover More
+                                        @lang('contents.generals.discover_button')
                                     </span>
 
                                     <span class="inline-block ml-2">
@@ -345,9 +348,9 @@
                                 </a>
                             </div>
                             <div class="distribution-body-carousel">
-                                <div class="w-full h-full relative">
+                                <div class="relative w-full h-full">
                                     {{-- add more swiper --}}
-                                    <div data-swiper="bulkswiper" class="swiper swiper-dis-content-2"
+                                    <div data-swiper="bulkswiper" class="swiper-dis-content-2 swiper"
                                         data-class-name="swiper-dis-content-2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -365,7 +368,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-pagination pagination-swiper-dis-content-2"></div>
+                                <div class="pagination-swiper-dis-content-2 swiper-pagination"></div>
                                 <x-frontend.utils.arrow-prev className="left-arrow-swiper left-arrow-swiper-dis-content-2" />
                                 <x-frontend.utils.arrow-next className="right-arrow-swiper right-arrow-swiper-dis-content-2" />
                             </div>

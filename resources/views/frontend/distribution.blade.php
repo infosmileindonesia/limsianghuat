@@ -12,12 +12,12 @@
         :title="'Distribution'"
     />
 
-    <div class="container mx-auto py-10" id="channel">
-        <p class="text-center mt-4 text-2xl">Our company have been continuosly develop and expand into different cities in <br>
+    <div class="mx-auto py-10 container" id="channel">
+        <p class="mt-4 text-2xl text-center">Our company have been continuosly develop and expand into different cities in <br>
             Indonesia to create wider connection with restaurants, hotels, supermarkets, bars, <br>
             night clubs and individual consumers. </p>
 
-            <div class="relative lg:mt-9 mt-4" id="map-parent">
+            <div class="relative mt-4 lg:mt-9" id="map-parent">
                 <img src="{{ asset('img/placeholder/maps.png') }}" class="w-full h-auto" alt="">
 
                 <div class="absolute inset-0">
@@ -79,7 +79,7 @@
                                     d="M487.478 325.55C488.218 325.55 488.865 325.693 489.418 325.98C489.978 326.26 490.408 326.667 490.708 327.2C491.015 327.727 491.168 328.343 491.168 329.05C491.168 329.757 491.015 330.37 490.708 330.89C490.408 331.41 489.978 331.81 489.418 332.09C488.865 332.363 488.218 332.5 487.478 332.5H485.208V325.55H487.478ZM487.478 331.57C488.291 331.57 488.915 331.35 489.348 330.91C489.781 330.47 489.998 329.85 489.998 329.05C489.998 328.243 489.781 327.613 489.348 327.16C488.915 326.707 488.291 326.48 487.478 326.48H486.348V331.57H487.478Z"
                                     fill="black" />
                             </g>
-                            <g id="Area 5"
+                            {{-- <g id="Area 5"
                                 class="cursor-pointer"
                                 data-pointer="sulawesi-1"
                             >
@@ -92,7 +92,7 @@
                                 <path id="E"
                                     d="M644.268 165.97V168.01H646.668V168.94H644.268V171.07H646.968V172H643.128V165.04H646.968V165.97H644.268Z"
                                     fill="black" />
-                            </g>
+                            </g> --}}
                             <g id="Area 6"
                                 class="cursor-pointer"
                                 data-pointer="sulawesi-2"
@@ -149,20 +149,20 @@
             </div>
     </div>
 
-    <div class="container mx-auto py-10" id="distribution">
-        <h2 class="section-title-lg text-center mt-10 mb-10">Unlocking Opportunities, <br>
+    <div class="mx-auto py-10 container" id="distribution">
+        <h2 class="mt-10 mb-10 text-center section-title-lg">Unlocking Opportunities, <br>
             Expanding Your Reach.</h2>
 
         <div class="accordions"
             x-data="{accordionActive: 1}"
             >
 
-            <div class="accordion-item bg-zinc-100"
+            <div class="bg-zinc-100 accordion-item"
                 id="hotel-restaurant-cafe"
                 :class="{ 'accordion-active' : accordionActive === 1}">
-                <div class="accordion-header group" @click="accordionActive = accordionActive === 1 ? 0 : 1">
-                    <h3 class="accordion-title group-hover:underline">Hotel Restaurant Cafe</h3>
-                    <div class="accordion-subtitle group-hover:underline">
+                <div class="group accordion-header" @click="accordionActive = accordionActive === 1 ? 0 : 1">
+                    <h3 class="group-hover:underline accordion-title">Hotel Restaurant Cafe</h3>
+                    <div class="group-hover:underline accordion-subtitle">
                         Connecting you with restaurants, hotels, and cafés for maximum exposure.
                     </div>
                 </div>
@@ -180,18 +180,18 @@
 
                             <div class="products-list">
 
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
 
                             </div>
 
@@ -200,12 +200,12 @@
                 </div>
             </div>
 
-            <div class="accordion-item bg-stone-200"
+            <div class="bg-stone-200 accordion-item"
                 id="general-trade"
                 :class="{ 'accordion-active' : accordionActive === 2}">
-                <div class="accordion-header group" @click="accordionActive = accordionActive === 2 ? 0 : 2">
-                    <h3 class="accordion-title group-hover:underline">General Trade</h3>
-                    <div class="accordion-subtitle group-hover:underline">
+                <div class="group accordion-header" @click="accordionActive = accordionActive === 2 ? 0 : 2">
+                    <h3 class="group-hover:underline accordion-title">General Trade</h3>
+                    <div class="group-hover:underline accordion-subtitle">
                         Connecting you with retailers and businesses that expand your reach.
                     </div>
                 </div>
@@ -223,18 +223,18 @@
 
                             <div class="products-list">
 
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
 
                             </div>
 
@@ -243,12 +243,12 @@
                 </div>
             </div>
 
-            <div class="accordion-item bg-neutral-300"
+            <div class="bg-neutral-300 accordion-item"
                 id="modern-trade"
                 :class="{ 'accordion-active' : accordionActive === 3}">
-                <div class="accordion-header group" @click="accordionActive = accordionActive === 3 ? 0 : 3">
-                    <h3 class="accordion-title group-hover:underline">Modern Trade</h3>
-                    <div class="accordion-subtitle group-hover:underline">
+                <div class="group accordion-header" @click="accordionActive = accordionActive === 3 ? 0 : 3">
+                    <h3 class="group-hover:underline accordion-title">Modern Trade</h3>
+                    <div class="group-hover:underline accordion-subtitle">
                         Connecting you with leading retailers and distribution channels.
                     </div>
                 </div>
@@ -266,18 +266,18 @@
 
                             <div class="products-list">
 
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
-                                <div class="aspect-square rounded-full bg-gray-500"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                <div class="bg-gray-500 rounded-full aspect-square"></div>
 
                             </div>
 

@@ -29,6 +29,38 @@
 
 @layer components {
 
+    .home--whoarewe-subtitle{
+        @apply font-semibold text-5xl leading-16;
+    }
+
+    .home--whoarewe-subtitle span {
+        @apply font-bold text-red-500 text-5xl italic;
+    }
+
+    .home--whoarewe-values{
+        @apply text-lg text-center leading-[22px];
+    }
+
+    .home--whoarewe-values span {
+        @apply font-bold text-red-500 text-xl italic uppercase leading-5;
+    }
+
+    .home--route_title{
+        @apply text-center;
+    }
+
+    .home--route_title span{
+        @apply font-bold text-red-500 italic;
+    }
+
+    .home--distribution_title{
+        @apply text-center;
+    }
+
+    .home--distribution_title span{
+        @apply font-bold text-red-500 italic;
+    }
+
     .banner-title{
         @apply absolute inset-0 flex flex-col justify-center items-center space-y-3 font-bold text-white text-2xl lg:text-8xl text-center italic;
     }

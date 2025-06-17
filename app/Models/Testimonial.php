@@ -3,9 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Testimonial extends Model
 {
+
+    use HasTranslations;
+
+
     protected $fillable = [
         'name',
         'position',
@@ -13,4 +18,6 @@ class Testimonial extends Model
         'image',
         'content',
     ];
+
+    public array $translatable = ['name', 'position'];
 }

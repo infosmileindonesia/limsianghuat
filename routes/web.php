@@ -12,3 +12,12 @@ Route::get('contact',[FrontendPageController::class, 'contact'])->name('contact'
 
 Route::get('careers',[FrontendPageController::class, 'careers'])->name('careers');
 
+// Locale route
+Route::get('locale/{locale}', [FrontendPageController::class, 'setLocale'])->name('locale');
+
+Route::get('image_load', function () {
+
+    return view('image_load');
+
+})->name('image.load');
+
