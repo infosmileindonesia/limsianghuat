@@ -128,36 +128,36 @@
                         <svg class="w-full h-full" width="1112" height="410" viewBox="0 0 1112 410" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Frame 4">
                                 <!-- Batam -->
-                                <circle cx="219" cy="122" r="7" fill="#E31D1C" />
-                                <circle cx="219" cy="122" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                <circle cx="219" cy="122" r="9" fill="#E31D1C" />
+                                <circle cx="219" cy="122" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
 
                                 <!-- Jakarta -->
-                                <circle cx="276" cy="296" r="7" fill="#E31D1C" />
-                                <circle cx="276" cy="296" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                <circle cx="276" cy="296" r="9" fill="#E31D1C" />
+                                <circle cx="276" cy="296" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
 
                                 <!-- Surabaya -->
-                                <circle cx="416" cy="319" r="7" fill="#E31D1C" />
-                                <circle cx="416" cy="319" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                <circle cx="416" cy="319" r="9" fill="#E31D1C" />
+                                <circle cx="416" cy="319" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
 
                                 <!-- Bali -->
-                                <circle cx="488" cy="347" r="7" fill="#E31D1C" />
-                                <circle cx="488" cy="347" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                <circle cx="488" cy="347" r="9" fill="#E31D1C" />
+                                <circle cx="488" cy="347" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle>
 
                                 <!-- Sulawesi 1 -->
-                                {{-- <circle cx="645" cy="185" r="7" fill="#E31D1C" />
-                                <circle cx="645" cy="185" r="7" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
+                                {{-- <circle cx="645" cy="185" r="9" fill="#E31D1C" />
+                                <circle cx="645" cy="185" r="9" fill="none" stroke="rgba(227, 29, 28, 0.5)" stroke-width="2">
                                     <animate attributeName="r" from="7" to="20" dur="1.5s" repeatCount="indefinite" />
                                     <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
                                 </circle> --}}
