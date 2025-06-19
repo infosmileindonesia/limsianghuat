@@ -90,30 +90,30 @@
                     <div class="justify-center gap-4 lg:gap-0 grid grid-cols-2 xl:grid-cols-5 mb-8">
 
                         <div class="flex flex-col items-center">
-                            <h4 class="mb-2 font-semibold text-xl text-center">Company</h4>
+                            <h4 class="mb-2 font-semibold text-xl text-center">@lang('Company')</h4>
                             <ul class="space-y-2 text-center">
-                                <li><a href="{{ route('about') }}">About LSH</a></li>
-                                <li><a href="{{ route('about') }}#about-why">Why Us</a></li>
-                                <li><a href="{{ route('careers') }}">Career</a></li>
+                                <li><a href="{{ route('about') }}">@lang('About LSH')</a></li>
+                                <li><a href="{{ route('about') }}#about-why">@lang('Why Us')</a></li>
+                                <li><a href="{{ route('careers') }}">@lang('Career')</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h4 class="mb-2 font-semibold text-xl text-center">Brands</h4>
+                            <h4 class="mb-2 font-semibold text-xl text-center">@lang('Brands')</h4>
                             <ul class="space-y-2 text-center">
-                                <li><a href="{{ route('brands') }}#brand-alcohol">Alcohol</a></li>
-                                <li><a href="{{ route('brands') }}#brand-non-alcohol">Non - Alcohol</a></li>
-                                <li><a href="{{ route('brands') }}#brand-food">Foods</a></li>
+                                <li><a href="{{ route('brands') }}#brand-alcohol">@lang('Alcohol')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-non-alcohol">@lang('Non - Alcohol')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-food">@lang('Foods')</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h4 class="mb-2 font-semibold text-xl text-center">Distribution</h4>
+                            <h4 class="mb-2 font-semibold text-xl text-center">@lang('Distribution')</h4>
                             <ul class="space-y-2 text-center">
-                                <li><a href="{{ route('distribution') }}#channel">Channel</a></li>
-                                <li><a href="{{ route('distribution') }}#distribution">Branches</a></li>
+                                <li><a href="{{ route('distribution') }}#channel">@lang('Channel')</a></li>
+                                <li><a href="{{ route('distribution') }}#distribution">@lang('Branches')</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h4 class="mb-2 font-semibold text-xl text-center">Contact</h4>
+                            <h4 class="mb-2 font-semibold text-xl text-center">@lang('Contact')</h4>
                             <ul class="space-y-2 text-center">
                                 <li>LSH Jakarta</li>
                                 <li>LSH Batam</li>
@@ -122,7 +122,7 @@
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h4 class="mb-2 font-semibold text-xl text-center">Updates</h4>
+                            <h4 class="mb-2 font-semibold text-xl text-center">@lang('Updates')</h4>
                             <ul class="flex items-center space-x-4">
                                 <li><a target="_blank" href="https://www.facebook.com/p/Lim-Siang-Huat-Group-100063795910946/?locale=id_ID"><span><img width="36" height="36" src="{{ asset('img/icons/facebook.png') }}" alt=""></span></a></li>
                                 <li><a target="_blank" href="https://www.instagram.com/limsianghuat.official/?hl=en"><span><img width="36" height="36" src="{{ asset('img/icons/instagram.png') }}" alt=""></span></a></li>
@@ -138,11 +138,13 @@
 
                 <div class="flex justify-between items-center mx-auto py-5 container">
                     <div>
-                        <p class="text-[#868686]">Copyright © Lim Siang Huat {{ date('Y') }}.</p>
+                        <p class="text-[#868686]">
+                            {{ __('contents.footer.copy', ['year' => date('Y')]) }}
+                        </p>
                     </div>
 
                     <div>
-                        <p class="text-[#868686]"><a href="https://lshworld.com">LSH Global Website</a></p>
+                        <p class="text-[#868686]"><a href="https://lshworld.com">@lang('LSH Global Website')</a></p>
                     </div>
                 </div>
 

@@ -161,7 +161,7 @@
                 id="hotel-restaurant-cafe"
                 :class="{ 'accordion-active' : accordionActive === 1}">
                 <div class="group accordion-header" @click="accordionActive = accordionActive === 1 ? 0 : 1">
-                    <h3 class="group-hover:underline accordion-title">Hotel Restaurant Cafe</h3>
+                    <h3 class="group-hover:underline accordion-title">@lang('contents.distribution.items.horeca.title')</h3>
                     <div class="group-hover:underline accordion-subtitle">
                         Connecting you with restaurants, hotels, and cafés for maximum exposure.
                     </div>
@@ -204,7 +204,9 @@
                 id="general-trade"
                 :class="{ 'accordion-active' : accordionActive === 2}">
                 <div class="group accordion-header" @click="accordionActive = accordionActive === 2 ? 0 : 2">
-                    <h3 class="group-hover:underline accordion-title">General Trade</h3>
+                    <h3 class="group-hover:underline accordion-title">
+                        @lang('contents.distribution.items.general_trade.title')
+                    </h3>
                     <div class="group-hover:underline accordion-subtitle">
                         Connecting you with retailers and businesses that expand your reach.
                     </div>
@@ -247,7 +249,9 @@
                 id="modern-trade"
                 :class="{ 'accordion-active' : accordionActive === 3}">
                 <div class="group accordion-header" @click="accordionActive = accordionActive === 3 ? 0 : 3">
-                    <h3 class="group-hover:underline accordion-title">Modern Trade</h3>
+                    <h3 class="group-hover:underline accordion-title">
+                        @lang('contents.distribution.items.modern_trade.title')
+                    </h3>
                     <div class="group-hover:underline accordion-subtitle">
                         Connecting you with leading retailers and distribution channels.
                     </div>

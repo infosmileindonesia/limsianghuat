@@ -35,6 +35,22 @@ return [
 
     ],
 
+    'distribution' => [
+        'items' => [
+            'horeca' => [
+                'title' => '酒店餐饮业'
+            ],
+
+            'modern_trade' => [
+                'title' => '现代贸易',
+            ],
+
+            'general_trade' => [
+                'title' => '传统贸易',
+            ],
+        ]
+    ],
+
     'generals' => [
         'discover_button' => '发现更多',
         'learn_more' => '了解更多',
@@ -43,5 +59,7 @@ return [
     'footer' => [
         'box_header' => '您的品牌下一步的重要行动从这里开始',
         'box_button' => "让我们一起实现它!",
+
+        'copy' => '版權所有 © Lim Siang Huat :year 。'
     ]
 ];

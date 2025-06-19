@@ -32,6 +32,22 @@ return [
         ]
     ],
 
+    'distribution' => [
+        'items' => [
+            'horeca' => [
+                'title' => 'Hotel Restaurant Cafe',
+            ],
+
+            'modern_trade' => [
+                'title' => 'Modern Trade',
+            ],
+
+            'general_trade' => [
+                'title' => 'General Trade',
+            ],
+        ]
+    ],
+
     'generals' => [
         'discover_button' => 'Discover More',
         'learn_more' => 'Learn More',
@@ -40,5 +56,7 @@ return [
     'footer' => [
         'box_header' => 'Your brand’s next big move starts here.',
         'box_button' => "Let's make It Happen!",
+
+        'copy' => 'Copyright &copy; Lim Siang Huat :year'
     ]
 ];
