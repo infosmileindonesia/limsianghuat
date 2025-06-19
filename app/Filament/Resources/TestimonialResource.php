@@ -6,6 +6,7 @@ use App\Filament\Resources\TestimonialResource\Pages;
 use App\Filament\Resources\TestimonialResource\RelationManagers;
 use App\Models\Testimonial;
 use Filament\Forms;
+use Filament\Forms\Components\Field;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -26,17 +27,42 @@ class TestimonialResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('position')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Fieldset::make('position')
+                    ->columnSpanFull()
+                    ->schema([
+                        Forms\Components\TextInput::make('position.en')
+                            ->label('English')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('position.zh_TW')
+                            ->label('Traditional Chinese')
+                            ->required()
+                            ->maxLength(255),
+                    ]),
+                // Forms\Components\TextInput::make('position')
+                //     ->required()
+                //     ->maxLength(255),
                 Forms\Components\TextInput::make('company')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
-                Forms\Components\Textarea::make('content')
-                    ->required()
-                    ->columnSpanFull(),
+                Forms\Components\Fieldset::make('Content')
+                    ->columnSpanFull()
+                    ->schema([
+                        Forms\Components\Textarea::make('content.en')
+                            ->label('English')
+                            ->required()
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('content.zh_TW')
+                            ->label('Traditional Chinese')
+                            ->required()
+                            ->columnSpanFull(),
+                    ]),
+                // Use a single textarea for content if translations are not needed
+                // Forms\Components\Textarea::make('content')
+                //     ->required()
+                //     ->columnSpanFull(),
             ]);
     }
 

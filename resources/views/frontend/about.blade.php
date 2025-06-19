@@ -151,7 +151,7 @@
 
                                         <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex flex-col justify-between space-y-36">
                                             <p class="text-2xl">
-                                                “{{ $testimonial->content }}”
+                                                {{ $testimonial->content }}
                                             </p>
                                         </div>
                                     </div>
