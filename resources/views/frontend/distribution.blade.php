@@ -251,7 +251,7 @@
                 </div>
                 <div
                     x-transition
-                    x-show="accordionActive === 3" class="accordion-content">
+                    x-show="accordionActive === 4" class="accordion-content">
                     <div
                         data-perfect-scrollbar
                         data-wheel-speed="1"
