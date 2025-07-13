@@ -121,8 +121,7 @@
             </div>
         </div>
 
-        <div class="space-y-5 mx-auto mt-16 lg:mt-36 px-2 lg:px-0 container">
-            {{-- <p class="text-2xl text-center">DISTRIBUTION</p> --}}
+        <div class="space-y-5 mx-auto mt-[100px] lg:mt-[200px] px-2 lg:px-0 container">
             <p class="text-2xl text-center">@lang('contents.home.route_header')</p>
             <h2 class="text-center section-title home--route_title">{!! __('contents.home.route_title') !!}</h2>
                 <p class="text-xl text-center">{{ __('contents.home.route_subtitle') }}</p>
