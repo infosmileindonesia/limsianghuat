@@ -278,6 +278,46 @@
                 </div>
             </div>
 
+            <div class="bg-neutral-300 accordion-item"
+                id="kol-management"
+                :class="{ 'accordion-active' : accordionActive === 4}">
+                <div class="group accordion-header" @click="accordionActive = accordionActive === 4 ? 0 : 4">
+                    <h3 class="group-hover:underline accordion-title">
+                        @lang('contents.distribution.items.kol_management.title')
+                    </h3>
+                    <div class="group-hover:underline accordion-subtitle">
+                        {!! __('contents.distribution.items.kol_management.description') !!}
+                    </div>
+                </div>
+                <div
+                    x-transition
+                    x-show="accordionActive === 4" class="accordion-content">
+                    <div
+                        data-perfect-scrollbar
+                        data-wheel-speed="1"
+                        data-suppress-scroll-x="true"
+                        data-min-scrollbar-length="20"
+                        data-max-scrollbar-length="100"
+                        class="accordion-content-outter">
+                        <div class="accordion-content-inner">
+
+                            <div class="products-list">
+
+                                @foreach ($modernTradeContents as $item)
+                                    <div
+                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
+                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                @endforeach
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
