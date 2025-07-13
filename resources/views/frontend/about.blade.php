@@ -25,39 +25,39 @@
 
 
     <div class="mx-auto pt-10 pb-14 lg:pb-28 container">
-        <h1 class="mb-8 text-center section-title">Connecting Brands to Consumer.</h1>
-        <p class="mb-10 text-2xl text-center">Our mission are to do every work with <span class="font-bold italic">passion</span>, <span class="font-bold italic">value</span> and <span class="font-bold italic">respect</span> the relationship <br> with brand owners and customers, <span class="font-bold italic">believe</span> in the strength of teamwork.</p>
+        <h1 class="mb-8 text-center section-title">@lang('contents.about.introduction')</h1>
+        <p class="about--intro-subtitle">@lang('contents.about.intro_subtitle')</p>
 
         <div class="md:flex flex-wrap justify-center md:items-center md:gap-3 lg:gap-0 lg:grid lg:grid-cols-5 mt-4 lg:mt-8">
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
                 </div>
-                <p class="text-center"><strong>Years</strong><br> <small>of experience</small></p>
+                <p class="text-center">@lang('contents.about.counters.year')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="100" data-counter-start="0" data-counter-duration="500">200</span>
                 </div>
-                <p class="text-center"><strong>SKUs</strong> <br> <small>that we distribute</small></p>
+                <p class="text-center">@lang('contents.about.counters.sku')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="10000" data-counter-start="0" data-counter-duration="500">10000</span>
                 </div>
-                <p class="text-center"><strong>Outlets</strong><br> <small>that we serve directly</small></p>
+                <p class="text-center">@lang('contents.about.counters.outlet')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="15" data-counter-start="0" data-counter-duration="500">15</span>
                 </div>
-                <p class="text-center"><strong>Company</strong><br> <small class="text-red-500">as our principal</small></p>
+                <p class="text-center">@lang('contents.about.counters.company')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">11</span>
                 </div>
-                <p class="text-center"><strong>Cities</strong> <br> <small>of active distribution</small></p>
+                <p class="text-center">@lang('contents.about.counters.city')</p>
             </div>
         </div>
     </div>
@@ -66,8 +66,8 @@
 <section class="bg-black py-10 lg:py-14" id="about-why">
 
     <div class="mx-auto px-2 lg:px-0 container">
-        <h2 class="font-semibold text-white text-6xl text-center">Why <span class="font-bold">Lim Siang Huat ?</span></h2>
-        <p class="mt-4 text-white text-2xl text-center">Several key factors distinguish us as the <span class="font-semibold italic">preferred choice</span> to fulfill your requirements.</p>
+        <h2 class="about--why-title">@lang('contents.about.why_title')</h2>
+        <p class="about--why-description">@lang('contents.about.why_description')</p>
 
         <div class="gap-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12" data-animate-view data-animate-target=".card-why">
             <div>
@@ -127,8 +127,8 @@
 <section class="relative">
 
     <div class="relative space-y-5 mx-auto my-10 lg:my-24 px-2 lg:px-0 container">
-        <p class="text-2xl text-center">TESTIMONIALS</p>
-        <h2 class="text-center section-title">Words From Principals</h2>
+        {{-- <p class="text-2xl text-center">TESTIMONIALS</p> --}}
+        <h2 class="text-center section-title">@lang("Compliments")</h2>
 
         <div class="p-0 lg:p-12">
 
@@ -234,7 +234,7 @@
     </div>
 
     <div class="mx-auto mt-10 lg:mt-24 px-2 lg:px-0 container">
-        <h2 class="section-title">Achievement</h2>
+        <h2 class="section-title">@lang("Achievement")</h2>
     </div>
 
     <div class="mb-24 ml-0 lg:ml-auto px-2 lg:px-0 w-full lg:w-1/2">

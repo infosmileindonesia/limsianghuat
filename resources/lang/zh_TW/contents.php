@@ -35,7 +35,25 @@ return [
             'horeca' => '酒店咖啡餐饮业 ',
             'modern_trade' => '传统贸易',
             'general_trade' => '现代贸易',
+            'kol_management' => '达人营销管理',
         ]
+
+    ],
+
+    'about' => [
+        'introduction' => '链接品牌与消费者。',
+        'intro_subtitle' => '持续培养稳固的关系与团队合作，高效且有效地完成每一项工作。',
+
+        'counters' => [
+            'year' => '年的经验',
+            'sku' => '产品我们分发的sku',
+            'outlet' => '的直营客户',
+            'company' => '厂商委托信赖',
+            'city' => '覆盖城市'
+        ],
+
+        'why_title' => '为什么选择Lim Siang Huat？',
+        'why_description' => 'Several key factors distinguish us as the <span>preferred choice</span> to fulfill your requirements.',
 
     ],
 
@@ -52,10 +70,16 @@ return [
             'general_trade' => [
                 'title' => '传统贸易',
             ],
+            'kol_management' => [
+                'title' => '达人营销管理',
+            ],
         ]
     ],
 
     'brands' => [
+
+        'description' => '我们深知每个品牌都有其独特的品质和价值主张。因此，我们与合作伙伴保持高度一致，在执行和分销上保持稳定，确保产品持续供应，并让目标消费者轻松触达。',
+
         'categories' => [
             'alcohol' => 'Alcohol Beverages',
             'non_alcohol' => 'Non Alcohol',

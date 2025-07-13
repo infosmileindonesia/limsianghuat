@@ -22,9 +22,7 @@
         />
 
         <div class="mx-auto px-2 lg:px-0 pt-20 pb-10 container" id="brand-alcohol">
-            <p class="mt-4 text-2xl text-center">Every brand possesses it’s own unique qualities and value propositions. Our team <br>
-                travels extensively to identify the highest quality products that we can introduce to <br>
-                the Indonesian market, ensuring they align with consumer patterns.</p>
+            <p class="mt-4 text-2xl text-center">@lang('contents.brands.description')</p>
 
             <h1 class="mt-10 text-center section-title-secondary">@lang('contents.brands.categories.alcohol')</h1>
 

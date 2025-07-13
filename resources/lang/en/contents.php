@@ -35,7 +35,28 @@ return [
         ]
     ],
 
+    'about' => [
+        'introduction' => 'Connecting Brands to Consumer.',
+        'intro_subtitle' => 'Our mission are to do every work with <span>passion</span>, <span>value</span> and <span>respect</span> the relationship <br> with brand owners and customers, <span>believe</span> in the strength of teamwork.',
+
+        'counters' => [
+            'year' => '<strong>Years</strong><br> <small>of experience</small>',
+            'sku' => '<strong>SKUs</strong> <br> <small>that we distribute</small>',
+            'outlet' => '<strong>Outlets</strong><br> <small>that we serve directly</small>',
+            'company' => '<strong>Company</strong><br> <small class="text-red-500">as our principal</small>',
+            'city' => '<strong>Cities</strong> <br> <small>of active distribution</small>'
+        ],
+
+        'why_title' => 'Why Lim Siang Huat ?',
+        'why_description' => 'Several key factors distinguish us as the <span>preferred choice</span> to fulfill your requirements.',
+    ],
+
     'brands' => [
+
+        'description' => 'Every brand possesses it’s own unique qualities and value propositions. Our team <br>
+                travels extensively to identify the highest quality products that we can introduce to <br>
+                the Indonesian market, ensuring they align with consumer patterns.',
+
         'categories' => [
             'alcohol' => 'Alcohol Beverages',
             'non_alcohol' => 'Non Alcohol',

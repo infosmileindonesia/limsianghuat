@@ -1,20 +1,20 @@
 {
     "HOME":"主页",
     "ABOUT US":"关于我们",
-    "BRANDS":"合作品牌",
-    "DISTRIBUTION":"分销网络",
+    "BRANDS":"品牌",
+    "DISTRIBUTION":"分布",
     "CONTACT":"联系方式",
 
     "About Us": "关于我们",
     "Company": "公司",
-    "Brands": "合作品牌",
-    "Distribution": "分销网络",
+    "Brands": "品牌",
+    "Distribution": "分布",
     "Contact": "联系方式",
     "Contact Us": "联系方式",
 
     "About LSH" : "关于LSH",
     "Why Us" : "为什么选择我们",
-    "Career" : "職涯發展",
+    "Career" : "职业发展",
 
     "Alcohol" : "酒精",
     "Non - Alcohol" : "非酒精",
@@ -29,5 +29,8 @@
 
     "Updates" : "最新消息",
 
-    "LSH Global Website" : "LSH全球網站"
+    "LSH Global Website" : "LSH全球網站",
+
+    "Compliments" : "伙伴评价",
+    "Achievement" : "成就"
 }

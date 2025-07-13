@@ -391,7 +391,7 @@
                                     class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
                                     {!! __('contents.home.distribution_items.kol_management') !!}
                                 </h5>
-                                <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
+                                <a href="{{ route('distribution') }}#kol-management" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="flex items-center py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
                                     <span class="font-normal text-2xl">
