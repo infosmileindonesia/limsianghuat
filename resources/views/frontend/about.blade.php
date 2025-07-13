@@ -65,61 +65,24 @@
 
 <section class="bg-black py-10 lg:py-14" id="about-why">
 
-    <div class="mx-auto px-2 lg:px-0 container">
+    <div class="mx-auto px-2 lg:px-0">
         <h2 class="about--why-title">@lang('contents.about.why_title')</h2>
         <p class="about--why-description">@lang('contents.about.why_description')</p>
 
-        <div class="gap-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12" data-animate-view data-animate-target=".card-why">
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">01</h3>
-                    <p class="font-bold text-red-500 text-4xl">LSH's DNA</p>
-                    <p class="text-center">Distribution is in <br>
-                        LSH’s DNA.</p>
+        <div class="space-y-4 mt-12 px-14">
+            @foreach ($whyContents as $items)
+                <div class="card-why-wrapper" data-animate-view data-animate-target=".card-why">
+                    @foreach ($items as $item)
+                        <div>
+                            <div class="card-why">
+                                <h3 class="text-outline font-black text-white text-5xl text-center">{{ $item->number }}</h3>
+                                <p class="min-h-[80px] font-bold text-red-500 text-4xl text-center">{!! $item->title !!}</p>
+                                <p class="card-description">{!! $item->description !!}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-            </div>
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">02</h3>
-                    <p class="font-bold text-red-500 text-4xl">Network</p>
-                    <p class="text-center">Ready in micro <br>
-                        distribution network.</p>
-                </div>
-            </div>
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">03</h3>
-                    <p class="font-bold text-red-500 text-4xl">Working System</p>
-                    <p class="text-center">Work with system, neat,<br>
-                        and documented.</p>
-                </div>
-            </div>
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">04</h3>
-                    <p class="font-bold text-red-500 text-4xl">Infrastructure</p>
-                    <p class="text-center">Ready infrastructure to reach <br>
-                        local and national market.</p>
-                </div>
-            </div>
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">05</h3>
-                    <p class="font-bold text-red-500 text-4xl">Channel</p>
-                    <p class="text-center">We know the strategy to <br>
-                        introduce the products <br>
-                        to the market.</p>
-                </div>
-            </div>
-            <div>
-                <div class="card-why">
-                    <h3 class="text-outline font-black text-white text-5xl text-center">06</h3>
-                    <p class="font-bold text-red-500 text-4xl">Experienced</p>
-                    <p class="text-center">Dedicated field force for <br>
-                        different types of market <br>
-                        channels.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

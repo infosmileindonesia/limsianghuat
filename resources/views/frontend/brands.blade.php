@@ -40,7 +40,7 @@
                                     class="brand-tab-link"
                                     :class="activeTab === '{{ $brand['slug'] }}' ? 'active' : ''"
                                     @click.prevent="setActiveTab('{{ $brand['slug'] }}')">
-                                    {{ $brand['name'] }}
+                                    {{ __($brand['name']) }}
                                 </a>
                             </li>
                         @endforeach

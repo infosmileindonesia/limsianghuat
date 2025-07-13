@@ -39,6 +39,37 @@ return [
         'introduction' => 'Connecting Brands to Consumer.',
         'intro_subtitle' => 'Our mission are to do every work with <span>passion</span>, <span>value</span> and <span>respect</span> the relationship <br> with brand owners and customers, <span>believe</span> in the strength of teamwork.',
 
+        'why' => [
+            'dna' => [
+                'title' => 'Distribution <br> Is Our DNA',
+                'description' => 'Founded humbly by Mr. Lim Mui Er to build friendships and grow a network, we have learned and thrived in distribution, and that legacy is preserved to this day.',
+            ],
+            'focus' => [
+                'title' => 'Focus',
+                'description' => 'We limit the principals we serve to maximize sales value and performance.',
+            ],
+            'network' => [
+                'title' => 'Distribution <br> Network',
+                'description' => 'We possess market expertise at our base, covering both local and national key players.',
+            ],
+            'expertise' => [
+                'title' => 'Expertise',
+                'description' => "We take our work seriously and don't mix things up to save a penny. We maintain dedicated field forces for different channels.",
+            ],
+            'integrity' => [
+                'title' => 'Integrity Merits <br> with Technology',
+                'description' => 'We validate every customer we serve to ensure the legitimacy of our database. Combined with information technology, we provide you with legitimate and real-time data.',
+            ],
+            'market' => [
+                'title' => 'Route To Market',
+                'description' => 'Through our consistent approach to managing and maintaining customer relationships, we ensure an efficient and timely Route to Market.',
+            ],
+            'delivery' => [
+                'title' => 'Sales & Delivery <br> Infrastructure',
+                'description' => 'New products need visibility to build awareness; mature products require consistent availability. In response to these challenges, we are prepared with a strong micro-distribution infrastructure.',
+            ],
+        ],
+
         'counters' => [
             'year' => '<strong>Years</strong><br> <small>of experience</small>',
             'sku' => '<strong>SKUs</strong> <br> <small>that we distribute</small>',
@@ -63,10 +94,23 @@ return [
             'rte' => 'RTE (Ready To Eat)',
             'rtd' => 'RTD (Ready To Drink)',
             'consumer_goods' => 'Consumer Goods',
+        ],
+
+        'alcohol' => [
+            'Wine' => 'Wine',
+            'Beer' => 'Beer',
+            'Cider' => 'Cider',
+            'Soju' => 'Soju',
+            'Spirit' => 'Spirit',
         ]
     ],
 
     'distribution' => [
+
+        'main_title' => '<span>Our data speaks</span> <span class="bold">Real Time</span>',
+        'main_subtitle' => 'with reliable real-time data, we move forward together with <br> our partners with confidence to win the market.',
+
+        'unlock_title' => "Unlocking Opportunities, <br>Expanding Your Reach.",
         'items' => [
             'horeca' => [
                 'title' => 'HOtel REstaurant CAfe',
@@ -74,15 +118,15 @@ return [
             ],
             'modern_trade' => [
                 'title' => 'Modern Trade',
-                'description' => 'Be visible at crowded retailers / outlets will enhance your brand image. Let us connect you with those potential customers.'
+                'description' => 'Being visible at crowded retailers/outlets will enhance your brand image. Let us connect you with those potential customers.'
             ],
             'general_trade' => [
                 'title' => 'General Trade',
-                'description' => 'Traditional market is massive yet it’s costly to serve especially in urban area. Let us bring you to the market through an effective way.'
+                'description' => 'The traditional market is massive, yet it’s costly to serve, especially in urban areas. Let us bring you to the market in an effective way.'
             ],
             'kol_management' => [
                 'title' => 'KOL Management',
-                'description' => 'Viral can be happen in just over night. Let us connect you with influencer and affilator to boost your sales and brand image.'
+                'description' => 'Viral can happen in just one night. Let us connect you with an influencer and affiliate to boost your sales and brand image.'
             ],
         ]
     ],

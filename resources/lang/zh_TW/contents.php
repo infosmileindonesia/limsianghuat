@@ -44,6 +44,37 @@ return [
         'introduction' => '链接品牌与消费者。',
         'intro_subtitle' => '持续培养稳固的关系与团队合作，高效且有效地完成每一项工作。',
 
+        'why' => [
+            'dna' => [
+                'title' => '分销是我们的基因',
+                'description' => '我们的创始人林美 先生怀着结交朋友和拓展人脉的初心，从谦逊的起点开始创业。正是这样，我们在分销领域不断学习和成长，将这一传承延续至今！',
+            ],
+            'focus' => [
+                'title' => '专注',
+                'description' => '我们严格筛选具有高度契合度的品牌伙伴，以实现销售价值与业绩表现的最优化。',
+            ],
+            'network' => [
+                'title' => '分销网络',
+                'description' => '我们深植本土市场，拥有覆盖本地及全国核心客户的专业洞察与实战经验。',
+            ],
+            'expertise' => [
+                'title' => '专长',
+                'description' => "我们做事认真，不因节省一分钱而混淆职责。我们坚持为不同渠道，配备专注的现场团队。",
+            ],
+            'integrity' => [
+                'title' => '以诚信为本， <br>融合科技优势',
+                'description' => '我们严格核验每位客户资质，依托信息技术保障数据库合规性，为您提供精准实时的数据服务。',
+            ],
+            'market' => [
+                'title' => '市场进入路径',
+                'description' => '我们拥有丰富的一线实战经验，深入各类消费品市场。',
+            ],
+            'delivery' => [
+                'title' => '销售与配送基础设施',
+                'description' => '新产品上市需要大量曝光以提升认知，即使是成熟产品也需要持续的可获得性。 面对这些挑战，我们已具备微型分销基础设施，随时准备应对。',
+            ],
+        ],
+
         'counters' => [
             'year' => '年的经验',
             'sku' => '产品我们分发的sku',
@@ -58,20 +89,30 @@ return [
     ],
 
     'distribution' => [
+
+        'main_title' => '<span class="bold">我们的数据实时发声</span>',
+        'main_subtitle' => '凭借可靠的实时数据，我们与合作伙伴携手自信前行，共同赢得市场。',
+
+
+        'unlock_title' => "开启机遇，<br>拓展您的影响力。",
         'items' => [
             'horeca' => [
-                'title' => '酒店餐饮业'
+                'title' => '酒店餐饮业',
+                'description' => '让消费者亲身体验，是赢得品牌忠诚的第一步。加入我们，助力您的产品快速入驻线下渠道。',
             ],
 
             'modern_trade' => [
                 'title' => '现代贸易',
+                'description' => '抢占热门零售点位，强化品牌影响力。我们将为您精准对接目标客群。',
             ],
 
             'general_trade' => [
                 'title' => '传统贸易',
+                'description' => '传统市场潜力巨大，但城市运营成本高昂。我们以高效模式，助您低成本开拓市场。',
             ],
             'kol_management' => [
                 'title' => '达人营销管理',
+                'description' => '一夜爆款，绝非偶然。携手网红与带货达人，快速引爆销量与品牌声量。',
             ],
         ]
     ],
@@ -81,11 +122,19 @@ return [
         'description' => '我们深知每个品牌都有其独特的品质和价值主张。因此，我们与合作伙伴保持高度一致，在执行和分销上保持稳定，确保产品持续供应，并让目标消费者轻松触达。',
 
         'categories' => [
-            'alcohol' => 'Alcohol Beverages',
+            'alcohol' => '酒精饮料',
             'non_alcohol' => 'Non Alcohol',
-            'rte' => 'RTE (Ready To Eat)',
-            'rtd' => 'RTD (Ready To Drink)',
-            'consumer_goods' => 'Consumer Goods',
+            'rte' => '即食',
+            'rtd' => '即饮饮料',
+            'consumer_goods' => '消费品',
+        ],
+
+        'alcohol' => [
+            'Wine' => '葡萄酒',
+            'Beer' => '啤酒',
+            'Cider' => '苹果酒',
+            'Soju' => '烧酒',
+            'Spirit' => '烈酒'
         ]
     ],
 

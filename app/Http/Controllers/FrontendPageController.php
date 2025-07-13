@@ -22,10 +22,61 @@ class FrontendPageController extends Controller
 
     public function about()
     {
-
         $testimonials = Testimonial::all();
 
-        return view('frontend.about', compact('testimonials'));
+        // dna
+        // focus
+        // network
+        // expertise
+        // integrity
+        // market
+        // delivery
+        $whyContents = [
+            [
+                'number' => '01',
+                'title' => __('contents.about.why.dna.title'),
+                'description' => __('contents.about.why.dna.description'),
+            ],
+            [
+                'number' => '02',
+                'title' => __('contents.about.why.focus.title'),
+                'description' => __('contents.about.why.focus.description'),
+            ],
+            [
+                'number' => '03',
+                'title' => __('contents.about.why.network.title'),
+                'description' => __('contents.about.why.network.description'),
+            ],
+            [
+                'number' => '04',
+                'title' => __('contents.about.why.expertise.title'),
+                'description' => __('contents.about.why.expertise.description'),
+            ],
+            [
+                'number' => '05',
+                'title' => __('contents.about.why.integrity.title'),
+                'description' => __('contents.about.why.integrity.description'),
+            ],
+            [
+                'number' => '06',
+                'title' => __('contents.about.why.market.title'),
+                'description' => __('contents.about.why.market.description'),
+            ],
+            [
+                'number' => '07',
+                'title' => __('contents.about.why.delivery.title'),
+                'description' => __('contents.about.why.delivery.description'),
+            ],
+        ];
+
+        // chunk into 4 items per row
+        $whyContents = collect($whyContents)->chunk(4)->map(function ($chunk) {
+            return $chunk->map(function ($item) {
+                return (object) $item;
+            });
+        });
+
+        return view('frontend.about', compact('testimonials', 'whyContents'));
     }
 
     public function brands()

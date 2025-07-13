@@ -18,7 +18,7 @@
                                 <path d="M13.5 15.75C17.6212 15.75 18.723 18.7694 19.0175 20.3839C19.1166 20.9272 18.6773 21.375 18.125 21.375H8.875C8.32272 21.375 7.88335 20.9272 7.98248 20.3839C8.27702 18.7694 9.37879 15.75 13.5 15.75Z" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </span>
-                        <p class="text-red-500 text-2xl">Department</p>
+                        <p class="text-red-500 text-2xl">@lang('Department')</p>
                         <span>
                             <svg class="transition-transform duration-300 ease-in-out"
                                 x-bind:class="{ 'rotate-180': openDept }" width="31" height="31" viewBox="0 0 31 31"
@@ -62,7 +62,7 @@
                                 <path d="M13.5 15.75C17.6212 15.75 18.723 18.7694 19.0175 20.3839C19.1166 20.9272 18.6773 21.375 18.125 21.375H8.875C8.32272 21.375 7.88335 20.9272 7.98248 20.3839C8.27702 18.7694 9.37879 15.75 13.5 15.75Z" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </span>
-                        <p class="text-red-500 text-2xl">State</p>
+                        <p class="text-red-500 text-2xl">@lang('Cities')</p>
                         <span>
                             <svg class="transition-transform duration-300 ease-in-out"
                                 x-bind:class="{ 'rotate-180': openState }" width="31" height="31" viewBox="0 0 31 31"
@@ -114,7 +114,7 @@
                                 <path d="M13.5 15.75C17.6212 15.75 18.723 18.7694 19.0175 20.3839C19.1166 20.9272 18.6773 21.375 18.125 21.375H8.875C8.32272 21.375 7.88335 20.9272 7.98248 20.3839C8.27702 18.7694 9.37879 15.75 13.5 15.75Z" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </span>
-                        <p class="text-red-500 text-2xl">Level</p>
+                        <p class="text-red-500 text-2xl">@lang('Level')</p>
                         <span>
                             <svg class="transition-transform duration-300 ease-in-out"
                                 x-bind:class="{ 'rotate-180': openLevel }" width="31" height="31"
@@ -156,7 +156,7 @@
                 x-on:click.prevent="confirm('Are you sure you want to remove all filters?') ? @this.removeFilters() : null"
                 x-show="$wire.selectedDepartment.length > 0 || $wire.stateSelected.length > 0 || $wire.levelSelected.length > 0"
             >
-                Remove Filters
+                @lang('Remove Filters')
             </a>
         </div>
     </div>
@@ -166,7 +166,7 @@
             <li class="px-4 lg:px-10 py-2 lg:py-4 border rounded-3xl text-base lg:text-2xl text-center whitespace-nowrap transition-all duration-300 ease-in-out"
                 wire:click="setDepartment('all')"
                 x-bind:class="{ 'bg-black text-white': department === null }"
-            ><span class="cursor-pointer">View All</span></li>
+            ><span class="cursor-pointer">@lang('View All')</span></li>
             @foreach ($departments as $department)
                 <li class="px-4 lg:px-10 py-2 lg:py-4 border rounded-3xl text-base lg:text-2xl text-center whitespace-nowrap transition-all duration-300 ease-in-out"
                     {{-- x-on:click.prevent="department = '{{ $department }}'" --}}
@@ -214,7 +214,7 @@
 
                     </div>
                     <div>
-                        <a href="#" class="flex space-x-0.5 font-bold text-lg lg:text-2xl"><span>Apply</span> <span class="inline max-w-2.5 lg:max-w-none"><svg class="w-full lg:w-auto" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="#" class="flex space-x-0.5 font-bold text-lg lg:text-2xl"><span>@lang('Apply')</span> <span class="inline max-w-2.5 lg:max-w-none"><svg class="w-full lg:w-auto" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M27.7614 13.6551L27.6185 11.6602L29.6134 11.5173L29.7563 13.5122L27.7614 13.6551ZM16.9957 29.1361C16.2725 29.971 15.0094 30.0614 14.1745 29.3382C13.3397 28.6149 13.2492 27.3518 13.9725 26.517L16.9957 29.1361ZM17.039 12.4178L27.6185 11.6602L27.9042 15.6499L17.3247 16.4076L17.039 12.4178ZM29.7563 13.5122L30.5139 24.0917L26.5242 24.3774L25.7665 13.7979L29.7563 13.5122ZM29.273 14.9646L16.9957 29.1361L13.9725 26.517L26.2497 12.3455L29.273 14.9646Z" fill="#33363F"/>
                             </svg>
                             </span>
