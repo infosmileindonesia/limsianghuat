@@ -20,7 +20,7 @@ return [
             'effective' => '<span>Effective</span> <br> integration',
         ],
 
-        'route_header' => 'Win win Solution',
+        'route_header' => 'DISTRIBUTION',
         'route_title' => 'Present in Key Provinces, <br> Ready to <span>Serve You</span>.',
         'route_subtitle' => 'Over the past 20 years, LSH Indonesia has expanded into five different provinces and continues to grow. Establish a strong presence throughout the country',
 
