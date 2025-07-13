@@ -1,24 +1,28 @@
 {
     "HOME":"主页",
     "ABOUT US":"关于我们",
-    "BRANDS":"品牌",
-    "DISTRIBUTION":"配送",
+    "BRANDS":"合作品牌",
+    "DISTRIBUTION":"分销网络",
     "CONTACT":"联系方式",
 
     "About Us": "关于我们",
     "Company": "公司",
-    "Brands": "品牌",
-    "Distribution": "配送",
+    "Brands": "合作品牌",
+    "Distribution": "分销网络",
     "Contact": "联系方式",
-    "Contact Us": "联系我们",
+    "Contact Us": "联系方式",
 
-    "About LSH" : "關於LSH",
-    "Why Us" : "為什麼選擇我們",
+    "About LSH" : "关于LSH",
+    "Why Us" : "为什么选择我们",
     "Career" : "職涯發展",
 
     "Alcohol" : "酒精",
     "Non - Alcohol" : "非酒精",
     "Foods" : "食品",
+
+    "RTD Ready To Drink": "即饮饮料",
+    "RTE Ready To Eat": "即食",
+    "Consumer Goods": "消费品",
 
     "Channel" : "渠道",
     "Branches" : "分店",

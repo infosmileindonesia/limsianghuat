@@ -23,13 +23,19 @@ class Listing extends Component
         'Marketing',
         'Finance',
         'Accounting',
+        'IT',
+        'Logistics',
+        'HR & Legal',
     ];
 
     public $availableDepartments = [
         'Sales' => 0,
         'Marketing' => 0,
         'Finance' => 0,
-        'Accounting' => 0
+        'Accounting' => 0,
+        'IT' => 0,
+        'Logistics' => 0,
+        'HR & Legal' => 0,
     ];
 
     public $states = [
@@ -184,6 +190,27 @@ class Listing extends Component
                 'level' => 'Fresh Graduate',
                 'description' => 'We’re looking for a Sales Associate to join our team.',
             ],
+            [
+                'title' => 'Web Developer',
+                'department' => 'IT',
+                'location' => 'Bali',
+                'level' => 'Experienced',
+                'description' => 'We’re looking for a Web Developer to join our team.',
+            ],
+            [
+                'title' => 'Logistics Coordinator',
+                'department' => 'Logistics',
+                'location' => 'Jakarta',
+                'level' => 'Experienced',
+                'description' => 'We’re looking for a Logistics Coordinator to join our team.',
+            ],
+            [
+                'title' => 'Human Resources Manager',
+                'department' => 'HR & Legal',
+                'location' => 'Bandung',
+                'level' => 'Experienced',
+                'description' => 'We’re looking for a Human Resources Manager to join our team.',
+            ]
         ];
 
         // Count the number of listings in each department

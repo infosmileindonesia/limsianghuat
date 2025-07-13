@@ -72,22 +72,28 @@
                         <div class="space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0 max-w-none xl:max-w-[74%]">
                             <p class="text-2xl">@lang('contents.home.whoarewe_title')</p>
                             <h1 class="home--whoarewe-subtitle">@lang('contents.home.whoarewe_subtitle')</h1>
-                            {{-- <p>We are passionate about connecting high-quality food and beverage products with businesses that share our commitment to excellence.</p> --}}
+                            <p>
+                                @lang('contents.home.whoarewe_description_1')
+                            </p>
                             <p class="mb-5 font-bold text-lg underline">
                                 @lang('contents.home.whoarewe_description_2')
                             </p>
 
-                            <div class="gap-2.5 grid lg:grid-cols-2 xl:grid-cols-3 mx-auto w-full max-w-3/5 lg:max-w-none">
-                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
-                                    <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Archive.png') }}" alt="">
-                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.integration') !!}</p>
-                                </div>
-                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
+                            <div class="gap-2.5 grid lg:grid-cols-2 xl:grid-cols-4 mx-auto w-full max-w-3/5 lg:max-w-none">
+                                <div class="flex flex-col items-center gap-1 bg-white shadow-2xl px-2 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Check-Round.png') }}" alt="">
                                     <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.respect') !!}</p>
                                 </div>
-                                <div class="flex flex-col items-center gap-2 bg-white shadow-2xl px-4 pt-4 pb-4 rounded-4xl">
+                                <div class="flex flex-col items-center gap-1 bg-white shadow-2xl px-2 pt-4 pb-4 rounded-4xl">
+                                    <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Archive.png') }}" alt="">
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.integration') !!}</p>
+                                </div>
+                                <div class="flex flex-col items-center gap-1 bg-white shadow-2xl px-2 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Group.png') }}" alt="">
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.teamwork') !!}</p>
+                                </div>
+                                <div class="flex flex-col items-center gap-1 bg-white shadow-2xl px-2 pt-4 pb-4 rounded-4xl">
+                                    <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Effective.png') }}" alt="">
                                     <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.teamwork') !!}</p>
                                 </div>
                             </div>
@@ -327,6 +333,63 @@
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                     class="font-semibold text-6xl leading-16">
                                     {!! __('contents.home.distribution_items.general_trade') !!}
+                                </h5>
+                                <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
+                                    data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
+                                    class="flex items-center py-1 pr-2 pl-5 border border-slate-600 rounded-full w-max">
+                                    <span class="font-normal text-2xl">
+                                        @lang('contents.generals.discover_button')
+                                    </span>
+
+                                    <span class="inline-block ml-2">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 1 15 1C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29ZM15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30Z"
+                                                fill="black" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16.7203 12.4592L13.8329 11.7258L14.2022 10.272L19.2931 11.5652L18.7937 16.794L17.3005 16.6514L17.5838 13.6858L11.5579 17.928C11.2192 18.1664 10.7514 18.0852 10.5129 17.7465C10.2745 17.4078 10.3557 16.9399 10.6944 16.7015L16.7203 12.4592Z"
+                                                fill="#E31D1C" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="distribution-body-carousel">
+                                <div class="relative w-full h-full">
+                                    {{-- add more swiper --}}
+                                    <div data-swiper="bulkswiper" class="swiper-dis-content-2 swiper"
+                                        data-class-name="swiper-dis-content-2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="{{ asset('img/placeholder/thumb-3-1.png') }}" alt=""
+                                                    class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="{{ asset('img/placeholder/thumb-1-1.png') }}" alt=""
+                                                    class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="{{ asset('img/placeholder/thumb-2-1.png') }}" alt=""
+                                                    class="w-full h-full object-cover">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination-swiper-dis-content-2 swiper-pagination"></div>
+                                <x-frontend.utils.arrow-prev className="left-arrow-swiper left-arrow-swiper-dis-content-2" />
+                                <x-frontend.utils.arrow-next className="right-arrow-swiper right-arrow-swiper-dis-content-2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="the_card">
+                    <div class="the_card_content">
+                        <div class="distribution-card">
+                            <div class="distribution-body">
+                                <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
+                                    class="text-red-500 text-xl italic">04</span>
+                                <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
+                                    class="font-semibold text-6xl leading-16">
+                                    {!! __('contents.home.distribution_items.kol_management') !!}
                                 </h5>
                                 <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                     data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"

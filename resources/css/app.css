@@ -38,11 +38,11 @@
     }
 
     .home--whoarewe-values{
-        @apply text-lg text-center leading-[22px];
+        @apply text-sm text-center leading-[22px];
     }
 
     .home--whoarewe-values span {
-        @apply font-bold text-red-500 text-xl italic uppercase leading-5;
+        @apply font-bold text-red-500 text-base italic uppercase leading-5;
     }
 
     .home--route_title{
@@ -245,6 +245,21 @@
     @apply stroke-gray-400;
 }
 .alcohol-swiper-button-next.swiper-button-disabled svg path{
+    @apply stroke-gray-400;
+}
+
+.consumer-goods-swiper-button-prev{
+    @apply select-none;
+}
+
+.consumer-goods-swiper-button-prev.swiper-button-disabled svg path{
+    @apply stroke-gray-400;
+}
+.consumer-goods-swiper-button-next{
+    @apply select-none;
+}
+
+.consumer-goods-swiper-button-prev.swiper-button-disabled svg path{
     @apply stroke-gray-400;
 }
 

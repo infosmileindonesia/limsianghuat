@@ -51,14 +51,24 @@ return [
         ]
     ],
 
+    'brands' => [
+        'categories' => [
+            'alcohol' => 'Alcohol',
+            'non_alcohol' => 'Non Alcohol',
+            'rte' => 'RTE (Ready To Eat)',
+            'rtd' => 'RTD (Ready To Drink)',
+            'consumer_goods' => 'Consumer Goods',
+        ]
+    ],
+
     'generals' => [
         'discover_button' => '发现更多',
         'learn_more' => '了解更多',
     ],
 
     'footer' => [
-        'box_header' => '您的品牌下一步的重要行动从这里开始',
-        'box_button' => "让我们一起实现它!",
+        'box_header' => '您的品牌下一步的重要行动从这里开始！',
+        'box_button' => "让我们一起实现它！",
 
         'copy' => '版權所有 © Lim Siang Huat :year 。'
     ]

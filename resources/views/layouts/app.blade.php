@@ -101,8 +101,9 @@
                             <h4 class="mb-2 font-semibold text-xl text-center">@lang('Brands')</h4>
                             <ul class="space-y-2 text-center">
                                 <li><a href="{{ route('brands') }}#brand-alcohol">@lang('Alcohol')</a></li>
-                                <li><a href="{{ route('brands') }}#brand-non-alcohol">@lang('Non - Alcohol')</a></li>
-                                <li><a href="{{ route('brands') }}#brand-food">@lang('Foods')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-non-alcohol">@lang('RTD Ready To Drink')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-food">@lang('RTE Ready To Eat')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-food">@lang('Consumer Goods')</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">

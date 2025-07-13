@@ -5,13 +5,14 @@ import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.e
 import alcoholBrand from './alcoholbrand';
 import nonalcoholbrand from './nonalcoholbrand';
 import beverages from './beverages';
+import consumerGoods from './consumergood';
 
 window.Alpine = Alpine;
 
 Alpine.data('alcoholSection', alcoholBrand);
 Alpine.data('nonAlcoholSection', nonalcoholbrand);
 Alpine.data('foodBrandsSection', beverages);
-
+Alpine.data('consumerGoodsSection', consumerGoods);
 Livewire.start();
 
 

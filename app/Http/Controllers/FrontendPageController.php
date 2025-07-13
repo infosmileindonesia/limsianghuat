@@ -142,7 +142,36 @@ class FrontendPageController extends Controller
 
     public function distribution()
     {
-        return view('frontend.distribution');
+
+        $horecaContents = [
+            asset('img/horeca/st-regis.png'),
+            asset('img/horeca/ritz-carlton.png'),
+            asset('img/horeca/the-westin.png'),
+            asset('img/horeca/dharmawangsa.png'),
+            asset('img/horeca/intern-continental.png'),
+            asset('img/horeca/jw-marrtiot.png'),
+            asset('img/horeca/mercure.png'),
+            asset('img/horeca/pullman.png'),
+            asset('img/horeca/raffles.png'),
+            asset('img/horeca/ritz-carlton-logo.png'),
+            asset('img/horeca/st-regis-logo.png'),
+            asset('img/horeca/the-westin-logo.png'),
+        ];
+
+        $modernTradeContents = [
+            asset('img/modern-trade/aeon-hall.png'),
+            asset('img/modern-trade/aeon.png'),
+            asset('img/modern-trade/dutabuah.png'),
+            asset('img/modern-trade/farmers-market.png'),
+            asset('img/modern-trade/grand-lucky-hall.png'),
+            asset('img/modern-trade/k3mart.png'),
+            asset('img/modern-trade/ranch-hall.png'),
+            asset('img/modern-trade/the-food-hall.png'),
+            asset('img/modern-trade/total-buah.png'),
+        ];
+
+
+        return view('frontend.distribution', compact('horecaContents', 'modernTradeContents'));
     }
 
     public function contact()

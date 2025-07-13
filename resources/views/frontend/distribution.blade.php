@@ -13,9 +13,14 @@
     />
 
     <div class="mx-auto py-10 container" id="channel">
-        <p class="mt-4 text-2xl text-center">Our company have been continuosly develop and expand into different cities in <br>
+        <h1 class="text-center">
+            <span class="block font-medium text-6xl tracking-tighter">Our Data Speaks</span>
+            <span class="block font-extrabold text-red-500 text-9xl italic">Real Time</span>
+            <span class="text-2xl">with reliable real-time data, we move forward together with <br> our partners with confidence to win the market.</span>
+        </h1>
+        {{-- <p class="mt-4 text-2xl text-center">Our company have been continuosly develop and expand into different cities in <br>
             Indonesia to create wider connection with restaurants, hotels, supermarkets, bars, <br>
-            night clubs and individual consumers. </p>
+            night clubs and individual consumers. </p> --}}
 
             <div class="relative mt-4 lg:mt-9" id="map-parent">
                 <img src="{{ asset('img/placeholder/maps.png') }}" class="w-full h-auto" alt="">
@@ -163,7 +168,7 @@
                 <div class="group accordion-header" @click="accordionActive = accordionActive === 1 ? 0 : 1">
                     <h3 class="group-hover:underline accordion-title">@lang('contents.distribution.items.horeca.title')</h3>
                     <div class="group-hover:underline accordion-subtitle">
-                        Connecting you with restaurants, hotels, and cafés for maximum exposure.
+                        {!! __('contents.distribution.items.horeca.description') !!}
                     </div>
                 </div>
                 <div
@@ -180,18 +185,13 @@
 
                             <div class="products-list">
 
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                @foreach ($horecaContents as $item)
+                                    <div
+                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
+                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                @endforeach
 
                             </div>
 
@@ -208,7 +208,7 @@
                         @lang('contents.distribution.items.general_trade.title')
                     </h3>
                     <div class="group-hover:underline accordion-subtitle">
-                        Connecting you with retailers and businesses that expand your reach.
+                        {!! __('contents.distribution.items.general_trade.description') !!}
                     </div>
                 </div>
                 <div
@@ -224,20 +224,13 @@
                         <div class="accordion-content-inner">
 
                             <div class="products-list">
-
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-
+                                @foreach ($horecaContents as $item)
+                                    <div
+                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
+                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                @endforeach
                             </div>
 
                         </div>
@@ -253,7 +246,7 @@
                         @lang('contents.distribution.items.modern_trade.title')
                     </h3>
                     <div class="group-hover:underline accordion-subtitle">
-                        Connecting you with leading retailers and distribution channels.
+                        {!! __('contents.distribution.items.modern_trade.description') !!}
                     </div>
                 </div>
                 <div
@@ -270,18 +263,13 @@
 
                             <div class="products-list">
 
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
-                                <div class="bg-gray-500 rounded-full aspect-square"></div>
+                                @foreach ($modernTradeContents as $item)
+                                    <div
+                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
+                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                @endforeach
 
                             </div>
 
