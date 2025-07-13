@@ -68,9 +68,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-5 min-h-[572px]">
                 <div class="relative col-span-3 h-full">
 
-                    <div class="lg:absolute relative lg:inset-0 bg-[#F2F2F2] py-10 lg:pl-10 lg:rounded-2xl lg:w-[108%] h-min">
-                        <div class="space-y-3 md:space-y-3 xl:space-y-5 px-2 lg:px-0 max-w-none xl:max-w-[74%]">
+                    <div class="lg:absolute relative lg:inset-0 bg-[#F2F2F2] py-10 lg:pl-7 lg:rounded-2xl lg:w-[108%] h-min">
+                        <div class="space-y-3 md:space-y-3 xl:space-y-2.5 px-2 lg:px-0 max-w-none xl:max-w-[74.6%]">
                             <p class="text-2xl">@lang('contents.home.whoarewe_title')</p>
+                            <p class="font-bold text-5xl">@lang('contents.home.whoarewe_title_alt')</p>
                             <h1 class="home--whoarewe-subtitle">@lang('contents.home.whoarewe_subtitle')</h1>
                             <p>
                                 @lang('contents.home.whoarewe_description_1')
@@ -94,7 +95,7 @@
                                 </div>
                                 <div class="flex flex-col items-center gap-1 bg-white shadow-2xl px-2 pt-4 pb-4 rounded-4xl">
                                     <img class="w-14 h-14" src="{{ asset('img/icons/Icon-Effective.png') }}" alt="">
-                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.teamwork') !!}</p>
+                                    <p class="home--whoarewe-values">{!! __('contents.home.whoarewe_values.effective') !!}</p>
                                 </div>
                             </div>
 
@@ -121,7 +122,7 @@
             </div>
         </div>
 
-        <div class="space-y-5 mx-auto mt-[100px] lg:mt-[200px] px-2 lg:px-0 container">
+        <div class="space-y-5 mx-auto mt-[80px] lg:mt-[120px] px-2 lg:px-0 container">
             <p class="text-2xl text-center">@lang('contents.home.route_header')</p>
             <h2 class="text-center section-title home--route_title">{!! __('contents.home.route_title') !!}</h2>
                 <p class="text-xl text-center">{{ __('contents.home.route_subtitle') }}</p>
@@ -212,7 +213,7 @@
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
                                     class="text-red-500 text-xl italic">01</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="font-semibold text-6xl leading-16">
+                                    class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
                                     {!! __('contents.home.distribution_items.horeca') !!}
                                 </h5>
                                 <a href="{{ route('distribution') }}#hotel-restaurant-cafe" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
@@ -272,7 +273,7 @@
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
                                     class="text-red-500 text-xl italic">02</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="font-semibold text-6xl leading-16">
+                                    class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
                                     {!! __('contents.home.distribution_items.modern_trade') !!}
                                 </h5>
                                 <a href="{{ route('distribution') }}#general-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
@@ -330,7 +331,7 @@
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
                                     class="text-red-500 text-xl italic">03</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="font-semibold text-6xl leading-16">
+                                    class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
                                     {!! __('contents.home.distribution_items.general_trade') !!}
                                 </h5>
                                 <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
@@ -387,7 +388,7 @@
                                 <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%"
                                     class="text-red-500 text-xl italic">04</span>
                                 <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
-                                    class="font-semibold text-6xl leading-16">
+                                    class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
                                     {!! __('contents.home.distribution_items.kol_management') !!}
                                 </h5>
                                 <a href="{{ route('distribution') }}#modern-trade" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"

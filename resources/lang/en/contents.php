@@ -7,15 +7,16 @@ return [
     'home' => [
         'whoarewe_header' => 'At Lim Siang Huat, <br> We’re a partner in your success.',
         'whoarewe_title' => 'WHO WE ARE',
+        'whoarewe_title_alt' => 'F&B Distributor.',
         // 'whoarewe_title' => 'F&B Distributor',
         // 'whoarewe_subtitle' => 'F&B Distributor Since <span>2002</span>',
-        'whoarewe_subtitle' => 'Founded in <span>1940</span>, Thriving in Indonesia Since <span>2002</span>',
+        'whoarewe_subtitle' => 'Established in <span class="bold">1940</span> Thrive in <br> <span>Indonesia Since</span> <span class="bold">2002</span>',
         'whoarewe_description_1' => 'We are passionate in connecting and servicing consumer goods from brand owners to consumer with proper selected channels that results in high efficiency Route To Market and Distribution.',
         'whoarewe_description_2' => 'We Commit to These Values',
 
         'whoarewe_values' => [
-            'integration' => 'Effective <br> <span>integration</span>',
-            'respect' => '<span>respect</span> <br> our relations',
+            'integration' => '<span>WIN - WIN</span> <br> solution',
+            'respect' => '<span>RESPECT</span> <br> our relations',
             'teamwork' => 'strength of <br> <span>teamwork</span>',
             'effective' => '<span>Effective</span> <br> integration',
         ],

@@ -30,10 +30,14 @@
 @layer components {
 
     .home--whoarewe-subtitle{
-        @apply font-semibold text-5xl leading-16;
+        @apply font-normal text-2xl leading-10;
     }
 
     .home--whoarewe-subtitle span {
+        @apply text-4xl;
+    }
+
+    .home--whoarewe-subtitle span.bold {
         @apply font-bold text-red-500 text-5xl italic;
     }
 
