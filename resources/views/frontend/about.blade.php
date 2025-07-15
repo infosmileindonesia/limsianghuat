@@ -37,13 +37,13 @@
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
-                    <span class="relative" data-counter data-counter-end="100" data-counter-start="0" data-counter-duration="500">200</span>
+                    <span class="relative" data-counter data-counter-end="200" data-counter-start="0" data-counter-duration="500">200</span>
                 </div>
                 <p class="text-center">@lang('contents.about.counters.sku')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
-                    <span class="relative" data-counter data-counter-end="10000" data-counter-start="0" data-counter-duration="500">10000</span>
+                    <span class="relative" data-counter data-counter-end="15000" data-counter-start="0" data-counter-duration="500">15000</span>
                 </div>
                 <p class="text-center">@lang('contents.about.counters.outlet')</p>
             </div>
