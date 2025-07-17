@@ -16,8 +16,8 @@ class FrontendPageController extends Controller
     public function index()
     {
         $banners = Banner::all();
-
-        return view('welcome', compact('banners'));
+        $distributions = \App\Models\Distribution::with(['media'])->get();
+        return view('welcome', compact('banners', 'distributions'));
     }
 
     public function about()
@@ -221,8 +221,10 @@ class FrontendPageController extends Controller
             asset('img/modern-trade/total-buah.png'),
         ];
 
+        $distributions = \App\Models\Distribution::with(['media'])->get();
 
-        return view('frontend.distribution', compact('horecaContents', 'modernTradeContents'));
+
+        return view('frontend.distribution', compact('horecaContents', 'modernTradeContents', 'distributions'));
     }
 
     public function contact()

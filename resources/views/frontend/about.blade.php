@@ -55,7 +55,7 @@
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
-                    <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">11</span>
+                    <span class="relative" data-counter data-counter-end="11" data-counter-start="0" data-counter-duration="500">11</span>
                 </div>
                 <p class="text-center">@lang('contents.about.counters.city')</p>
             </div>
@@ -69,14 +69,14 @@
         <h2 class="about--why-title">@lang('contents.about.why_title')</h2>
         <p class="about--why-description">@lang('contents.about.why_description')</p>
 
-        <div class="space-y-4 mt-12 px-14">
+        <div class="space-y-3 lg:space-y-4 mt-12 px-2 lg:px-14">
             @foreach ($whyContents as $items)
                 <div class="card-why-wrapper" data-animate-view data-animate-target=".card-why">
                     @foreach ($items as $item)
                         <div>
                             <div class="card-why">
-                                <h3 class="text-outline font-black text-white text-5xl text-center">{{ $item->number }}</h3>
-                                <p class="min-h-[80px] font-bold text-red-500 text-4xl text-center">{!! $item->title !!}</p>
+                                <h3 class="text-outline font-black text-white text-3xl lg:text-5xl text-center">{{ $item->number }}</h3>
+                                <p class="lg:min-h-[80px] font-bold text-red-500 text-2xl lg:text-4xl text-center">{!! $item->title !!}</p>
                                 <p class="card-description">{!! $item->description !!}</p>
                             </div>
                         </div>

@@ -33,96 +33,25 @@
             x-data="{accordionActive: 1}"
             >
 
+            @foreach ($distributions as $distribution)
+
             <div class="bg-zinc-100 accordion-item"
+                style="background-color: {{ $distribution->attribute['background_color'] ?? '#f3f4f6' }}"
                 id="hotel-restaurant-cafe"
-                :class="{ 'accordion-active' : accordionActive === 1}">
-                <div class="group accordion-header" @click="accordionActive = accordionActive === 1 ? 0 : 1">
-                    <h3 class="group-hover:underline accordion-title">@lang('contents.distribution.items.horeca.title')</h3>
-                    <div class="group-hover:underline accordion-subtitle">
-                        {!! __('contents.distribution.items.horeca.description') !!}
-                    </div>
-                </div>
-                <div
-                    x-transition
-                    x-show="accordionActive === 1" class="accordion-content">
-                    <div
-                        data-perfect-scrollbar
-                        data-wheel-speed="1"
-                        data-suppress-scroll-x="true"
-                        data-min-scrollbar-length="20"
-                        data-max-scrollbar-length="100"
-                        class="accordion-content-outter">
-                        <div class="accordion-content-inner">
-
-                            <div class="products-list">
-
-                                @foreach ($horecaContents as $item)
-                                    <div
-                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
-                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
-                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
-                                    </div>
-                                @endforeach
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-stone-200 accordion-item"
-                id="general-trade"
-                :class="{ 'accordion-active' : accordionActive === 2}">
-                <div class="group accordion-header" @click="accordionActive = accordionActive === 2 ? 0 : 2">
+                :class="{ 'accordion-active' : accordionActive === $loop->iteration}">
+                <div class="group accordion-header" @click="accordionActive = accordionActive === {{$loop->iteration}} ? 0 : {{$loop->iteration}}">
                     <h3 class="group-hover:underline accordion-title">
-                        @lang('contents.distribution.items.general_trade.title')
+                        {{-- @lang('contents.distribution.items.horeca.title') --}}
+                        {!! nl2br($distribution->name) !!}
                     </h3>
                     <div class="group-hover:underline accordion-subtitle">
-                        {!! __('contents.distribution.items.general_trade.description') !!}
+                        {{-- {!! __('contents.distribution.items.horeca.description') !!} --}}
+                        {{ $distribution->description }}
                     </div>
                 </div>
                 <div
                     x-transition
-                    x-show="accordionActive === 2" class="accordion-content">
-                    <div
-                        data-perfect-scrollbar
-                        data-wheel-speed="1"
-                        data-suppress-scroll-x="true"
-                        data-min-scrollbar-length="20"
-                        data-max-scrollbar-length="100"
-                        class="accordion-content-outter">
-                        <div class="accordion-content-inner">
-
-                            <div class="products-list">
-                                @foreach ($horecaContents as $item)
-                                    <div
-                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
-                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
-                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
-                                    </div>
-                                @endforeach
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-neutral-300 accordion-item"
-                id="modern-trade"
-                :class="{ 'accordion-active' : accordionActive === 3}">
-                <div class="group accordion-header" @click="accordionActive = accordionActive === 3 ? 0 : 3">
-                    <h3 class="group-hover:underline accordion-title">
-                        @lang('contents.distribution.items.modern_trade.title')
-                    </h3>
-                    <div class="group-hover:underline accordion-subtitle">
-                        {!! __('contents.distribution.items.modern_trade.description') !!}
-                    </div>
-                </div>
-                <div
-                    x-transition
-                    x-show="accordionActive === 3" class="accordion-content">
+                    x-show="accordionActive === {{$loop->iteration}}" class="accordion-content">
                     <div
                         data-perfect-scrollbar
                         data-wheel-speed="1"
@@ -134,13 +63,29 @@
 
                             <div class="products-list">
 
-                                @foreach ($modernTradeContents as $item)
-                                    <div
-                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
-                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
-                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
-                                    </div>
-                                @endforeach
+                                @if ($distribution->getMedia('distribution_images')->isEmpty())
+                                    
+                                    @foreach ($horecaContents as $item)
+                                        <div
+                                            class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                            {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
+                                            <img src="{{$item}}" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                    @endforeach
+                                    
+                                @else
+                                    
+                                    @foreach($distribution->getMedia('distribution_images') as $media)
+                                        
+                                        <div
+                                            class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+                                            <img src="{{$media->getUrl('webp_render') }}" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                    
+                                    @endforeach
+                                    
+                                @endif
+
 
                             </div>
 
@@ -149,45 +94,8 @@
                 </div>
             </div>
 
-            <div class="bg-neutral-300 accordion-item"
-                id="kol-management"
-                :class="{ 'accordion-active' : accordionActive === 4}">
-                <div class="group accordion-header" @click="accordionActive = accordionActive === 4 ? 0 : 4">
-                    <h3 class="group-hover:underline accordion-title">
-                        @lang('contents.distribution.items.kol_management.title')
-                    </h3>
-                    <div class="group-hover:underline accordion-subtitle">
-                        {!! __('contents.distribution.items.kol_management.description') !!}
-                    </div>
-                </div>
-                <div
-                    x-transition
-                    x-show="accordionActive === 4" class="accordion-content">
-                    <div
-                        data-perfect-scrollbar
-                        data-wheel-speed="1"
-                        data-suppress-scroll-x="true"
-                        data-min-scrollbar-length="20"
-                        data-max-scrollbar-length="100"
-                        class="accordion-content-outter">
-                        <div class="accordion-content-inner">
 
-                            <div class="products-list">
-
-                                @foreach ($modernTradeContents as $item)
-                                    <div
-                                        class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
-                                        {{-- <img src="{{ asset('images/distribution/horeca/' . $item) }}" alt="" class="w-full h-full object-cover"> --}}
-                                        <img src="{{$item}}" alt="" class="w-full h-full object-cover">
-                                    </div>
-                                @endforeach
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
 
         </div>

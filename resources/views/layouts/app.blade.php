@@ -109,8 +109,17 @@
                         <div class="flex flex-col items-center">
                             <h4 class="mb-2 font-semibold text-xl text-center">@lang('Distribution')</h4>
                             <ul class="space-y-2 text-center">
-                                <li><a href="{{ route('distribution') }}#channel">@lang('Channel')</a></li>
-                                <li><a href="{{ route('distribution') }}#distribution">@lang('Branches')</a></li>
+
+                                @foreach ($distributions_list as $distribution)
+                                    <li>
+                                        <a href="{{ route('distribution') }}#{{$distribution->slug}}">
+                                            {{ $distribution->menu_name }}
+                                        </a>
+                                    </li>
+                                @endforeach
+
+
+
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">

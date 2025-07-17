@@ -6,6 +6,7 @@
 /public/error_log
 /storage/*.key
 /storage/pail
+/storage/media-library
 /vendor
 .env
 .env.backup

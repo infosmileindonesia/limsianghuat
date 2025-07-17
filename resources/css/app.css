@@ -90,7 +90,7 @@
     }
 
     .card-why-wrapper{
-        @apply flex flex-nowrap justify-center gap-3;
+        @apply flex lg:flex-row flex-col flex-nowrap justify-center gap-3;
     }
 
     .card-why{
@@ -203,7 +203,7 @@
     }
 
     .accordion-item .accordion-content .accordion-content-outter{
-        @apply  relative px-2 lg:px-4 w-full h-[160px] lg:h-[620px] overflow-hidden;
+        @apply  relative px-2 lg:px-4 w-full h-[160px] lg:h-[640px] overflow-hidden;
     }
 
     .accordion-item .accordion-content .accordion-content-inner{
