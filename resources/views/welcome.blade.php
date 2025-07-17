@@ -214,7 +214,7 @@
                                         class="text-red-500 text-xl italic">0{{$loop->iteration}}</span>
                                     <h5 data-swiper-parallax="-300" data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
                                         class="font-semibold text-4xl lg:text-6xl leading-10 lg:leading-16">
-                                        {!! nl2br($distribution->name) !!}
+                                        {!! $distribution->name_breakline !!}
                                     </h5>
                                     <a href="{{ route('distribution') }}#{{$distribution->slug}}" data-swiper-parallax-y="-100" data-swiper-parallax-x="100%"
                                         data-swiper-parallax-duration="500" data-swiper-parallax-opacity="0"
@@ -242,20 +242,6 @@
                                             data-class-name="swiper-dis-content-{{$distribution->id}}">
 
                                             <x-distribution-thumbnail :distribution="$distribution" />
-                                            {{-- <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/placeholder/thumb-1-1.png') }}" alt=""
-                                                        class="w-full h-full object-cover">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/placeholder/thumb-2-1.png') }}" alt=""
-                                                        class="w-full h-full object-cover">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/placeholder/thumb-3-1.png') }}" alt=""
-                                                        class="w-full h-full object-cover">
-                                                </div>
-                                            </div> --}}
                                         </div>
                                     </div>
                                     <!-- Add Pagination -->

@@ -42,7 +42,7 @@
                 <div class="group accordion-header" @click="accordionActive = accordionActive === {{$loop->iteration}} ? 0 : {{$loop->iteration}}">
                     <h3 class="group-hover:underline accordion-title">
                         {{-- @lang('contents.distribution.items.horeca.title') --}}
-                        {!! nl2br($distribution->name) !!}
+                        {!! $distribution->name_breakline !!}
                     </h3>
                     <div class="group-hover:underline accordion-subtitle">
                         {{-- {!! __('contents.distribution.items.horeca.description') !!} --}}
@@ -64,7 +64,7 @@
                             <div class="products-list">
 
                                 @if ($distribution->getMedia('distribution_images')->isEmpty())
-                                    
+
                                     @foreach ($horecaContents as $item)
                                         <div
                                             class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
@@ -72,18 +72,18 @@
                                             <img src="{{$item}}" alt="" class="w-full h-full object-cover">
                                         </div>
                                     @endforeach
-                                    
+
                                 @else
-                                    
+
                                     @foreach($distribution->getMedia('distribution_images') as $media)
-                                        
+
                                         <div
                                             class="bg-white border-2 border-white hover:border-red-500 rounded-full aspect-square overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
                                             <img src="{{$media->getUrl('webp_render') }}" alt="" class="w-full h-full object-cover">
                                         </div>
-                                    
+
                                     @endforeach
-                                    
+
                                 @endif
 
 

@@ -38,6 +38,22 @@ class Distribution extends Model implements HasMedia
         'attribute' => 'array',
     ];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['name_breakline'];
+
+    /**
+     * Get the name with a breakline for display purposes.
+     *
+     * @return string
+     */
+    public function getNameBreaklineAttribute(): string
+    {
+        return nl2br($this->name);
+    }
 
     /**
      * The attributes that should be translatable.
