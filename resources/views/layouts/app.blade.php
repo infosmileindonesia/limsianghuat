@@ -125,10 +125,10 @@
                         <div class="flex flex-col items-center">
                             <h4 class="mb-2 font-semibold text-xl text-center">@lang('Contact')</h4>
                             <ul class="space-y-2 text-center">
-                                <li>LSH Jakarta</li>
-                                <li>LSH Batam</li>
-                                <li>LSH Bali</li>
-                                <li>LSH Surabaya</li>
+                                <li><a href="{{ route('contact') }}">LSH Jakarta</a></li>
+                                <li><a href="{{ route('contact') }}">LSH Batam</a></li>
+                                <li><a href="{{ route('contact') }}">LSH Bali</a></li>
+                                <li><a href="{{ route('contact') }}">LSH Surabaya</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">
