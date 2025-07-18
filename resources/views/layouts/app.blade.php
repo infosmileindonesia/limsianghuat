@@ -84,7 +84,9 @@
 
 
                     <div class="mb-5">
-                        <img src="{{ asset('img/lsh-logo-text.png') }}" alt="" width="384" height="116" class="mx-auto max-w-[200px] lg:max-w-[384px]">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('img/lsh-logo-text.png') }}" alt="" width="384" height="116" class="mx-auto max-w-[200px] lg:max-w-[384px]">
+                        </a>
                     </div>
 
                     <div class="justify-center gap-4 lg:gap-0 grid grid-cols-2 xl:grid-cols-5 mb-8">

@@ -4,7 +4,7 @@
     <div class="relative flex md:flex-row flex-col justify-center items-center mx-auto lg:py-4 min-h-[121px] container">
         <!-- Logo Section -->
         <div class="md:top-0 md:bottom-0 md:left-0 md:absolute flex justify-center items-center md:self-center md:place-items-center md:grid mb-0 lg:mb-4 h-full">
-            <a href="#">
+            <a href="{{ route('home') }}">
                 <span><img src="{{ asset('img/logo.png') }}" alt="Logo" width="93" height="86"></span>
             </a>
         </div>
