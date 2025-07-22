@@ -63,7 +63,8 @@ class BannerResource extends Resource
                     ->disk('public')
                     ->directory('banners')
                     ->preserveFilenames()
-                    ->maxSize(1024)
+                    ->maxSize(2048) // 2MB
+                    ->required()
                     ->columnSpanFull(),
             ]);
     }

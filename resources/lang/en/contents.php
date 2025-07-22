@@ -37,7 +37,9 @@ return [
 
     'about' => [
         'introduction' => 'Connecting Brands to Consumer.',
-        'intro_subtitle' => 'Our mission are to do every work with <span>passion</span>, <span>value</span> and <span>respect</span> the relationship <br> with brand owners and customers, <span>believe</span> in the strength of teamwork.',
+        // 'intro_subtitle' => 'Our mission are to do every work with <span>passion</span>, <span>value</span> and <span>respect</span> the relationship <br> with brand owners and customers, <span>believe</span> in the strength of teamwork.',
+        'intro_subtitle' => 'Continuously to cultivate a <span>Strong relationship</span> and <span>Teamwork,</span> <br> to do every work <span>Effectively and Efficiently.</span>',
+
 
         'why' => [
             'dna' => [
@@ -71,11 +73,11 @@ return [
         ],
 
         'counters' => [
-            'year' => '<strong>Years</strong><br> <small>of experience</small>',
-            'sku' => '<strong>SKUs</strong> <br> <small>that we distribute</small>',
-            'outlet' => '<strong>Outlets</strong><br> <small>that we serve directly</small>',
-            'company' => '<strong>Company</strong><br> <small class="text-red-500">as our principal</small>',
-            'city' => '<strong>Cities</strong> <br> <small>of active distribution</small>'
+            'year' => '<strong>Years</strong><br> <small class="text-base">of experience</small>',
+            'sku' => '<strong>SKUs</strong> <br> <small class="text-base">that we distribute</small>',
+            'outlet' => '<strong>Customers</strong><br> <small class="text-base">that we serve directly</small>',
+            'company' => '<strong>Principals</strong><br> <small class="text-base">trust us to grow their brands</small>',
+            'city' => '<strong>Cities</strong> <br> <small class="text-base">of active distribution</small>'
         ],
 
         'why_title' => 'Why Lim Siang Huat ?',
@@ -84,9 +86,11 @@ return [
 
     'brands' => [
 
-        'description' => 'Every brand possesses it’s own unique qualities and value propositions. Our team <br>
-                travels extensively to identify the highest quality products that we can introduce to <br>
-                the Indonesian market, ensuring they align with consumer patterns.',
+        // 'description' => 'Every brand possesses it’s own unique qualities and value propositions. Our team <br>
+        //         travels extensively to identify the highest quality products that we can introduce to <br>
+        //         the Indonesian market, ensuring they align with consumer patterns.',
+
+        'description' => 'We understand that every brand possess it’s own unique qualities and value <br> propositions. Hence we are aligned with our Principals, we are consistent in <br> execution and distribution to ensure our products continuously available to our <br> customers and easily reach by the targeted consumer. ',
 
         'categories' => [
             'alcohol' => 'Alcohol Beverages',

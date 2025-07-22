@@ -21,8 +21,8 @@
             :title="'Brands'"
         />
 
-        <div class="mx-auto px-2 lg:px-0 pt-20 pb-10 container" id="brand-alcohol">
-            <p class="mt-4 text-2xl text-center">@lang('contents.brands.description')</p>
+        <div class="mx-auto px-2 lg:px-0 pt-10 pb-10 container" id="brand-alcohol">
+            <p class="mt-2 text-2xl text-center">@lang('contents.brands.description')</p>
 
             <h1 class="mt-10 text-center section-title-secondary">@lang('contents.brands.categories.alcohol')</h1>
 

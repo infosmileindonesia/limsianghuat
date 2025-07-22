@@ -38,8 +38,10 @@
                         </svg>
                 </span>
                 <div class="text-center">
-                    <p class="font-medium text-red-500 text-2xl md:text-4xl">Phone</p>
-                    <a href="tel:+62 778 430359" class="font-normal text-white text-lg md:text-2xl">+62 778 430359</a>
+                    <p class="font-medium text-red-500 text-2xl md:text-4xl">
+                        <a href="tel:+62 778 430359">@lang('Phone')</a>
+                    </p>
+                    {{-- <a href="tel:+62 778 430359" class="font-normal text-white text-lg md:text-2xl">+62 778 430359</a> --}}
                 </div>
             </div>
             <div class="flex flex-col justify-end items-center gap-y-6 bg-black py-10 rounded-2xl">
@@ -49,8 +51,10 @@
                         </svg>
                 </span>
                 <div class="text-center">
-                    <p class="font-medium text-red-500 text-2xl md:text-4xl">Email</p>
-                    <a href="mailto:lsh@gmail.com" class="font-normal text-white text-lg md:text-2xl">lsh@gmail.com</a>
+                    <p class="font-medium text-red-500 text-2xl md:text-4xl">
+                        <a href="mailto:lsh@gmail.com">@lang('Email')</a>
+                    </p>
+                    {{-- <a href="mailto:lsh@gmail.com" class="font-normal text-white text-lg md:text-2xl">lsh@gmail.com</a> --}}
                 </div>
             </div>
             <div class="flex flex-col justify-end items-center gap-y-6 bg-black py-10 rounded-2xl">
@@ -60,8 +64,10 @@
                         </svg>
                 </span>
                 <div class="text-center">
-                    <p class="font-medium text-red-500 text-2xl md:text-4xl">Head Office</p>
-                    <p class="font-normal text-white text-lg md:text-2xl">Batam, Kepulauan Riau</p>
+                    <p class="font-medium text-red-500 text-2xl md:text-4xl">
+                        <a href="https://maps.app.goo.gl/1h4mEdfGsB1GwjLx5" target="_blank">@lang('Head Office')</a>
+                    </p>
+                    {{-- <p class="font-normal text-white text-lg md:text-2xl">Batam, Kepulauan Riau</p> --}}
                 </div>
             </div>
         </div>
@@ -75,12 +81,17 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Balindo+Jakarta&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.LSHR+JAKARTA&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Balindo+Batam&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT+Lim+Siang+Huat+Balindo+Surabaya&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
+                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Bali&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
                     </div>
                 </div>
             </div>

@@ -28,36 +28,36 @@
         <h1 class="mb-8 text-center section-title">@lang('contents.about.introduction')</h1>
         <p class="about--intro-subtitle">@lang('contents.about.intro_subtitle')</p>
 
-        <div class="md:flex flex-wrap justify-center md:items-center md:gap-3 lg:gap-0 lg:grid lg:grid-cols-5 mt-4 lg:mt-8">
+        <div class="md:flex flex-wrap justify-center md:items-start md:gap-3 lg:gap-0 lg:grid lg:grid-cols-5 mt-4 lg:mt-8">
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="20" data-counter-start="0" data-counter-duration="500">20</span>
                 </div>
-                <p class="text-center">@lang('contents.about.counters.year')</p>
+                <p class="text-lg text-center">@lang('contents.about.counters.year')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="200" data-counter-start="0" data-counter-duration="500">200</span>
                 </div>
-                <p class="text-center">@lang('contents.about.counters.sku')</p>
+                <p class="text-lg text-center">@lang('contents.about.counters.sku')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="15000" data-counter-start="0" data-counter-duration="500">15000</span>
                 </div>
-                <p class="text-center">@lang('contents.about.counters.outlet')</p>
+                <p class="text-lg text-center">@lang('contents.about.counters.outlet')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="15" data-counter-start="0" data-counter-duration="500">15</span>
                 </div>
-                <p class="text-center">@lang('contents.about.counters.company')</p>
+                <p class="text-lg text-center">@lang('contents.about.counters.company')</p>
             </div>
             <div class="flex flex-col items-center lg:min-w-0 min-w-2xs">
                 <div class="flex items-center space-x-2 font-bold text-red-500 text-6xl">
                     <span class="relative" data-counter data-counter-end="11" data-counter-start="0" data-counter-duration="500">11</span>
                 </div>
-                <p class="text-center">@lang('contents.about.counters.city')</p>
+                <p class="text-lg text-center">@lang('contents.about.counters.city')</p>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
 <section>
 
     <x-frontend.hero.minimal
-        :image="asset('img/placeholder/contact.png')"
+        :image="asset('img/placeholder/career.png')"
         :title="'Contact Us'"
     />
 

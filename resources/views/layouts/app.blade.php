@@ -151,7 +151,7 @@
                 <div class="flex justify-between items-center mx-auto py-5 container">
                     <div>
                         <p class="text-[#868686]">
-                            {{ __('contents.footer.copy', ['year' => date('Y')]) }}
+                            {!! __('contents.footer.copy', ['year' => date('Y')]) !!}
                         </p>
                     </div>
 
