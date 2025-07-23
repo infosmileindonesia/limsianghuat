@@ -229,7 +229,15 @@ class FrontendPageController extends Controller
 
     public function contact()
     {
-        return view('frontend.contact');
+        $places = [
+            'ChIJ1xLy-nKJ2TERbzwd0vkrkbk',
+            'ChIJC9pumkMdai4Rj8mVum52gXo',
+            'ChIJrav3issfai4RI-YItQnOOgI',
+            'ChIJKwGCpDY_0i0RwiiCu6625xc',
+            'ChIJMe45w6H_1y0RfiNItYw-c3M',
+        ];
+
+        return view('frontend.contact', compact('places'));
     }
 
     public function careers()

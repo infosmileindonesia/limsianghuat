@@ -79,31 +79,19 @@
         {{-- create swiper wrapper with three slides item map embed --}}
         <div class="swiper maps-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Pt.+Lim+Siang+Huat&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                @foreach ($places as $item)
+
+                    @php
+                        $placeId = $item;
+                        $mapUrl = "https://www.google.com/maps/embed/v1/place?q=place_id:{$placeId}&key=" . env('GOOGLE_MAP_API_KEY');
+                    @endphp
+
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
+                            <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="{{ $mapUrl }}"></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Balindo+Jakarta&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.LSHR+JAKARTA&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT+Lim+Siang+Huat+Balindo+Surabaya&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
-                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Bali&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="swiper-maps-controls">
