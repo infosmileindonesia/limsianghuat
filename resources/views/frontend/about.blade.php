@@ -19,7 +19,7 @@
 <section>
 
     <x-frontend.hero.minimal
-        :image="asset('img/placeholder/about.png')"
+        :image="asset('img/placeholder/contact.png')"
         :title="'About Us'"
         />
 

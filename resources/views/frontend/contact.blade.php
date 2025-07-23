@@ -81,6 +81,16 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
+                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Pt.+Lim+Siang+Huat&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
+                        <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.+Lim+Siang+Huat+Balindo+Jakarta&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="rounded-2xl w-full lg:w-[1112px] h-[300px] lg:h-[543px] overflow-hidden">
                         <iframe class="w-full h-full" width="1112" height="543" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=PT.LSHR+JAKARTA&key={{ env('GOOGLE_MAP_API_KEY') }}"></iframe>
                     </div>
                 </div>
