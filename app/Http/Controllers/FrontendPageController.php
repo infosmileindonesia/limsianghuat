@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\BrandAlcohol;
+use App\Models\BrandFoodAlcohol;
 use App\Models\BrandNonAlcohol;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -167,26 +168,12 @@ class FrontendPageController extends Controller
             ];
         });
 
-        $foodBrands = collect([
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-10.png'),
-            ],
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-11.png'),
-            ],
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-12.png'),
-            ],
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-10.png'),
-            ],
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-11.png'),
-            ],
-            [
-                'image' => asset('img/placeholder/brands/beverages/product-12.png'),
-            ],
-        ]);
+        $foodBrands = BrandFoodAlcohol::all()->map(function ($brand) {
+            return [
+                'name' => $brand->name,
+                'image' => $brand->getImageUrlAttribute(),
+            ];
+        });
 
         return view('frontend.brands', compact('alcoholBrands', 'nonAlcoholBrands', 'foodBrands'));
     }
