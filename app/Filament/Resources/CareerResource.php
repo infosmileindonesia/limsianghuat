@@ -62,18 +62,51 @@ class CareerResource extends Resource
                                             ->maxLength(255),
                                     ])
                             ])
+                            ->preload()
                             ->required()
                             ->searchable(),
-                        Forms\Components\Toggle::make('is_full_time')
-                            ->label('Is Full Time')
-                            ->required(),
-                        Forms\Components\Toggle::make('is_active')
-                            ->label('Is Active')
-                            ->required(),
+                        Forms\Components\Select::make('levels')
+                            ->relationship('levels', 'name')
+                            ->multiple()
+                            ->preload()
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Create Level')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name.en')
+                                            ->label('Level Name (English)')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('name.zh_TW')
+                                            ->label('Level Name (Traditional Chinese)')
+                                            ->maxLength(255),
+                                    ])
+                            ])
+                            ->required()
+                            ->searchable(),
+                        Forms\Components\Select::make('areas')
+                            ->relationship('areas', 'name')
+                            ->multiple()
+                            ->preload()
+                            ->createOptionForm([
+                                Forms\Components\TextInput::make('name.en')
+                                    ->label('Area Name')
+                                    ->required()
+                                    ->maxLength(255),
+                            ])
+                            ->required()
+                            ->searchable(),
                         Forms\Components\TextInput::make('job_url')
                             ->label('Job URL')
                             ->maxLength(255)
                             ->placeholder('https://careers.example.com/job/12345'),
+                        Forms\Components\Toggle::make('is_full_time')
+                            ->label('Is Full Time')
+                            ->default(true)
+                            ->required(),
+                        Forms\Components\Toggle::make('is_active')
+                            ->label('Is Active')
+                            ->default(true)
+                            ->required(),
                     ]),
                 ]);
     }

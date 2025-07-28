@@ -2,6 +2,10 @@
 
 namespace App\Livewire\Frontend\Careers;
 
+use App\Models\Career;
+use App\Models\CareerArea;
+use App\Models\CareerDepartment;
+use App\Models\CareerLevel;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 
@@ -18,38 +22,13 @@ class Listing extends Component
 
     public $selectedDepartmentLabel = null;
 
-    public $departments = [
-        'Sales',
-        'Marketing',
-        'Finance',
-        'Accounting',
-        'IT',
-        'Logistics',
-        'HR & Legal',
-    ];
+    public $departments;
 
-    public $availableDepartments = [
-        'Sales' => 0,
-        'Marketing' => 0,
-        'Finance' => 0,
-        'Accounting' => 0,
-        'IT' => 0,
-        'Logistics' => 0,
-        'HR & Legal' => 0,
-    ];
+    public $availableDepartments = [];
 
-    public $states = [
-        'Jakarta',
-        'Bandung',
-        'Surabaya',
-        'Yogyakarta',
-        'Bali',
-    ];
+    public $states;
 
-    public $levels = [
-        'Experienced',
-        'Fresh Graduate',
-    ];
+    public $levels;
 
     public $filteredListings = null;
 
@@ -110,19 +89,19 @@ class Listing extends Component
 
         if (!empty($this->selectedDepartment)) {
             $this->filteredListings = $this->filteredListings->filter(function ($listing) {
-                return in_array($listing->department, $this->selectedDepartment);
+                return $listing->department_id === $this->selectedDepartment[0];
             });
         }
 
         if (!empty($this->stateSelected)) {
             $this->filteredListings = $this->filteredListings->filter(function ($listing) {
-                return in_array($listing->location, $this->stateSelected);
+                return $listing->areas->pluck('id')->intersect($this->stateSelected)->isNotEmpty();
             });
         }
 
         if (!empty($this->levelSelected)) {
             $this->filteredListings = $this->filteredListings->filter(function ($listing) {
-                return in_array($listing->level, $this->levelSelected);
+                return $listing->levels->pluck('id')->intersect($this->levelSelected)->isNotEmpty();
             });
         }
     }
@@ -154,75 +133,40 @@ class Listing extends Component
 
     public function mount()
     {
-        $listings = [
-            [
-                'title' => 'Sales Supervisor',
-                'department' => 'Sales',
-                'location' => 'Jakarta',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for a Sales Supervisor to join our team.',
-            ],
-            [
-                'title' => 'Admin Accounting',
-                'department' => 'Accounting',
-                'location' => 'Jakarta',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for an Admin Accounting to join our team.',
-            ],
-            [
-                'title' => 'Marketing Executive',
-                'department' => 'Marketing',
-                'location' => 'Bandung',
-                'level' => 'Fresh Graduate',
-                'description' => 'We’re looking for a Marketing Executive to join our team.',
-            ],
-            [
-                'title' => 'Finance Staff',
-                'department' => 'Finance',
-                'location' => 'Surabaya',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for a Finance Staff to join our team.',
-            ],
-            [
-                'title' => 'Sales Associate',
-                'department' => 'Sales',
-                'location' => 'Yogyakarta',
-                'level' => 'Fresh Graduate',
-                'description' => 'We’re looking for a Sales Associate to join our team.',
-            ],
-            [
-                'title' => 'Web Developer',
-                'department' => 'IT',
-                'location' => 'Bali',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for a Web Developer to join our team.',
-            ],
-            [
-                'title' => 'Logistics Coordinator',
-                'department' => 'Logistics',
-                'location' => 'Jakarta',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for a Logistics Coordinator to join our team.',
-            ],
-            [
-                'title' => 'Human Resources Manager',
-                'department' => 'HR & Legal',
-                'location' => 'Bandung',
-                'level' => 'Experienced',
-                'description' => 'We’re looking for a Human Resources Manager to join our team.',
-            ]
-        ];
+        $locale = app()->getLocale();
+
+        $listings = Career::with(['department', 'levels', 'areas'])
+            ->where('is_active', true)
+            ->get();
+
+        $departments = CareerDepartment::select(['id', 'name', 'slug'])
+            ->get();
+
+        foreach ($departments as $department) {
+            $this->availableDepartments[$department->id] = [
+                'name' => $department->getTranslation('name', $locale),
+                'slug' => $department->slug,
+                'count' => 0, // Initialize count
+            ];
+        }
+
+        $this->departments = $departments;
+        $this->states = CareerArea::select(['id', 'name', 'slug'])
+            ->get();
+        $this->levels = CareerLevel::select(['id', 'name'])
+            ->get();
 
         // Count the number of listings in each department
         foreach ($listings as $listing) {
-            if (isset($this->availableDepartments[$listing['department']])) {
-                $this->availableDepartments[$listing['department']]++;
-            }
+            $this->availableDepartments[$listing->department->id]['count']++;
         }
 
-        $this->listings = collect($listings)->map(function ($listing) {
-            return (object) $listing;
-        });
+        $this->listings = $listings;
+        // Initialize filtered listings to all listings
+        if ($this->listings->isEmpty()) {
+            $this->filteredListings = collect();
+            return;
+        }
 
         $this->filteredListings = $this->listings;
     }

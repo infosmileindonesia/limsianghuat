@@ -148,3 +148,28 @@ if (!function_exists('isLocaleCurrent')) {
         return app()->isLocale($locale);
     }
 }
+
+if (!function_exists('localeFetcher')) {
+
+    /**
+     * Fetch the locale from the request or default to the app locale.
+     *
+     * @param string|null $fields
+     *
+     *
+     * @return string
+     */
+
+    function localeFetcher(?string $fields = null): string
+    {
+        $locale = request()->get('locale', App::getLocale());
+
+        if ($fields) {
+            $localeParts = explode('.', $fields);
+            $locale = $localeParts[0] ?? $locale;
+        }
+
+        return $locale;
+    }
+
+}

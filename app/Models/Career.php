@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\Sluggable\HasSlug;
 
 class Career extends Model
@@ -37,14 +38,25 @@ class Career extends Model
         return $this->belongsTo(CareerDepartment::class, 'department_id');
     }
 
-    public function levels()
+    /**
+     * The levels that belong to the Career
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function levels(): BelongsToMany
     {
-        return $this->morphToMany(CareerLevel::class, 'career_level', 'career_level_career');
+        return $this->belongsToMany(CareerLevel::class, 'career_level_career', 'career_id', 'career_level_id');
     }
 
-    public function areas()
+
+    /**
+     * The areas that belong to the Career
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function areas(): BelongsToMany
     {
-        return $this->morphToMany(CareerArea::class, 'career_area', 'career_area_career');
+        return $this->belongsToMany(CareerArea::class, 'career_area_career', 'career_id', 'career_area_id');
     }
 
 }
