@@ -42,7 +42,7 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="block bg-red-500 hover:bg-red-600 shadow-sm mx-auto px-4 py-3 rounded-2xl w-full max-w-[200px] font-medium text-white text-2xl transition-colors" wire:loading.attr="disabled" wire:loading.class="bg-gray-100">
+        <button type="submit" class="block bg-red-500 hover:bg-red-600 shadow-sm mx-auto px-4 py-3 rounded-2xl w-full max-w-[200px] font-medium text-white text-2xl transition-colors cursor-pointer" wire:loading.attr="disabled" wire:loading.class="bg-gray-100">
             @lang('Submit')
         </button>
     </form>

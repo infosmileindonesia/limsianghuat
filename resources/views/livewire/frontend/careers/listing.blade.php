@@ -40,9 +40,9 @@
                         <div class="checkbox-list-item">
                             @foreach ($departments as $department)
                             <div class="checkbox-item">
-                                <label for="department-{{ $department }}" class="text-lg">{{ $department }} (<span class="w-2">{{ $availableDepartments[$department] }}</span>)</label>
-                                <input type="checkbox" id="department-{{ $department }}"
-                                    wire:model.live="selectedDepartment" value="{{ $department }}" class="block w-4 h-4">
+                                <label for="department-{{ $department->name }}" class="text-lg">{{ $department->name }} (<span class="w-2">{{ $availableDepartments[$department->id]['count'] }}</span>)</label>
+                                <input type="checkbox" id="department-{{ $department->slug }}"
+                                    wire:model.live="selectedDepartment" value="{{ $department->id }}" class="block w-4 h-4">
                             </div>
 
                             @endforeach
@@ -91,9 +91,9 @@
                             </div>
                             @foreach ($states as $state)
                             <div class="checkbox-item">
-                                <label for="state-{{ $state }}" class="text-lg">{{ $state }}</label>
-                                <input type="checkbox" id="state-{{ $state }}" wire:model.live="stateSelected"
-                                    value="{{ $state }}" class="block w-4 h-4">
+                                <label for="state-{{ $state->slug }}" class="text-lg">{{ $state->name }}</label>
+                                <input type="checkbox" id="state-{{ $state->slig }}" wire:model.live="stateSelected"
+                                    value="{{ $state->id }}" class="block w-4 h-4">
                             </div>
 
                             @endforeach
@@ -139,9 +139,9 @@
 
                             @foreach ($levels as $level)
                             <div class="checkbox-item">
-                                <label for="level-{{ $level }}" class="text-lg">{{ $level }}</label>
-                                <input type="checkbox" id="level-{{ $level }}" wire:model.live="levelSelected"
-                                    value="{{ $level }}">
+                                <label for="level-{{ $level->slug }}" class="text-lg">{{ $level->name }}</label>
+                                <input type="checkbox" id="level-{{ $level->slug }}" wire:model.live="levelSelected"
+                                    value="{{ $level->id }}">
                             </div>
 
                             @endforeach
@@ -170,10 +170,10 @@
             @foreach ($departments as $department)
                 <li class="px-4 lg:px-10 py-2 lg:py-4 border rounded-3xl text-base lg:text-2xl text-center whitespace-nowrap transition-all duration-300 ease-in-out"
                     {{-- x-on:click.prevent="department = '{{ $department }}'" --}}
-                    x-bind:class="{ 'bg-black text-white': department === '{{ $department }}' }"
-                    wire:click="setDepartment('{{ $department }}')"
+                    x-bind:class="{ 'bg-black text-white': department === '{{ $department->id }}' }"
+                    wire:click="setDepartment('{{ $department->id }}')"
                 >
-                    <span href="#" class="cursor-pointer">{{ $department }}</span>
+                    <span href="#" class="cursor-pointer">{{ $department->name }}</span>
                 </li>
             @endforeach
         </ul>
