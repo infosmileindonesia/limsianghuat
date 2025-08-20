@@ -105,7 +105,7 @@
                                 <li><a href="{{ route('brands') }}#brand-alcohol">@lang('Alcohol')</a></li>
                                 <li><a href="{{ route('brands') }}#brand-non-alcohol">@lang('RTD Ready To Drink')</a></li>
                                 <li><a href="{{ route('brands') }}#brand-food">@lang('RTE Ready To Eat')</a></li>
-                                <li><a href="{{ route('brands') }}#brand-food">@lang('Consumer Goods')</a></li>
+                                <li><a href="{{ route('brands') }}#brand-consumer-goods">@lang('Consumer Goods')</a></li>
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">

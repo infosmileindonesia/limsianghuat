@@ -64,7 +64,7 @@ return [
             ],
             'market' => [
                 'title' => 'Route To Market',
-                'description' => 'Through our consistent approach to managing and maintaining customer relationships, we ensure an efficient and timely Route to Market.',
+                'description' => 'Through our consistent approach in managing and maintaining customer relationships, we ensure an efficient and timely Route to Market.',
             ],
             'delivery' => [
                 'title' => 'Sales & Delivery <br> Infrastructure',

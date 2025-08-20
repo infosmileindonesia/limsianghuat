@@ -168,7 +168,7 @@
 
                 <div class="mt-5 swiper consumer-goods-brands-swiper">
                     <div class="swiper-wrapper">
-                        @foreach ($foodBrands as $brand)
+                        @foreach ($consumerBrands as $brand)
                         <div class="swiper-slide"/>
                             <x-frontend.brand-card
                                 :image="$brand['image']"

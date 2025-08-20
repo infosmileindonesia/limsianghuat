@@ -295,7 +295,9 @@
 .alcohol-swiper-button-next.swiper-button-disabled svg path{
     @apply stroke-gray-400;
 }
-
+.consumer-goods-swiper .swiper-slide{
+    @apply flex justify-center items-center;
+}
 .consumer-goods-swiper-button-prev{
     @apply select-none;
 }

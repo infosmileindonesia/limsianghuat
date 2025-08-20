@@ -48,14 +48,14 @@ class TestimonialResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image(),
                 Forms\Components\Fieldset::make('Content')
-                    ->columnSpanFull()
+                    ->column()
                     ->schema([
                         Forms\Components\Textarea::make('content.en')
-                            ->label('English')
+                            ->label('(English)')
                             ->required()
                             ->columnSpanFull(),
                         Forms\Components\Textarea::make('content.zh_TW')
-                            ->label('Traditional Chinese')
+                            ->label('(Traditional Chinese)')
                             ->required()
                             ->columnSpanFull(),
                     ]),

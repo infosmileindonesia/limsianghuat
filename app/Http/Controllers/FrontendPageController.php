@@ -6,6 +6,7 @@ use App\Models\Banner;
 use App\Models\BrandAlcohol;
 use App\Models\BrandFoodAlcohol;
 use App\Models\BrandNonAlcohol;
+use App\Models\ConsumerBrand;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -174,8 +175,14 @@ class FrontendPageController extends Controller
                 'image' => $brand->getImageUrlAttribute(),
             ];
         });
+        $consumerBrands = ConsumerBrand::all()->map(function ($brand) {
+            return [
+                'name' => $brand->name,
+                'image' => $brand->getImageUrlAttribute(),
+            ];
+        });        
 
-        return view('frontend.brands', compact('alcoholBrands', 'nonAlcoholBrands', 'foodBrands'));
+        return view('frontend.brands', compact('alcoholBrands', 'nonAlcoholBrands', 'foodBrands', 'consumerBrands'));
     }
 
     public function distribution()

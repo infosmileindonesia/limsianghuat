@@ -19,7 +19,7 @@ export default () => ({
 
         let swiperContainerClass = `.consumer-goods-brands-swiper`;
 
-        this.nonalcoholBrandsSwiper = new Swiper(swiperContainerClass, {
+        this.consumerBrandsSwiper = new Swiper(swiperContainerClass, {
             modules: [Navigation, Autoplay],
             autoplay: {
                 delay: 1200,

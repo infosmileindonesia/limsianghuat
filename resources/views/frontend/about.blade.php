@@ -109,13 +109,11 @@
                                 <div class="pt-7 lg:pt-14 pr-4 lg:pr-9 pb-8 lg:pb-16 pl-4 lg:pl-16">
                                     <div class="gap-x-24 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
                                         <div>
-                                            <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full max-w-11/12 h-auto" alt="">
+                                            <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ $testimonial->image }}" class="w-full max-w-11/12 h-auto" alt="">
                                         </div>
 
                                         <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex flex-col justify-between space-y-36">
-                                            <p class="text-2xl">
-                                                {{ $testimonial->content }}
-                                            </p>
+                                            <p class="text-2xl">{{ $testimonial->content }}</p>
                                         </div>
                                     </div>
                                     <div class="gap-x-0 gap-y-4 lg:gap-x-24 lg:gap-y-0 grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-36 overflow-hidden">
@@ -130,7 +128,7 @@
                                         <div class="overflow-hidden">
                                             <p data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="-100%">
                                                 <span class="font-bold text-2xl">{{ $testimonial->name }}</span> <br>
-                                                <span class="text-xl">{{ $testimonial->position }}</span>
+                                                <span class="text-xl">{{ $testimonial->position }} of A {{ $testimonial->company }}</span>
                                             </p>
                                         </div>
                                     </div>
@@ -150,7 +148,7 @@
                             <div class="pt-7 lg:pt-14 pr-4 lg:pr-9 pb-8 lg:pb-16 pl-4 lg:pl-16">
                                 <div class="gap-x-24 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
                                     <div>
-                                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/akasha.png') }}" class="w-full max-w-11/12 h-auto" alt="">
+                                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/placeholder/clients/aeon-hall.png') }}" class="w-full max-w-11/12 h-auto" alt="">
                                     </div>
 
                                     <div data-swiper-parallax="-800" data-swiper-parallax-opacity="0.1" data-swiper-parallax-y="-100%" class="flex flex-col justify-between space-y-36">
@@ -197,20 +195,48 @@
     </div>
 
     <div class="mx-auto mt-10 lg:mt-24 px-2 lg:px-0 container">
-        <h2 class="section-title">@lang("Achievement")</h2>
+        <h2 class="section-title">@lang("Achievement")</h2>    
+ <!--    <div style="width:40%; border: 0px solid #000; position: absolute; margin-top: 50px;"><img src="img/placeholder/clients/aeon-hall.png" style="float: right;"></div>     -->       
     </div>
-
-    <div class="mb-24 ml-0 lg:ml-auto px-2 lg:px-0 w-full lg:w-1/2">
+                     
+    <div class="mb-24 ml-0 lg:ml-auto px-2 lg:px-0 w-full lg:w-1/2" style="width:70% !important; margin: auto !important;">
 
         <div class="swiper half-wrapper-swiper">
             <div class="swiper-wrapper">
-                @for ($i = 1; $i <= 5; $i++)
-                <div class="px-2 py-10 swiper-slide">
+                @for ($i = 1; $i <= 1; $i++)
+ <!--               <div class="px-2 py-10 swiper-slide">
                     <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
                         <h3 class="font-bold text-2xl">Slide {{ $i }}</h3>
                         <p class="mt-4">This is the content of slide {{ $i }}.</p>
                     </div>
                 </div>
+ -->               
+
+                 <div class="px-2 py-10 swiper-slide">
+                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
+                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/achievement/ptd-lshr-2012.png') }}" class="w-full max-w-11/12 h-auto" alt="" style="margin: auto; height: 90%;">
+                        <!--<h3 class="font-bold text-2xl"></h3> -->
+                        <p class="mt-4" style="margin:auto; text-align: center;">PT. Delta Djakarta</p>
+                    </div>
+                </div>    
+                  <div class="px-2 py-10 swiper-slide">
+                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
+                        <h3 class="font-bold text-2xl">Slide 3</h3>
+                        <p class="mt-4">This is the content of slide 3a</p>
+                    </div>
+                </div>  
+                 <div class="px-2 py-10 swiper-slide">
+                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
+                        <h3 class="font-bold text-2xl">Slide 3</h3>
+                        <p class="mt-4">This is the content of slide 3a</p>
+                    </div>
+                </div>                    
+                 <div class="px-2 py-10 swiper-slide">
+                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
+                        <h3 class="font-bold text-2xl">Slide 3</h3>
+                        <p class="mt-4">This is the content of slide 3a</p>
+                    </div>
+                </div>                            
                 @endfor
             </div>
 
@@ -219,16 +245,16 @@
     </div>
 
     <div class="-bottom-4 lg:bottom-0 absolute inset-x-0 mx-auto container">
-        <div class="flex justify-center lg:justify-start space-x-10 max-w-none lg:max-w-md swiper-half-button-navigation-wrapper">
+        <div class="flex justify-center lg:justify-start space-x-10 max-w-none lg:max-w-md swiper-half-button-navigation-wrapper" style="width: 100% !important; margin: auto !important; height: 100px; padding-top: 40px;">
 
             {{-- arrow button for achievement slider --}}
-            <div class="swiper-button-prev swiper-button-prev-half-wrapper-swiper">
+            <div class="swiper-button-prev swiper-button-prev-half-wrapper-swiper" style="margin:auto; margin-top: 50px !important;">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 15L3.23223 13.2322L1.46447 15L3.23223 16.7678L5 15ZM23.75 17.5C25.1307 17.5 26.25 16.3807 26.25 15C26.25 13.6193 25.1307 12.5 23.75 12.5V17.5ZM10.7322 5.73223L3.23223 13.2322L6.76777 16.7678L14.2678 9.26777L10.7322 5.73223ZM3.23223 16.7678L10.7322 24.2678L14.2678 20.7322L6.76777 13.2322L3.23223 16.7678ZM5 17.5H23.75V12.5H5V17.5Z" fill="black"/>
                 </svg>
             </div>
 
-            <div class="swiper-button-next swiper-button-next-half-wrapper-swiper">
+            <div class="swiper-button-next swiper-button-next-half-wrapper-swiper" style="margin:auto; margin-top: 50px !important;">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25 15L26.7678 13.2322L28.5355 15L26.7678 16.7678L25 15ZM6.25 17.5C4.86929 17.5 3.75 16.3807 3.75 15C3.75 13.6193 4.86929 12.5 6.25 12.5V17.5ZM19.2678 5.73223L26.7678 13.2322L23.2322 16.7678L15.7322 9.26777L19.2678 5.73223ZM26.7678 16.7678L19.2678 24.2678L15.7322 20.7322L23.2322 13.2322L26.7678 16.7678ZM25 17.5H6.25V12.5H25V17.5Z" fill="black"/>
                 </svg>
