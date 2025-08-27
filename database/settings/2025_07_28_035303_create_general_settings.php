@@ -8,7 +8,7 @@ return new class extends SettingsMigration
     {
         $this->migrator->add('general_settings.site_name', 'Lim Siang Huat');
         $this->migrator->add('general_settings.site_description', 'Your one-stop shop for all your food and alcohol needs.');
-        $this->migrator->add('general_settings.contact_email', 'lsh@gmail.com');
+        $this->migrator->add('general_settings.contact_email', 'hr.lshjkt@gmail.com');
         $this->migrator->add('general_settings.contact_phone', '+62 778 430359');
 
         $this->migrator->add('general_settings.google_map_api_key', 'AIzaSyBB5tal8AmvNbWdrVK6gPud4x-z7o2Sdlo');
@@ -24,13 +24,13 @@ return new class extends SettingsMigration
         $this->migrator->add('general_settings.instagram_link', 'https://www.instagram.com/limsianghuat.official/?hl=en');
         $this->migrator->add('general_settings.tiktok_link', 'https://www.tiktok.com/@lim.siang.huat');
 
-        $this->migrator->add('general_settings.mail_username', 'lsh@gmail.com');
-        $this->migrator->add('general_settings.mail_password', 'your_mail_password');
-        $this->migrator->add('general_settings.mail_host', 'smtp.gmail.com');
-        $this->migrator->add('general_settings.mail_port', 587);
+        $this->migrator->add('general_settings.mail_username', 'lsh@belarydesign.com');
+        $this->migrator->add('general_settings.mail_password', '');
+        $this->migrator->add('general_settings.mail_host', 'mail.exclusivehosting.net');
+        $this->migrator->add('general_settings.mail_port', 465);
         $this->migrator->add('general_settings.mail_encryption', 'tls');
-        $this->migrator->add('general_settings.mail_from_address', 'lsh@gmail.com');
-        $this->migrator->add('general_settings.mail_recipient', 'hr.lshjkt@gmail.com');
+        $this->migrator->add('general_settings.mail_from_address', 'lsh@belarydesign.com');
+        $this->migrator->add('general_settings.mail_recipient', 'lsh@belarydesign.com');
     }
 };
 

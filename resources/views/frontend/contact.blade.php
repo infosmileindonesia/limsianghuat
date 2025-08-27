@@ -52,9 +52,9 @@
                 </span>
                 <div class="text-center">
                     <p class="font-medium text-red-500 text-2xl md:text-4xl">
-                        <a href="mailto:lsh@gmail.com">@lang('Email')</a>
+                        <a href="mailto:hr.lshjkt@gmail.com">@lang('Email')</a>
                     </p>
-                    {{-- <a href="mailto:lsh@gmail.com" class="font-normal text-white text-lg md:text-2xl">lsh@gmail.com</a> --}}
+                    {{-- <a href="mailto:hr.lshjkt@gmail.com" class="font-normal text-white text-lg md:text-2xl">hr.lshjkt@gmail.com</a> --}}
                 </div>
             </div>
             <div class="flex flex-col justify-end items-center gap-y-6 bg-black py-10 rounded-2xl">

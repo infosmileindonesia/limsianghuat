@@ -96,7 +96,7 @@
                             <ul class="space-y-2 text-center">
                                 <li><a href="{{ route('about') }}">@lang('About LSH')</a></li>
                                 <li><a href="{{ route('about') }}#about-why">@lang('Why Us')</a></li>
-                                <li><a href="{{ route('careers') }}">@lang('Career')</a></li>
+                                <!-- <li><a href="{{ route('careers') }}">@lang('Career')</a></li> -->
                             </ul>
                         </div>
                         <div class="flex flex-col items-center">

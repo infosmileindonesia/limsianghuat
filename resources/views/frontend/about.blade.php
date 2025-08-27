@@ -88,7 +88,7 @@
 </section>
 
 <section class="relative">
-
+<!-- ini bagian testimony
     <div class="relative space-y-5 mx-auto my-10 lg:my-24 px-2 lg:px-0 container">
         {{-- <p class="text-2xl text-center">TESTIMONIALS</p> --}}
         <h2 class="text-center section-title">@lang("Compliments")</h2>
@@ -192,10 +192,10 @@
 
         <div class="swiper-pagination testimonial-swiper-pagination"></div>
 
-    </div>
+    </div> -->
 
     <div class="mx-auto mt-10 lg:mt-24 px-2 lg:px-0 container">
-        <h2 class="section-title">@lang("Achievement")</h2>    
+        <h2 class="section-title" style="text-align: center !important;">@lang("Achievement")</h2>    
  <!--    <div style="width:40%; border: 0px solid #000; position: absolute; margin-top: 50px;"><img src="img/placeholder/clients/aeon-hall.png" style="float: right;"></div>     -->       
     </div>
                      
@@ -219,24 +219,13 @@
                         <p class="mt-4" style="margin:auto; text-align: center;">PT. Delta Djakarta</p>
                     </div>
                 </div>    
-                  <div class="px-2 py-10 swiper-slide">
-                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
-                        <h3 class="font-bold text-2xl">Slide 3</h3>
-                        <p class="mt-4">This is the content of slide 3a</p>
-                    </div>
-                </div>  
                  <div class="px-2 py-10 swiper-slide">
                     <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
-                        <h3 class="font-bold text-2xl">Slide 3</h3>
-                        <p class="mt-4">This is the content of slide 3a</p>
+                        <img data-swiper-parallax="200" data-swiper-parallax-opacity="0.1" data-swiper-parallax-x="100%" src="{{ asset('img/achievement/otsuka-lshk-2023.png') }}" class="w-full max-w-11/12 h-auto" alt="" style="margin: auto; height: 90%;">
+                        <!--<h3 class="font-bold text-2xl"></h3> -->
+                        <p class="mt-4" style="margin:auto; text-align: center;">PT. Amerta Indah Otsuka</p>
                     </div>
-                </div>                    
-                 <div class="px-2 py-10 swiper-slide">
-                    <div class="bg-neutral-100 shadow-xl p-8 rounded-4xl w-full max-w-none lg:max-w-[341px] aspect-[3/4]">
-                        <h3 class="font-bold text-2xl">Slide 3</h3>
-                        <p class="mt-4">This is the content of slide 3a</p>
-                    </div>
-                </div>                            
+                </div>                              
                 @endfor
             </div>
 

@@ -25,7 +25,7 @@
                         <div class="relative swiper-slide">
                             <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}" class="w-full object-cover aspect-square xl:aspect-[4/2]">
                             <div class="banner-title">
-                                <span data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! nl2br($banner->title) !!}</span>
+                                <span style="padding-bottom: 20px;" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">{!! nl2br($banner->title) !!}</span>
                                 <a href="{{ $banner->url }}" class="btn-learn-more-banner">{{ $banner->button_text }}</a>
                             </div>
                         </div>
