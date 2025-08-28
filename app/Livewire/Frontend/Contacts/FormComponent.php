@@ -63,7 +63,7 @@ class FormComponent extends Component
         ]);
 
         // Send the email using the ContactMail Mailable
-        $mailer->to($this->email)
+        $mailer->to(app(GeneralSetting::class)->mail_recipient)
             ->send(new ContactMail($contact, $mailSettings));
 
         // Optionally, you can show a success message or redirect the user
